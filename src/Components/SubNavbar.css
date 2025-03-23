@@ -1,0 +1,90 @@
+.subnavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003366;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 8px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #00aaff;
+    border-radius: 20px;
+    padding: 5px 10px;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+  }
+  
+  .search-icon {
+    color: #00aaff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .menu-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  .menu-links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;  /* Thickness of the underline */
+    background-color: #00aaff; /* Color of the underline */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .menu-links:hover::after {
+    width: 100%;
+  }
+  
+  .menu-links .icon {
+    margin-right: 5px;
+    color: #00aaff;
+  }
+  
+  .contact-btn {
+    display: flex;
+    align-items: center;
+    border: 2px solid #00aaff;
+    border-radius: 20px;
+    padding: 5px 12px;
+    color: #00aaff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .phone-icon {
+    margin-right: 5px;
+  }
+  

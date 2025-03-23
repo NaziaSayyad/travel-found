@@ -1,149 +1,128 @@
+/* Navbar Styles */
+.sub-nav{
+  /* width: 1200px; */
+  /* height: 120px; */
+  width: 100%;
+  position: fixed;
+  background-color: teal;
+}
 .navbar {
-    background-color: #243447;
+    background-color: #003366;
     padding: 10px 20px;
-    color: white;
+    width: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-.container {
+  /* Navbar Container */
+  .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
   }
   
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
+  /* Logo */
+  .logo img {
+    height: 50px;
+    width: auto;
   }
-
-.nav-links {
-    list-style: none;
+  
+  /* Navigation Links */
+  .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    align-items: center;
   }
-
-.nav-links li {
+  
+  /* Links */
+  .nav-links a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    /* font-weight: 600; */
+    padding: 8px 12px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+  
+  /* Hover Effects */
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFD700;
+  }
+  
+  /* Mega Dropdown Container */
+  .mega-dropdown {
     position: relative;
-    padding: 10px 15px;
+  }
+  
+  /* Mega Dropdown Menu */
+  .mega-dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    padding: 15px;
+    min-width: 350px;
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  
+/* Show Mega Dropdown */
+.mega-dropdown:hover .mega-dropdown-menu,
+.mega-dropdown-menu:hover {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
-
-.nav-links.open {
+  
+  /* Dropdown Columns */
+  .dropdown-column {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 250px;
-    background-color: #243447;
-    padding: 20px;
-    height: 100vh;
-    overflow-x: hidden;  /* ✅ Prevents horizontal overflow */
-  }
-  
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-    font-size: 16px;
-}
-
-.nav-links li a:hover {
-    color: #f39c12;
-}
-
-/* ✅ Dropdown menu fix */
-.dropdown {
-    position: relative;
-    width: 100%; /* Ensure it fits inside the sidebar */
-  }
-  
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    left: 0; /* ✅ Ensures the dropdown stays inside the sidebar */
-    top: 100%;
-    background-color: #243447;
-    color: black;
-    list-style: none;
     padding: 10px;
-    width: 250px;
-    z-index: 1000;
-    white-space: nowrap;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgb(122, 182, 250);
-    list-style: none;
-    padding: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
   }
-
-/* Show dropdown on hover */
-.dropdown:hover > .dropdown-menu {
-    display: block;
+  /* Dropdown Links */
+.mega-dropdown-menu a {
+  padding: 10px;
+  color: #003366;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s ease-in-out;
+}
+/* Dropdown Hover Effect */
+.mega-dropdown-menu a:hover {
+  background-color: #003366;
+  color: white;
 }
 
-/* ✅ Fixing nested dropdowns */
-.dropdown-menu .dropdown {
-    position: relative;
-}
-
-.dropdown-menu .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-left: 0;
-    transform: translateX(10px);
-}
-
-.dropdown-menu li {
-    padding: 12px 20px;
-}
-
-.dropdown-menu li a {
-    color: white !important; /* Ensure text is readable */
+  /* Dropdown Links */
+  .mega-dropdown-menu a {
+    padding: 10px;
+    color: #003366;
     font-weight: 500;
+    text-decoration: none;
     display: block;
-}
-
-.dropdown-menu li a:hover {
-    background: #f39c12;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  /* Dropdown Hover Effect */
+  .mega-dropdown-menu a:hover {
+    background-color: #003366;
     color: white;
-    border-radius: 4px;
-}
-
-/* ✅ Responsive Sidebar Navigation for Mobile */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-    }
-   
-    .nav-links.open {
-        display: flex;
-        overflow-x: hidden;  /* ✅ Prevent horizontal overflow */
-    }
-
-    .dropdown-menu {
-        position: relative;
-        left: 0;
-        top: 0;
-        display: none;
-        background: none;
-    }
-    
-    .dropdown:hover > .dropdown-menu {
-        display: block;
-    }
-}
+  }
+  
