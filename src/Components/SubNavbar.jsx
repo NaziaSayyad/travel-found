@@ -8,7 +8,7 @@ export const SubNavbar = () => {
     <div className="subnavbar">
       {/* Left: Logo */}
       <div className="logo">
-        <img src="/logo.png" alt="Traveler Found" />
+        <img src="/logo.png" alt="Travel Fond" />
         {/* <p>Traveler Found</p> */}
       </div>
 

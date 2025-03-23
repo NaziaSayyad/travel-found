@@ -48,13 +48,13 @@ const Navbar = () => {
             )} */}
           </div>
 
-          <div><Link to="#">Kashmir ▼</Link></div>
-          <div><Link to="#">Spiti ▼</Link></div>
-          <div><Link to="#">🎁 Gift Cards</Link></div>
-          <div><Link to="#"> Refer & Earn </Link></div>
-          <div><Link to="#">About Us</Link></div>
-          <div><Link to="#">Contact Us</Link></div>
-          
+        <div className="nav-links">
+           <div><Link to="#">Kashmir ▼</Link></div>
+            <div><Link to="#">Spiti ▼</Link></div>
+           <div><Link to="#">🎁 Gift Cards</Link></div>
+           <div><Link to="#"> Refer & Earn </Link></div>
+         
+        </div>
         </div>
       </div>
     </nav>

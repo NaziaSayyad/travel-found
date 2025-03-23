@@ -21,7 +21,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    margin-left: 20%;
+    margin-left: 35%;
   }
   
   /* Logo */
@@ -33,8 +33,9 @@ body {
   /* Navigation Links */
   .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 60px;
     align-items: center;
+    /* margin-left: 2%; */
   }
   
   /* Links */
