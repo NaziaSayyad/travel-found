@@ -8,6 +8,7 @@ import Contact from './Pages/Contact';
 import Navbar from './Components/Navbar';
 import { Footer } from './Components/Footer';
 import { SubNavbar } from './Components/SubNavbar';
+import { SubFooter } from './Components/SubFooter';
 
 function App() {
   return (
@@ -19,11 +20,10 @@ function App() {
     <Route path="/" element={<Dashboard />} />
     <Route path="/about" element ={<About />} />
     <Route path="/contact" element ={<Contact />}  />
-    
-   </Routes>
-   <Footer />
-  
-    </div>
+  </Routes>
+   {/* <Footer /> */}
+   <SubFooter />
+  </div>
   );
 }
 
