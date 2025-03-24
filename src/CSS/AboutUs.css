@@ -1,0 +1,31 @@
+.about{
+    /* border: 5px solid brown; */
+}
+.about >img{
+    width: 1500px;
+    height: 520px;
+}
+.tagline {
+    font-family: Arial, sans-serif;
+    color:rgb(4, 92, 126);
+    font-size: 30px;
+}
+.highlight-green {
+    color: green;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+p {
+    color: #333;
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.5;
+    font-size: 25px;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 30px 15px;
+    }
+}

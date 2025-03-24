@@ -4,6 +4,9 @@
     text-align: center;
     padding: 20px;
 }
+.footer >h1 {
+    font-size: 55px;
+}
 
 .footer h2 {
     font-size: 20px;
