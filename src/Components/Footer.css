@@ -1,5 +1,5 @@
 .footer {
-    background-color: #003366;
+    background-color:#21759b;
     color: white;
     padding: 40px 0;
     text-align: center;
@@ -18,10 +18,14 @@
     min-width: 200px;
     padding: 10px;
   }
+  .footer-column h1{
+    font-size: 56px;
+  }
   
-  .footer-column h3 {
+  .footer-column h4 {
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 28px;
+
   }
   
   .footer-column ul {
@@ -80,6 +84,15 @@
   .footer-bottom {
     margin-top: 20px;
     padding: 10px;
-    background-color: #002244;
+    background-color:#035981;
+    /* color: #cc8500; */
+  }
+  .footer-bottom p {
+    color: #cc8500; 
+    font-weight: bold;
   }
   
+  .footer-column p{
+    color: whitesmoke;
+    font-size: 16px;
+  }

@@ -20,17 +20,28 @@ export const SubNavbar = () => {
 
       {/* Right: Menu Links */}
       <div className="menu-links">
-        <Link to="#"><FaCalendarAlt className="icon" /> Upcoming Trips</Link>
-        <Link to="#">Corporate Tours</Link>
-        <Link to="#">Blogs</Link>
-        <Link to="#">About Us</Link>
-        <Link to="#">Contact Us </Link>
+       {/* dropdown */}
+       <div className="dropdown">
+       <Link to="#" className="menu-item">
+            <FaCalendarAlt className="icon" />
+             Best Seller Packages
+          </Link>
+          <div className="dropdown-content">
+            <Link to="ladakh" className="dropdown-item">Ladakh</Link>
+            <Link to="/kashmir" className="dropdown-item">Kashmir</Link>
+            <Link to="/spiti" className="dropdown-item">Spiti</Link>
+          </div>
+        </div>
+
+       {/* about  */}
+        <Link to="/about">About Us</Link>
+        <Link to="/contact">Contact Us </Link>
       </div>
 
       {/* Contact Button */}
       <div className="contact-btn">
         <FaPhoneAlt className="phone-icon" />
-        <span> +91-8287805715</span>
+        <span className="number"> +91-8287805715</span>
       </div>
     </div>
   );

@@ -11,10 +11,10 @@ export const Footer = () => {
         <div className="footer-column">
           <h3>Quick Links</h3>
           <ul>
-            <li><Link to="#">About Us</Link></li>
-            <li><Link to="#">Contact</Link></li>
-            <li><Link to="#">Privacy Policy</Link></li>
-            <li><Link to="#">Terms & Conditions</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/privacy">Privacy Policy</Link></li>
+            <li><Link to="/terms">Terms & Conditions</Link></li>
           </ul>
         </div>
 
@@ -40,7 +40,7 @@ export const Footer = () => {
 
         {/* Column 1: Company Info */}
         <div className="footer-column">
-          <h1>Travele Found</h1>
+          <h1>Travel Fond</h1>
           <h4>Your perfect travel partner for unforgettable adventures.</h4>
           <p> Address: 16 DSIDC Complex, Mata Sundari Road,
              Beside Ranjit Singh Flyover, Barakhamba Road, Near Connaught Place, Delhi -110002</p>
@@ -49,7 +49,7 @@ export const Footer = () => {
 
       {/* Copyright Section */}
       <div className="footer-bottom">
-        <p>© 2025 Traveler Found. All Rights Reserved.</p>
+        <p>© 2025 Travel Fond. All Rights Reserved.</p>
       </div>
     </footer>
   );
