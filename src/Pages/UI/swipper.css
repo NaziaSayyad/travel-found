@@ -1,0 +1,126 @@
+.travel-carousel {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.swiper {
+  padding-bottom: 40px;
+}
+
+.trip-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.trip-card:hover {
+  /* transform: scale(1.05); */
+}
+
+.trip-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.trip-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* padding: 20px; */
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);  /* ✅ Gradient effect */
+  box-sizing: border-box;
+  text-align: left;
+  
+  
+}
+
+.trip-details h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+  margin-left: 15px;
+}
+
+.price {
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color:white;
+  font-size: 14px;
+  margin-right: 5px;
+}
+.trip-details p{
+  font-size: 12px;
+  color: white;
+  margin-left: 15px;
+}
+/* Navigation Buttons */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color:#21759b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.nav-button.left {
+  left: -1px;
+}
+
+.nav-button.right {
+  right: -1px;
+}
+
+.nav-button:hover {
+   background-color:#21759b;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 90%;
+  }
+  .nav-button {
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+  .trip-details {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .nav-button {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .left {
+    left: -20px;
+  }
+
+  .right {
+    right: -20px;
+  }
+
+}

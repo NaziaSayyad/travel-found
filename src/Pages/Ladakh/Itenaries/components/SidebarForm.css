@@ -1,0 +1,112 @@
+/* Right Sidebar Layout */
+.right-section {
+    width: 350px;
+    /* position: absolute; */
+    top: 1000px;
+    right: 20px;
+}
+
+/* Price Box */
+.price-box {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.price-box p {
+    font-size: 14px;
+    color: #333;
+}
+
+.price-box h2 {
+    color: #00a9ce;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.price-box h2 span {
+    font-size: 14px;
+    color: #666;
+}
+
+.cost-btn {
+    width: 100%;
+    background: #00a9ce;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cost-btn:hover {
+    background: #0088a3;
+}
+
+/* Form Box */
+.form-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-text {
+    color: #00a9ce;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form-box p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #ffb700;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .right-section {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
