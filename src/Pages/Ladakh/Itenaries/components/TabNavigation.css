@@ -1,0 +1,33 @@
+.tab-container {
+    display: flex;
+    background-color: #e8faff; 
+    padding: 12px;
+    border-radius: 10px;
+    justify-content: space-between;
+    position: relative;
+    width: 800px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px 0;
+}
+
+.tab.active {
+    color: #00a9ce;
+    position: relative;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: #00a9ce;
+    width: 20%;
+    transition: left 0.3s ease-in-out;
+}

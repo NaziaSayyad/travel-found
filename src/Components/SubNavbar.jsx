@@ -27,21 +27,22 @@ export const SubNavbar = () => {
              Best Seller Packages
           </Link>
           <div className="dropdown-content">
-            <Link to="ladakh" className="dropdown-item">Ladakh</Link>
+            <Link to="/ladakh" className="dropdown-item">Ladakh</Link>
             <Link to="/kashmir" className="dropdown-item">Kashmir</Link>
-            <Link to="/spiti" className="dropdown-item">Spiti</Link>
+            <Link to= '/spiti' className="dropdown-item">Spiti</Link>
           </div>
         </div>
 
        {/* about  */}
         <Link to="/about">About Us</Link>
         <Link to="/contact">Contact Us </Link>
-      </div>
+        
+        </div>
 
       {/* Contact Button */}
       <div className="contact-btn">
         <FaPhoneAlt className="phone-icon" />
-        <span className="number"> +91-8287805715</span>
+        <span className="number"> +91-9899275976</span>
       </div>
     </div>
   );

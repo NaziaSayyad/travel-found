@@ -24,7 +24,7 @@ const Navbar = () => {
             onMouseOver={() => setDropdown(true)}
             onMouseOut={() => setDropdown(false)}
           >
-            <Link to="#">Ladakh ▼</Link>
+            <Link to="/ladakh">Ladakh ▼</Link>
             
             {/* {dropdown && (
               <div className="mega-dropdown-menu">
@@ -50,7 +50,7 @@ const Navbar = () => {
 
         <div className="nav-links">
            <div><Link to="#">Kashmir ▼</Link></div>
-            <div><Link to="#">Spiti ▼</Link></div>
+            <div><Link to='/spiti'>Spiti ▼</Link></div>
            <div><Link to="#">🎁 Gift Cards</Link></div>
            <div><Link to="#"> Refer & Earn </Link></div>
          
