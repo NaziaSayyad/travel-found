@@ -1,13 +1,24 @@
 .tab-container {
     display: flex;
-    background-color: #e8faff; 
+    /* background-color: #e8faff;
     padding: 12px;
     border-radius: 10px;
     justify-content: space-between;
-    position: relative;
-    width: 800px;
+    /* position: fixed; Fix it at the top */
+    position: sticky;
+    /* top: 0;
+    left: 0; */
+    /* width: 100%; Make it span full width */
+    /* z-index: 1000; Ensure it stays above other elements */
+    /* scroll-behavior: smooth; */
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); Optional: Add shadow for better visibility */ 
+    /* margin-top: 20%; */
 }
 
+/* Ensures sections do not get hidden under the sticky tab bar */
+#overview, #itinerary, #inclusions, #exclusions, #other-info {
+    padding-top: 80px; /* Adjust this based on navbar height */
+}
 .tab {
     flex: 1;
     text-align: center;
@@ -30,4 +41,27 @@
     background-color: #00a9ce;
     width: 20%;
     transition: left 0.3s ease-in-out;
+}
+
+/* Ensures sections do not get hidden under the sticky tab bar */
+#overview, #itinerary, #inclusions, #exclusions, #other-info {
+    padding-top: 20px;
+}
+.tabs-section {
+    position: relative;
+}
+.tab-container {
+    position: sticky;
+    top: 0;
+    background: #EAF8FF;
+    z-index: 10;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure content has enough space so it doesn't get hidden */
+.section-content {
+    padding-top: 80px; /* Adjust based on tab height */
+    min-height: 100vh;
 }

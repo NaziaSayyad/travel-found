@@ -9,7 +9,7 @@ const InfoCard = () => {
         <FaMapMarkerAlt className="info-icon" />
         <div>
           <p className="info-title">Pickup & Drop</p>
-          <p className="info-value">Srinagar - Delhi</p>
+          <p className="info-value">Srinagar - Manali</p>
         </div>
       </div>
 
