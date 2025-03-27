@@ -2,7 +2,6 @@ import ItenarySlideshow from "../../UI/Itenaries_slideshow"
 import InfoCard from "./components/InfoCard"
 import SidebarForm from "./components/SidebarForm"
 import TabNavigation from "./components/TabNavigation"
-import { Itenaries } from "./Itenaries_details"
 
 export const Shrinagar_Manali = ()=>{
     return(
@@ -12,11 +11,12 @@ export const Shrinagar_Manali = ()=>{
         <div> 
             <h1> Two different Components </h1>
            <div style={{display: 'flex',
-            justifyContent : 'space-around' }}>
+            gap : '15%' }}>
                
            <div> 
                 <InfoCard />
                 <TabNavigation />
+
            </div>
            <div> <SidebarForm /> </div>
            </div>
