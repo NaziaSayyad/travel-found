@@ -1,8 +1,11 @@
-export const Overview = () =>{
+export const Overview = ({data})=>{
+     // console.log("over",data);
+
     return(
         <>
-        <h1>
-            Overview</h1>
-     </>
+       <div style={{width : '800px', marginTop: "3%"}}>
+       <h4>  {data} </h4>
+       </div>
+        </>
     )
 }

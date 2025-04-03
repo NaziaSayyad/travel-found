@@ -1,8 +1,5 @@
-export const OtherInfo = () =>{
+export const OtherInfo = ({data})=>{
     return(
-        <>
-        <h1>
-            OtherInfo</h1>
-     </>
+        <h1> OtherInfo </h1>
     )
 }
