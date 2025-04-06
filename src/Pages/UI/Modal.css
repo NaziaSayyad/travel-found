@@ -11,29 +11,44 @@
     align-items: center;
     z-index: 1000;
   }
-  
+  .img-heading-breakpoints{
+    display: flex;
+    gap: 4%;
+    margin-bottom: 2%;
+  }
+  .img-heading-breakpoints >img{
+    width: 150px;
+    border-radius: 5%;
+    height: 150px;
+  }
   .modal-content {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    width: 100%;
+    width: 400px;
     max-width: 400px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   .form-group {
     margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
   }
   
   .form-group label {
     display: block;
+    /* font-size: large; */
+    font-weight: bold;
+
     margin-bottom: 5px;
   }
   
   .form-group input {
-    width: 100%;
+    width: 200px;
     padding: 8px;
     box-sizing: border-box;
+    /* border: blue; */
   }
   
   .form-actions {

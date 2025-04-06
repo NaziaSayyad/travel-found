@@ -1,0 +1,37 @@
+.inclusions-container {
+    background-color: #f5fdf4; /* Light green background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    /* border: 5px solid brown; */
+    margin-left: 5%;
+    margin-top: 4%;
+  }
+  
+  .itinerar-heading {
+    /* color: #2e7d32; Green color */
+    font-weight: bold;
+    font-size: 24px;
+    border-left: 4px solid #2e7d32; /* Left green border */
+    padding-left: 10px;
+    margin-left: 2%;
+  }
+  
+  .inclusions-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .inclusions-item {
+    display: flex;
+    text-align: left;
+    gap: 10px;
+    font-size: 16px;
+    margin: 8px 0;
+    color: #333;
+  }
+  .inclusion-category{
+    text-align: left;
+    margin-left: 5%;
+    
+  }

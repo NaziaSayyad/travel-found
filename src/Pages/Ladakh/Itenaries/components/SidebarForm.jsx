@@ -1,6 +1,7 @@
 import React from "react";
 import { FaUser, FaPhone, FaEnvelope } from "react-icons/fa";
 import "./SidebarForm.css";
+import { Link } from "react-router-dom";
 
 const SidebarForm = () => {
   return(
@@ -11,7 +12,7 @@ const SidebarForm = () => {
         <p>Starting from</p>
         <span className="price">₹22,999/-</span>
         <span className="per-person"> per person</span>
-        <button className="pricing-btn">Dates & Costing</button>
+        <Link to={'/costing'}> <button className="pricing-btn">Dates & Costing</button> </Link>
       </div>
     <div className="form-box">
       <h2>Wanderlust Calling?</h2>

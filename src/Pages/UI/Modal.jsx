@@ -13,10 +13,13 @@ const Modal = ({ isOpen, onClose, onSubmit, email, setEmail, phone, setPhone }) 
   return (
     <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="modal-content">
-        <h2>Enter Your Details</h2>
+        <div className='img-heading-breakpoints'>
+        <img src="https://i.postimg.cc/s29nSzXK/mountain-5769089.jpg" alt="" />
+        <h2>Ladakh Itenary</h2>
+        </div>
         <form onSubmit={onSubmit}>
           <div className="form-group">
-            <label>Email:</label>
+            <label>Email :</label>
             <input
               type="email"
               value={email}
@@ -25,7 +28,7 @@ const Modal = ({ isOpen, onClose, onSubmit, email, setEmail, phone, setPhone }) 
             />
           </div>
           <div className="form-group">
-            <label>Phone Number:</label>
+            <label>Ph No. :</label>
             <input
               type="tel"
               value={phone}

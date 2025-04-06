@@ -9,7 +9,8 @@ import "swiper/css/navigation";
 import "./swipper.css"; // Import CSS file
 import { Link } from "react-router-dom";
 import { TripRoute } from "./Route";
-
+import { BiTimeFive } from "react-icons/bi";
+import { GoLocation } from "react-icons/go";
 
 export const TravelCarousel = ({data}) => {
 
@@ -39,8 +40,13 @@ export const TravelCarousel = ({data}) => {
              <img src={trip.img} alt={trip.Name} className="trip-image" />
             </Link>
             <div className="trip-details">
-            <h3>{trip.days} | {trip.location}</h3>
             <h3>{trip.Name}</h3>
+                  <div className="trip-def">
+                      <BiTimeFive size={25} color="skyblue" /><span> {trip.nights}    </span>     
+                     <div style={{marginLeft : '35%'}} > 
+                     <GoLocation size={25}  color="skyblue" /><span> {trip.location}  </span>
+                     </div>    
+                  </div>
             {/* <p style={{color:"yellow"}}> {trip.Route}</p> */}
             <TripRoute locations={trip.Route} destination = {trip.id}/>
             <p className="price">

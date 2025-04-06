@@ -13,6 +13,7 @@ import { Ladakh } from './Pages/Ladakh/LadakhPage';
 import { Spiti } from './Pages/Spiti/Spiti';
 import { Test } from './Pages/Test';
 import { Shrinagar_Manali } from './Pages/Ladakh/Itenaries/S_M';
+import { Costing } from './Pages/Ladakh/Itenaries/Subcomponents/Costing';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
     <Route  path="/spiti" element ={<Spiti />} />
     <Route path="/test" element={<Test />}/>
    <Route path='/ladakh/:id' element={<Shrinagar_Manali />} />
+   <Route path='/costing' element = {<Costing />}/>
   </Routes>
   
    <Footer />
