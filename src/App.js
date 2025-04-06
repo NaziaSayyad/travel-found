@@ -28,7 +28,7 @@ function App() {
     <Route path="/contact" element ={<Contact />}  />
     <Route  path="/spiti" element ={<Spiti />} />
     <Route path="/test" element={<Test />}/>
-   <Route path='/shrinagar-to-manali' element={<Shrinagar_Manali />} />
+   <Route path='/ladakh/:id' element={<Shrinagar_Manali />} />
   </Routes>
   
    <Footer />

@@ -14,7 +14,7 @@ export const AllRoutes = () =>{
    <Routes>
     <Route path="/" element={<Dashboard />} />
     <Route path="/ladakh" element ={<Ladakh />} />
-    
+    {/* <Route path="/ladakh/:id" element = {} /> */}
     <Route path="/about" element ={<About />} />
     <Route path="/contact" element ={<Contact />}  />
     <Route  path="/spiti" element ={<Spiti />} />

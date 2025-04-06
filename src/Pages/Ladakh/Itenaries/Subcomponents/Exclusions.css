@@ -1,0 +1,37 @@
+.exclusions-container {
+    background-color: #fff7f6;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #111;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border-left: 5px solid red;
+    padding-left: 10px;
+  }
+  
+  .exclusions-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .exclusion-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    color: red;
+    margin-right: 10px;
+  }
+  

@@ -1,6 +1,8 @@
 .info-container {
     display: flex;
     gap: 15px;
+    margin-left: 15%;
+    margin-bottom: 2%;
 }
 
 .info-card {

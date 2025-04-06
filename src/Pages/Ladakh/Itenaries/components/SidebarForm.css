@@ -1,112 +1,131 @@
-/* Right Sidebar Layout */
-.right-section {
-    width: 350px;
-    /* position: absolute; */
-    top: 1000px;
-    right: 20px;
+
+/* Sidebar Container */
+.sidebar-container {
+    width: 100%;
+    /* max-width: 400px; */
+    background: #ffffff;
+    border-radius: 10px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    /* border: 2px solid #00AEEF; */
 }
 
-/* Price Box */
-.price-box {
-    background: #f8f8f8;
+/* Pricing Box */
+.pricing-box {
+    background: #F8FCFE;
     padding: 15px;
     border-radius: 10px;
-    text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
     margin-bottom: 15px;
 }
 
-.price-box p {
+.pricing-box p {
     font-size: 14px;
-    color: #333;
+    color: #555;
+    margin-bottom: 5px;
 }
 
-.price-box h2 {
-    color: #00a9ce;
-    font-size: 24px;
-    margin: 5px 0;
+.pricing-box .price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00AEEF;
 }
 
-.price-box h2 span {
+.pricing-box .per-person {
     font-size: 14px;
     color: #666;
 }
 
-.cost-btn {
+/* Button Styling */
+.pricing-btn {
     width: 100%;
-    background: #00a9ce;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    background: #00AEEF;
+    color: white;
     font-size: 16px;
     font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.cost-btn:hover {
-    background: #0088a3;
+.pricing-btn:hover {
+    background: #0099CC;
 }
 
-/* Form Box */
+
+/* Form Container */
 .form-box {
-    background: #fff;
-    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* border: 2px solid #00AEEF; */
+    margin-bottom: 1%;
+    /* margin-right: 0; */
+    /* margin-right: 5%; */
 }
 
-.highlight-text {
-    color: #00a9ce;
+/* Header Styling */
+.form-box h2 {
+    color: #00AEEF;
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .form-box p {
     font-size: 14px;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
+/* Input Fields */
 .input-group {
-    margin-bottom: 10px;
+    position: relative;
+    margin-bottom: 15px;
 }
 
-label {
-    display: block;
+.input-group input {
+    width: 200px;
+    padding: 12px 15px;
+    padding-left: 40px; /* Space for the icon */
+    border-radius: 8px;
+    border: 1px solid #ddd;
     font-size: 14px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
+    outline: none;
+    background: #f9f9f9;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Icons Inside Input Fields */
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #888;
 }
 
+/* Submit Button */
 .submit-btn {
     width: 100%;
-    padding: 10px;
-    background: #ffcc00;
-    border: none;
-    border-radius: 5px;
+    background: #FFD700;
+    color: #000;
     font-size: 16px;
     font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .submit-btn:hover {
-    background: #ffb700;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .right-section {
-        position: static;
-        width: 100%;
-        margin-top: 20px;
-    }
+    background: #FFC107;
 }

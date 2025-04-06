@@ -8,66 +8,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./swipper.css"; // Import CSS file
 import { Link } from "react-router-dom";
+import { TripRoute } from "./Route";
 
-const travelPackages = [
-  {
-    image: "https://i.postimg.cc/sfkwnmLt/leh-4152872.jpg",
-    title: "11 Days Manali Leh Tour",
-    price: "₹37,999/-",
-    oldPrice: "₹39,999/-",
-    duration: "10N/11D",
-    location: "Delhi/Chandigarh - Delhi",
-    date: "31 May, 7 Jun",
-  },
 
-  {
-    image: "https://i.postimg.cc/sfkwnmLt/leh-4152872.jpg",
-    title: "9 Days Leh to Srinagar",
-    price: "₹33,999/-",
-    oldPrice: "₹36,999/-",
-    duration: "8N/9D",
-    location: "Leh/Srinagar - Leh/Srinagar",
-    date: "31 May, 14 Jun",
-  },
-  {
-    image: "https://i.postimg.cc/yNGFDY4w/118.jpg",
-    title: "8 Days Srinagar to Leh",
-    price: "₹32,999/-",
-    oldPrice: "₹37,999/-",
-    duration: "7N/8D",
-    location: "Srinagar - Leh",
-    date: "24 May, 7 Jun",
-  },
-  {
-    image: "https://i.postimg.cc/q7NKHVhQ/IMG-0200.jpg",
-    title: "11 Days Manali Leh Tour",
-    price: "₹37,999/-",
-    oldPrice: "₹39,999/-",
-    duration: "10N/11D",
-    location: "Delhi/Chandigarh - Delhi",
-    date: "31 May, 7 Jun",
-  },
-  {
-    image: "https://i.postimg.cc/1X4MLNKY/mountain-7565305.jpg",
-    title: "11 Days Manali Leh Tour",
-    price: "₹37,999/-",
-    oldPrice: "₹39,999/-",
-    duration: "10N/11D",
-    location: "Delhi/Chandigarh - Delhi",
-    date: "31 May, 7 Jun",
-  },
-  {
-    image: "https://i.postimg.cc/q7NKHVhQ/IMG-0200.jpg",
-    title: "11 Days Manali Leh Tour",
-    price: "₹37,999/-",
-    oldPrice: "₹39,999/-",
-    duration: "10N/11D",
-    location: "Delhi/Chandigarh - Delhi",
-    date: "31 May, 7 Jun",
-  },
-];
-
-export const TravelCarousel = () => {
+export const TravelCarousel = ({data}) => {
 
     const swiperRef = useRef(null);
 
@@ -89,22 +33,21 @@ export const TravelCarousel = () => {
             480: { slidesPerView: 1 },
           }}
         >
-          {travelPackages.map((trip, index) => (
+          {data?.map((trip, index) => (
             <SwiperSlide key={index} className="trip-card">
-             <Link to={'/shrinagar-to-manali'}>
-             <img src={trip.image} alt={trip.title} className="trip-image" />
-           
-             </Link>
+             <Link to={`/ladakh/${trip.id}`}>
+             <img src={trip.img} alt={trip.Name} className="trip-image" />
+            </Link>
             <div className="trip-details">
-                <h3>{trip.title}</h3>
-                <p className="price">
-                  <span className="old-price">{trip.oldPrice}</span> {trip.price}
-                </p>
-                <p>{trip.duration} | {trip.location}</p>
-                <p>Dates:  {trip.date}</p>
+            <h3>{trip.days} | {trip.location}</h3>
+            <h3>{trip.Name}</h3>
+            {/* <p style={{color:"yellow"}}> {trip.Route}</p> */}
+            <TripRoute locations={trip.Route} destination = {trip.id}/>
+            <p className="price">
+                  <span className="old-price">{trip.oldprice}</span> {trip.newprice}
+            </p> 
               </div>
-          
-            </SwiperSlide>
+        </SwiperSlide>
           ))}
         </Swiper>
   
