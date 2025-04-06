@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Itenaries.css";
+import { MdArrowRight } from "react-icons/md"; // Looks close to a bullet
+
 export const Itenaries = ({data})=>{
     console.log(data,"itenaries");
     const [openDay, setOpenDay] = useState(null);
@@ -11,9 +13,8 @@ export const Itenaries = ({data})=>{
     return(
         <>
         <div className="itinerary-container">
-      <h2 className="itinerary-heading">
-        <span className="itinerary-icon">[</span> Itinerary <span className="itinerary-icon">]</span>
-      </h2>
+      <h2 className="itinerary-heading"> Itineraries </h2>
+
       {data?.map((item, index) => (
         <div
           key={index}
@@ -28,9 +29,12 @@ export const Itenaries = ({data})=>{
           {openDay === index && (
             <ul className="itinerary-details">
               {item.Details.map((detail, i) => (
-                <li key={i} className="itinerary-detail-item">
-                  {detail}
-                </li>
+              
+              <div key={i} className="itinerary-detail-item">
+                 <MdArrowRight size={30} color="teal" /> {/* Bullet Icon */}
+                 <span>{detail}</span>
+                </div>
+                           
               ))}
             </ul>
           )}

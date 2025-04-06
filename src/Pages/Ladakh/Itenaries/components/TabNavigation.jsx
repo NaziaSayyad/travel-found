@@ -8,13 +8,13 @@ import { Inclusions } from "../Subcomponents/Inclusions";
 import { OtherInfo } from "../Subcomponents/OtherInfo";
 import { Route } from "../Subcomponents/Route";
 
-export const TabNavigation = ({Name, Inclusion,Exclusion,Itenary,Overviews,route }) => {
+export const TabNavigation = ({Name,Inclustion,Exclusion,Itenary,Overviews,route }) => {
   const tabs = [
     { Name: "Overview & Highlights", id: "overview", ref: useRef(null) },
-    { Name: "Itinerary", id: "itinerary", ref: useRef(null) },
-    { Name: "Inclusions", id: "inclusions", ref: useRef(null) },
-    { Name: "Exclusions", id: "exclusions", ref: useRef(null) },
-    { Name: "Other Info", id: "other-info", ref: useRef(null) },
+    { Name: "Itinerary", id: "itinerary", ref: useRef(null)},
+    { Name: "Inclusions", id: "Inclusions", ref: useRef(null)},
+    { Name: "Exclusions", id: "exclusions", ref: useRef(null)},
+    { Name: "Other Info", id: "other-info", ref: useRef(null)},
     
   ];
 
@@ -51,11 +51,12 @@ export const TabNavigation = ({Name, Inclusion,Exclusion,Itenary,Overviews,route
         <div className="underline" style={{ left: `${tabs.findIndex(tab => tab.id === activeTab) * 20}%` }}></div>
       </div>
       <div>
-        <h1 style={{textAlign:'left', color:'blue',marginLeft :'5%'}}>Overview </h1>
-        <div style={{textAlign:'left',marginLeft:'3%'}}> <Route data ={route}/> </div>
+        <h2 style={{marginLeft : '5%'}}> Overview  </h2>
+
+        <div style={{textAlign : 'left',marginLeft : '2%'}}> <Route data ={route}/> </div>
         <div ref={tabs[0].ref}> <Overview data={Overviews} /> </div>
         <div ref={tabs[1].ref}> <Itenaries data={Itenary} /> </div>
-        <div ref={tabs[2].ref}><Inclusions data={Inclusion} /></div>
+        <div ref={tabs[2].ref}> <Inclusions data={Inclustion} /></div>
         <div ref={tabs[3].ref}><Exclusions data={Exclusion} /></div>
         <div ref={tabs[4].ref}><OtherInfo /></div>
         

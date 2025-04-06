@@ -3,9 +3,17 @@ export const Overview = ({data})=>{
 
     return(
         <>
-       <div style={{width : '800px', marginTop: "3%"}}>
-       <h4>  {data} </h4>
+       <div style={{
+        width : '800px',
+        marginTop: "3%",
+        textAlign : 'left',
+        marginLeft : '2%',
+        marginBottom :'5%',
+        marginTop : '5%'
+         }}>
+       <h5 >  {data} </h5 >
        </div>
+       
         </>
     )
 }

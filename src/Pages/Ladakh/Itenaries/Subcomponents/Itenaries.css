@@ -2,7 +2,8 @@
 .itinerary-container {
     font-family: Arial, sans-serif;
     max-width: 700px;
-    margin: auto;
+    /* margin: auto; */
+   
 }
 
 /* Heading styling */
@@ -10,8 +11,10 @@
     font-size: 24px;
     font-weight: bold;
     display: flex;
-    align-items: center;
+    text-align:left;
     margin-bottom: 10px;
+    margin-left: 5%;
+   
 }
 
 .itinerary-icon {
@@ -28,12 +31,13 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    transition: background 0.3s ease-in-out;
+    margin-left: 8%;
+    /* transition: background 0.3s ease-in-out; */
 }
 
 /* Box styling for expanded state */
 .itinerary-box.expanded {
-    background: #e8f6ff;
+    /* background: #e8f6ff; */
 }
 
 /* Day header styling */
@@ -45,7 +49,7 @@
 
 /* Day button styling */
 .itinerary-day-button {
-    background: #00aaff;
+    background:#21759b;
     color: white;
     border: none;
     padding: 5px 15px;
@@ -74,6 +78,7 @@
 .itinerary-details {
     margin-top: 10px;
     padding-left: 20px;
+    text-align: left;
 }
 
 /* Individual detail item styling */
@@ -81,7 +86,7 @@
     margin-bottom: 5px;
 }
 .itinerary-detail-item::before {
-    content: "➤"; /* Change to ➜ if you prefer */
+    /* content: "➤"; Change to ➜ if you prefer */
     position: absolute;
     left: 0;
     color: #00aaff; /* Adjust color if needed */

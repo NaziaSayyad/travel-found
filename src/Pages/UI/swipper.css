@@ -28,7 +28,11 @@
   height: 500px;
   object-fit: cover;
 }
-
+.trip-def {
+  display: flex;
+  margin-left: 2%;
+  gap: 4px
+}
 .trip-details {
   position: absolute;
   bottom: 0;
@@ -39,7 +43,7 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);  /* ✅ Gradient effect */
   box-sizing: border-box;
   text-align: left;
-  
+  /* display: flex; */
   
 }
 
