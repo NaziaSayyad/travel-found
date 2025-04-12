@@ -58,6 +58,10 @@ export const Shrinagar_Manali = () => {
               Itenary={tripDetails?.Itenary}
               Overviews={tripDetails?.overview_highlight}
               route={tripDetails?.Route}
+              costing ={tripDetails?.Costing}
+              batches = {tripDetails?.Batches}
+              start = {tripDetails?.start}
+              end = {tripDetails?.End}
             />
 
           </div>
@@ -67,7 +71,11 @@ export const Shrinagar_Manali = () => {
             height: 'fit-content',
             alignSelf: 'flex-start' // ensures it sticks at the top of the container
           }}>
-            <SidebarForm />
+            <SidebarForm 
+              costing = {tripDetails?.Costing} 
+              batches = {tripDetails?.Batches}
+              data = {tripDetails}
+            />
           </div>
         </div>
       </div>

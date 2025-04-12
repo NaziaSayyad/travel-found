@@ -1,42 +1,66 @@
-import React from "react";
-import { FaUser, FaPhone, FaEnvelope } from "react-icons/fa";
+import React, { useState } from "react";
 import "./SidebarForm.css";
-import { Link } from "react-router-dom";
 
-const SidebarForm = () => {
-  return(
-   <>
-     <div className="sidebar-container">
+import { Form } from "./Form";
+import { useNavigate } from "react-router-dom";
+import { BatchesPage } from "../Subcomponents/Batches";
+import { CostingPage } from "../Subcomponents/Costing";
+
+const SidebarForm = ({ costing, batches, data}) => {
+  const [showCosting, setShowCosting] = useState(false);
+  const navigate = useNavigate();
+
+  console.log("booking",data.Name);
+  
+  const toggleCosting = () => {
+    setShowCosting((prev) => !prev);
+  };
+
+  const handleBookNow = () => {
+    // You can customize this object to send specific data like batch name, cost etc.
+    const bookingDetails = {
+      Name : data.Name,
+      days : data.days,
+      img: data.img,
+      batch : batches,
+      cost :costing,
+      start : data.start,
+      end : data.End
+
+    };
+
+    navigate("/book-now", { state: bookingDetails });
+  };
+
+  return (
+    <div className="sidebar-container">
       {/* Pricing Box */}
       <div className="pricing-box">
         <p>Starting from</p>
         <span className="price">₹22,999/-</span>
         <span className="per-person"> per person</span>
-        <Link to={'/costing'}> <button className="pricing-btn">Dates & Costing</button> </Link>
-      </div>
-    <div className="form-box">
-      <h2>Wanderlust Calling?</h2>
-      <p>Allow Us to Call You Back!</p>
+        <button className="pricing-btn" onClick={toggleCosting}>
+          Dates & Costing
+        </button>
 
-      <div className="input-group">
-        <i><FaUser /></i>
-        <input type="text" placeholder="e.g. John Smith" />
-      </div>
+        {/* Batch Section */}
+        {showCosting && (
+          <>
+            <BatchesPage data={batches}  start={data.start} end ={data.End}  />
+            <CostingPage data={costing} />
 
-      <div className="input-group">
-        <i><FaPhone /></i>
-        <input type="text" placeholder="Enter your 10 digit number" />
-      </div>
-
-      <div className="input-group">
-        <i><FaEnvelope /></i>
-        <input type="email" placeholder="john@example.com" />
+            <div className="book-now-container">
+              <button className="book-now-btn" onClick={handleBookNow}>
+                Book Now
+              </button>
+            </div>
+          </>
+        )}
       </div>
 
-      <button className="submit-btn">Submit</button>
+      {/* Form Component */}
+      <Form />
     </div>
-    </div>
-   </>
   );
 };
 

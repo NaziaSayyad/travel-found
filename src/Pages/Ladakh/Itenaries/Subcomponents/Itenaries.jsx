@@ -31,7 +31,7 @@ export const Itenaries = ({data})=>{
               {item.Details.map((detail, i) => (
               
               <div key={i} className="itinerary-detail-item">
-                 <MdArrowRight size={30} color="teal" /> {/* Bullet Icon */}
+                 <MdArrowRight size={45} color="teal" /> {/* Bullet Icon */}
                  <span>{detail}</span>
                 </div>
                            

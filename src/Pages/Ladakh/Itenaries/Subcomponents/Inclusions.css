@@ -2,12 +2,14 @@
     background-color: #f5fdf4; /* Light green background */
     padding: 20px;
     border-radius: 8px;
-    width: 500px;
+    width: 700px;
     /* border: 5px solid brown; */
     margin-left: 5%;
     margin-top: 4%;
   }
-  
+  .logo-category{
+    width: 30px;
+  }
   .itinerar-heading {
     /* color: #2e7d32; Green color */
     font-weight: bold;
@@ -29,9 +31,44 @@
     font-size: 16px;
     margin: 8px 0;
     color: #333;
-  }
-  .inclusion-category{
-    text-align: left;
-    margin-left: 5%;
     
   }
+  .inclusion-category {
+    margin-bottom: 16px;
+  }
+  
+  .inclusion-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  
+  .sub-list {
+    padding-left: 28px; /* Indent to match text, not the icon */
+    margin-top: 4px;
+    padding-left: 20px;
+    margin-top: 4px;
+    list-style-type: disc !important; /* Bullet */
+  }
+  
+  .inclusions-item {
+    display: list-item !important; /* Force list behavior */
+    list-style: disc inside !important; /* Bullet inside */
+    margin: 4px 50px;
+    font-weight: normal;
+  }
+  
+  /* .inclusion-category span{
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 500px;
+  }
+  .inclusions-item {
+    margin: 4px 0;
+    font-weight: normal;
+  } */

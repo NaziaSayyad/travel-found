@@ -30,9 +30,19 @@
 }
 .trip-def {
   display: flex;
-  margin-left: 2%;
-  gap: 4px
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 5%;
 }
+
+.trip-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  color: white; /* Optional: adjust text color */
+}
+
 .trip-details {
   position: absolute;
   bottom: 0;

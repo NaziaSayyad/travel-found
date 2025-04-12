@@ -83,8 +83,15 @@
 
 /* Individual detail item styling */
 .itinerary-detail-item {
-    margin-bottom: 5px;
+    display: flex;
+    align-items: center; /* Aligns text with icon */
+    margin-bottom: 10px;
 }
+.itinerary-detail-item span {
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
 .itinerary-detail-item::before {
     /* content: "➤"; Change to ➜ if you prefer */
     position: absolute;

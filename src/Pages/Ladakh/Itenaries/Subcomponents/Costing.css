@@ -1,84 +1,64 @@
-.dates-costing-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 20px;
-    justify-content: space-between;
-  }
-  
-  .dates-section, .costing-section {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    flex: 1 1 45%;
-    min-width: 300px;
-  }
-  
-  .month-header {
-    background-color: #d5f4ff;
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .date-option {
-    background: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 8px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .open-tag {
-    color: green;
-    margin-left: 10px;
-  }
-  
-  .price {
-    font-weight: bold;
-    color: #0077b6;
-  }
-  
-  .costing-section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  
-  .costing-section th,
-  .costing-section td {
-    text-align: left;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .book-now {
+
+.costing-table-container,
+.batch-table-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.costing-heading,
+.batch-heading {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.batch-table,
+.costing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.batch-table th,
+.batch-table td,
+.costing-table th,
+.costing-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.batch-table th,
+.costing-table th {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+.batch-table tr:nth-child(even),
+.costing-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Book now button */
+
+.book-now-container {
+    margin-top: 20px;
     text-align: center;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
   }
   
-  .book-now strong {
-    display: block;
-    font-size: 24px;
-    margin: 5px 0;
-  }
-  
-  .book-now button {
-    background: #00b4d8;
-    color: #fff;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 30px;
+  .book-now-btn {
+    background-color: #00b2ff;
+    color: white;
+    padding: 12px 30px;
     font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  .book-now button:hover {
-    background: #0077b6;
+  .book-now-btn:hover {
+    background-color: #0091d4;
   }
   
