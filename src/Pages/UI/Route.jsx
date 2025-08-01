@@ -2,16 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const TripRoute = ({ locations ,destination}) => {
-  const maxVisible = 6; // Show only 4 locations initially
+  const maxVisible = 12; // Show only 4 locations initially
 const getdata = () =>{
 
 }
   return (
-    <p style={{ color: "yellow" }}>
+    <p style={{ color: "skyblue" , fontSize : '12px', fontWeight : 'bold' , 
+    textAlign : 'center',
+    marginRight : '5px' }}>
       {locations.slice(0, maxVisible).join(" • ")}
       {locations.length > maxVisible && (
         <Link to={`/ladakh/${destination}`} style={{ fontWeight: "bold", color: "#FFD700", textDecoration: "none" }}>
           {" "}
+        
           +{locations.length - maxVisible} More
         </Link>
       )}

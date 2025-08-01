@@ -1,0 +1,128 @@
+.costing-form-container {
+  /* max-width: 500px; */
+  width: 450px;
+  margin-top: 25px;
+  margin-left: 85px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.costing-form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+.input-form{
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+.costing-form-container label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  text-align: left;
+}
+.input-costing{
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.input-costing:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.costing-btn{
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.costing-btn:hover {
+    background-color: #45a049;
+}
+
+.booking-container {
+  display: flex;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+  padding: 30px;
+ }
+.summary-section {
+  flex: 1;
+  /* min-width: 300px; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-right: 150px;
+}
+.tour-card img{
+  width: 250px;
+  margin-right: 200px;
+}
+.tour-card {
+  background-color: #fff;
+  padding: 20px;
+  border-left: 6px solid #00bcd4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+  position: relative;
+  margin-top: 30px;
+  width : '150px';
+  
+}
+
+.tour-card h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  /* margin-top: 15px; */
+}
+
+.tour-card p {
+  margin: 0;
+  color: #333;
+}
+.duration-box {
+  position: absolute;
+  top: 2px;
+  right: 20px;
+  background-color: #00bcd4;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.price-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.price-box h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #00bcd4;
+}
+
+.price-box span {
+  font-size: 14px;
+  color: #666;
+}

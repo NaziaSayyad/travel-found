@@ -19,14 +19,15 @@
   }
   
   .trip-content {
-    text-align: left;
+    /* text-align: center; */
     max-width: 600px;
+    margin-left: 5%;
   }
   
   .trip-content h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
   }
   
   .trip-content p {

@@ -1,0 +1,119 @@
+.domestic-dropdown-wrapper {
+  position: relative;
+}
+
+/* .dropdown-link {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+} */
+
+.dropdown-menu {
+ display: none; 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  /* background: black; */
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  min-width: 600px;
+  color: #003366;
+}
+
+.domestic-dropdown-wrapper:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-search {
+  width: 90%;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4,200px);
+  gap: 10px;
+}
+
+.domestic-dropdown-item {
+  position: relative;
+  padding: 2px;
+  /* background: #f9f9f9; */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: #003366;
+}
+.state-span :hover{
+   background-color: #00BFFF;
+  color: white;
+ 
+}
+.domestic-dropdown-item:hover {
+  background:#003366;
+  background-color: #00BFFF;
+  color: white;
+  /* background-color: teal; */
+  
+    
+}
+
+.state-name a {
+  font-weight: 600;
+  padding: 3px 4px;
+  /* color: white; */
+ font-size: 14px;
+ text-decoration: none;
+ color: #003366;
+}
+.state-name :hover{
+  color: white;
+  background-color: #00BFFF;
+}
+.state-name a :hover{
+  color: white;
+  text-decoration: none;
+  background-color: #00BFFF;
+}
+
+
+.city-submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  font-weight: bold;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  display: none;
+  white-space: nowrap;
+  min-width: 150px;
+  z-index: 999;
+  border-radius: 6px;
+  color: #003366;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.domestic-dropdown-item:hover .city-submenu {
+  display: block;
+}
+
+.city-item {
+  padding: 7px 8px;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.city-item:hover {
+  /* background-color:#003366; */
+  background-color: #00BFFF;
+  color: white;
+}

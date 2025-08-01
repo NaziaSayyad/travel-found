@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './ItneariesSlideshow.css';
 import { FaDownload } from 'react-icons/fa';
 import Modal from './Modal';
+import { WhatsAppButton } from './WhatsappButton';
+import RequestCallback from './RequestCallback';
 
 const images = [
   'https://i.postimg.cc/j5s0Gvmq/sand-6740499.jpg',
@@ -9,15 +11,17 @@ const images = [
   'https://i.postimg.cc/htNmg4Fv/lake-6529960.jpg',
   'https://i.postimg.cc/sfkwnmLt/leh-4152872.jpg',
 ];
-const pdfUrl = 'https://www.example.com/sample.pdf';
 
-export default function ItenarySlideshow() {
+export default function ItenarySlideshow({data}) {
+  console.log(data,"itneary-slideshow");
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-
+  const pdfUrl = data?.pdf_link;  
+   
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(false);
@@ -62,6 +66,14 @@ export default function ItenarySlideshow() {
         phone={phone}
         setPhone={setPhone}
       />
+      <button className='whatsapp-btn'>
+            <WhatsAppButton /> WhatsApp Us 
+      </button>
+      <button className='requestcallback-btn'>
+           <RequestCallback /> 
+          <span>  Request A call back  </span>
+      </button>
+      
     </div>
   );
 }
