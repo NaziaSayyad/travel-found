@@ -8,6 +8,7 @@ import { OtherInfo } from "../Subcomponents/OtherInfo";
 import { Route } from "../Subcomponents/Route";
 import { CostingPage } from "../Subcomponents/Costing";
 import { BatchesPage } from "../Subcomponents/Batches";
+import InfoCard from "./InfoCard";
 
 export const TabNavigation = ({
   Name,
@@ -20,6 +21,7 @@ export const TabNavigation = ({
   batches,
   start,
   end,
+  nights
 }) => {
   const tabs = [
     { Name: "Overview", id: "overview", ref: useRef(null) },
@@ -27,51 +29,60 @@ export const TabNavigation = ({
     { Name: "Inclusions", id: "inclusions", ref: useRef(null) },
     { Name: "Exclusions", id: "exclusions", ref: useRef(null) },
     { Name: "Other Info", id: "other-info", ref: useRef(null) },
-    { Name: "Batches", id: "batches", ref: useRef(null) },
-    { Name: "Costing", id: "costing", ref: useRef(null) },
-  ];
+   ];
 
   const [activeTab, setActiveTab] = useState("overview");
 
- const handleTabClick = (id) => {
-  setActiveTab(id);
-  const element = document.getElementById(id);
-  
-  if (element) {
-    const navHeight = 100; // Height of your main navigation bar
-    const tabHeight = 70;  // Height of your tab container
-    const totalOffset = navHeight + tabHeight;
-    
-    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-    window.scrollTo({
-      top: elementPosition - totalOffset,
-      behavior: 'smooth'
-    });
-  }
-};
+  const [isFixed, setIsFixed] = useState(false);
+  const infoCardRef = useRef(null);
 
+  const handleTabClick = (id) => {
+    setActiveTab(id);
+    setIsFixed(true);
+    const element = document.getElementById(id);
+    
+    if (element) {
+      const navHeight = 100;
+      const tabHeight = 70;
+      const infoCardHeight = infoCardRef.current ? infoCardRef.current.offsetHeight : 0;
+      const totalOffset = navHeight + tabHeight + infoCardHeight;
+      
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementPosition - totalOffset,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <>
-      <div className="tab-container">
-        {tabs.map((tab) => (
+        <div className="tab-container">
+        {tabs?.map((tab) => (
           <div
             key={tab.id}
             className={`tab ${activeTab === tab.id ? "active" : ""}`}
             onClick={() => handleTabClick(tab.id)}
           >
-            {tab.Name}
+            {tab?.Name}
           </div>
         ))}
         <div
           className="underline"
           style={{
-            left: `${(tabs.findIndex((tab) => tab.id === activeTab) / tabs.length) * 100}%`,
+            left: `${(tabs?.findIndex((tab) => tab.id === activeTab) / tabs.length) * 100}%`,
             width: `${100 / tabs.length}%`,
           }}
         ></div>
       </div>
-
+      <div 
+        ref={infoCardRef}
+        className={`info-card-container ${isFixed ? 'fixed' : ''}`}
+        style={{ marginTop: '50px' }}
+      >
+        <InfoCard pick={start} Drop={end} Nights={nights} />
+      </div>
+     
       <div>
         <div id="overview" ref={tabs[0].ref} className="section">
           <h2 style={{ marginLeft: "5%" }}>Overview</h2>
@@ -97,13 +108,13 @@ export const TabNavigation = ({
           <OtherInfo />
         </div>
 
-        <div id="batches" ref={tabs[5].ref} className="section">
+        {/* <div id="batches" ref={tabs[5].ref} className="section">
           <BatchesPage data={batches} start={start} end={end} />
         </div>
 
         <div id="costing" ref={tabs[6].ref} className="section">
           <CostingPage data={costing} />
-        </div>
+        </div> */}
       </div>
     </>
   );

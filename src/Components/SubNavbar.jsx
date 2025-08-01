@@ -7,10 +7,19 @@ export const SubNavbar = () => {
   return (
     <div className="subnavbar">
       {/* Left: Logo */}
-      <div className="logo">
-        <img src="/logo.png" alt="Travel Fond" />
-        {/* <p>Traveler Found</p> */}
-      </div>
+      {/* Logo */}
+           <Link to='/'> 
+           <div className="logo-video-container">
+           <video
+             className="logo-video"
+             src="/logo.mp4"
+             autoPlay
+             loop
+             muted
+             playsInline
+           />
+         </div>
+           </Link>
 
       {/* Center: Search Bar */}
       <div className="search-bar">
@@ -28,7 +37,7 @@ export const SubNavbar = () => {
           </Link>
           <div className="dropdown-content">
             <Link to="/ladakh" className="dropdown-item">Ladakh</Link>
-            <Link to="/kashmir" className="dropdown-item">Kashmir</Link>
+            <Link to="/kashmir" className="dropdown-item">Himachal</Link>
             <Link to= '/spiti' className="dropdown-item">Spiti</Link>
           </div>
         </div>

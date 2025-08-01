@@ -1,7 +1,10 @@
+import { useLocation } from "react-router-dom";
 import "./Batches.css";
+import { useEffect } from "react";
 
 export const BatchesPage = ({data,start,end}) =>{
     console.log(data, "batch");
+   
     
     return(
         <>

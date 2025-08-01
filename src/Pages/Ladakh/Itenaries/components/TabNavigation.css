@@ -1,6 +1,6 @@
 .tab-container {
     position: sticky;
-    top: 100px; /* Adjust this value to match your main navigation height */
+    top: 117.5px; /* Adjust this value to match your main navigation height */
     z-index: 1000;
     background-color: white;
     padding: 10px 0;
@@ -40,5 +40,17 @@
     margin-left: 0;
     transition: left 0.3s ease-in-out;
   }
+
+.info-card-container {
+  position: relative;
+  z-index: 98;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.info-card-container.fixed {
+  position: sticky;
+  top: 175px; /* Adjust based on your navbar + tab heights */
+}
   
  

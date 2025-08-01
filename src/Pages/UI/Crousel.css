@@ -1,6 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .carousel-container {
   width: 100%;
-  position: relative;
+  max-width: 100vw; /* prevent overflow */
+ position: relative;
+  margin: 0 auto;
 }
 
 .carousel-slide {
@@ -36,13 +44,17 @@
 .carousel-content p {
   font-size: 18px;
   margin-bottom: 10px;
-  color: white;
+  color: rgb(12, 87, 4);
+  font-weight: bold;
 }
 
-.price {
-  font-size: 20px;
+.carousel-content .Price {
+  color: #FFD700 !important;
   font-weight: bold;
-  color: yellow;
+  font-size: 28px;
+  display: block;
+  margin: 15px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .callback-btn {

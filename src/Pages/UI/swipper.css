@@ -1,46 +1,47 @@
 .travel-carousel {
   position: relative;
-  width: 90%;
-  margin: auto;
-  overflow: hidden;
-  padding: 20px 0;
+  width: 100%;
+  max-width: 1380px;
+  /* margin: 5px 70px; */
+  padding: 0 20px;
+  perspective: 1000px;
+  margin-left: 55px;
+  /* height: fit-content; */
+  
 }
-
-.swiper {
-  padding-bottom: 40px;
-}
-
+/* ✅ Modified width & height here */
 .trip-card {
-  background: #fff;
-  border-radius: 10px;
+  /* width: 30px; */
+  height: 480px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
   cursor: pointer;
+  position: relative;
 }
 
-.trip-card:hover {
-  /* transform: scale(1.05); */
+.trip-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 60%; /* Adjusted to fit taller card */
+  overflow: hidden;
 }
-
 .trip-image {
   width: 100%;
   height: 500px;
   object-fit: cover;
+  display: block;
 }
-.trip-def {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 5%;
-}
-
-.trip-item {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 16px;
-  color: white; /* Optional: adjust text color */
+.vignette-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(to top, black, transparent);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .trip-details {
@@ -48,93 +49,147 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  /* padding: 20px; */
+  z-index: 2;
+  background: linear-gradient(to top, black, transparent);
   color: white;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);  /* ✅ Gradient effect */
+  padding: 10px 15px;
   box-sizing: border-box;
-  text-align: left;
-  /* display: flex; */
-  
 }
-
 .trip-details h3 {
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
   margin-bottom: 10px;
-  color: white;
-  margin-left: 15px;
+  color: #fff;
 }
 
-.price {
-  font-size: 15px;
+.trip-def {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+  margin-bottom: 8px;
+}
+.trip-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
   color: white;
-  font-weight: bold;
-  margin-left: 15px;
+}
+.trip-item-location {
+  margin-right: 10px;
+}
+
+.custom-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 2px 10px; */
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 12px;
+  padding-right: 6px;
+  margin-top: 8px;
+}
+.price {
+  /* border: 1px solid whitesmoke; */
+  /* border-radius: 30px; */
+  /* font-size: 12px;
+  align-items: center;
+  font-weight: 300; */
+  display: flex;
+  /* padding-top: 0px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  padding-left: 1px; */
+  /* padding: 2px 12px 2px 4px; */
+}
+.price-icon {
+  color: skyblue;
+  font-size: 14px;
+  margin-right: 5px;
+  align-items: center;
+  margin-top: 2px;
+  /* margin-left: 2px; */
 }
 
 .old-price {
   text-decoration: line-through;
-  color:white;
-  font-size: 14px;
   margin-right: 5px;
+  font-size: 15px;
+  color: #ddd;
+ align-items: center;
 }
-.trip-details p{
-  font-size: 12px;
+.new-price {
   color: white;
-  margin-left: 15px;
+  font-size: 15px;
+    
 }
-/* Navigation Buttons */
+
+.custom-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  /* border: 1px solid whitesmoke; */
+  border-radius: 30px;
+  /* padding: 4px 12px; */
+  /* color: skyblue; */
+  color: white;
+  font-size: 14px;
+}
+
+.custom {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
 .nav-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color:#21759b;
+  background-color: #21759b;
   color: white;
   border: none;
-  padding: 10px 15px;
-  font-size: 24px;
+  padding: 10px 14px;
+  font-size: 20px;
   cursor: pointer;
   z-index: 10;
   border-radius: 50%;
-  transition: background 0.3s;
 }
-
 .nav-button.left {
-  left: -1px;
+  left: -10px;
 }
-
 .nav-button.right {
-  right: -1px;
+  right: -10px;
 }
-
 .nav-button:hover {
-   background-color:#21759b;
+  background-color: #145a86;
+}
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .swiper-slide {
-    width: 90%;
+  .trip-image-wrapper {
+    height: 250px;
   }
-  .nav-button {
-    padding: 8px 12px;
-    font-size: 20px;
+  .trip-details h3 {
+    font-size: 16px;
   }
-  .trip-details {
-    padding: 10px;
-    font-size: 14px;
+  .trip-item,
+  .custom,
+  .price {
+    font-size: 12px;
   }
-
-  .nav-button {
-    font-size: 18px;
-    padding: 8px 12px;
+  .custom-div {
+    flex-direction: column;
+    gap: 5px;
   }
-
-  .left {
-    left: -20px;
+  .trip-def {
+    flex-direction: column;
+    gap: 4px;
   }
-
-  .right {
-    right: -20px;
-  }
-
 }

@@ -1,0 +1,32 @@
+.mobile-container {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 10px 12px; */
+  background-color:#00BFFF;
+  color: #fff;
+}
+
+.logo {
+  width: 34px;
+}
+
+.phone-number {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 18px;
+  margin-left: 10px;
+}

@@ -13,7 +13,7 @@ export const Inclusions = ({ data }) => {
 
           <li key={el.id} className="inclusion-category">
             <div className="inclusion-heading">
-              <MdArrowRight size={20} color="teal" />
+              {/* <MdArrowRight size={20} color="teal" /> */}
               <span> <img src={el.img} alt="logo" className='logo-category' /></span>
               <span>{el.Name}</span>
             </div>
@@ -24,6 +24,10 @@ export const Inclusions = ({ data }) => {
                  {detail}
                </li>
               ))}
+              <p>
+               {/* style={{ letterSpacing: '1px' }}> */}
+                 {el.meals?.join("    ")} 
+              </p>
             </ul>
           </li>
 

@@ -1,0 +1,151 @@
+.mobile-container {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background-color:#00BFFF;
+  color: #fff;
+}
+
+.logo {
+  width: 34px;
+}
+
+.phone-number {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+/* Hero */
+.hero-section {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  right: 10%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-overlay h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.highlight {
+  background-color: yellow;
+  color: #222;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 6px;
+  margin-top: 4px;
+}
+
+/* Reviews */
+.reviews {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.review{
+    display: flex;
+}
+.review p {
+  font-size: 13px;
+  margin: 1;
+  margin-left: 3px;
+}
+.star-icon{
+   color: #FFD700;
+  font-size: '15px';
+   margin : 1;
+   margin-top: 11px;
+   margin-left: 5px;
+}
+
+/* Destinations */
+.destinations {
+  padding: 15px 10px;
+}
+
+.destinations h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.destination-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.destination-card {
+  width: 22%;
+  text-align: center;
+  font-size: 12px;
+}
+
+.destination-card img {
+  width: 100%;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 4px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+  z-index: 99;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  color: #444;
+}
+
+.nav-item svg {
+  font-size: 18px;
+  margin-bottom: 3px;
+}

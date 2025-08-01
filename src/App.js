@@ -14,28 +14,49 @@ import { Spiti } from './Pages/Spiti/Spiti';
 import { Test } from './Pages/Test';
 import { Shrinagar_Manali } from './Pages/Ladakh/Itenaries/S_M';
 import { RegistrationForm } from './Pages/Ladakh/Itenaries/Subcomponents/RegistrationForm';
+import { useEffect } from 'react';
+import { useLocation, BrowserRouter as Router } from 'react-router-dom';
+import { SpitiItenary } from './Pages/Spiti/SpitiItenaries';
+import DomesticTrips from './Pages/DomesticTrips/DomesticTrips';
+import { InternationalTrips } from './Pages/InternationalTrips/InternationalTrips';
+import { useIsMobile } from './Responsive-component/UseMobile';
+import MobileLandingPage from './MobileVersion/Components/Dashboard/MobileDashboard';
+import { MobileNavbar } from './MobileVersion/Components/Navbar/MobileNavbar';
 
 function App() {
+  const isMobile = useIsMobile();
+  function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  }, [pathname]);
+
+  return null;
+}
+
   return (
     <div className="App">
-      {/* <AllRoutes /> */}
-      <SubNavbar />
-      <Navbar />
-      <Routes>
-    <Route path="/" element={<Dashboard />} />
-    <Route path="/ladakh" element ={<Ladakh />} />
-    
-    <Route path="/about" element ={<About />} />
-    <Route path="/contact" element ={<Contact />}  />
-    <Route  path="/spiti" element ={<Spiti />} />
-    <Route path="/test" element={<Test />}/>
-   <Route path='/ladakh/:id' element={<Shrinagar_Manali />} />
-   <Route path='/book-now' element = {<RegistrationForm />}/>
-  </Routes>
-  
-   <Footer />
 
-   {/* <SubFooter /> */}
+    {isMobile ? <MobileNavbar /> :  <Navbar />}
+      <Routes>
+          <Route path="/" element={isMobile ? <MobileLandingPage /> : <Dashboard />} />
+          <Route path="/ladakh" element ={<Ladakh />} />
+         <Route path="/about" element ={<About />} />
+          <Route path="/contact" element ={<Contact />}  />
+          <Route  path="/spiti" element ={<Spiti />} />
+          <Route path="/test" element={<Test />}/>
+        <Route path='/ladakh/:id' element={<Shrinagar_Manali />} />
+        <Route path='/spiti/:id' element={<SpitiItenary />} />
+        <Route path='/book-now' element = {<RegistrationForm />}/>
+        <Route path='/domestic/:id' element={<DomesticTrips />}  />
+        <Route path='/international/:id' element={<InternationalTrips />}/>
+      </Routes>
+   <Footer />
   </div>
   );
 }

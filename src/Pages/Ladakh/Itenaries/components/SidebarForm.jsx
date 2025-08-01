@@ -5,6 +5,7 @@ import { Form } from "./Form";
 import { useNavigate } from "react-router-dom";
 import { BatchesPage } from "../Subcomponents/Batches";
 import { CostingPage } from "../Subcomponents/Costing";
+import QueryForm from "./QueryForm";
 
 const SidebarForm = ({ costing, batches, data}) => {
   const [showCosting, setShowCosting] = useState(false);
@@ -46,14 +47,34 @@ const SidebarForm = ({ costing, batches, data}) => {
         {/* Batch Section */}
         {showCosting && (
           <>
-            <BatchesPage data={batches}  start={data.start} end ={data.End}  />
+           {/* <BatchesPage data={batches}  start={data.start} end ={data.End}  />
             <CostingPage data={costing} />
-
-            <div className="book-now-container">
+           <div className="book-now-container">
               <button className="book-now-btn" onClick={handleBookNow}>
                 Book Now
               </button>
             </div>
+            <QueryForm /> */}
+            <div>
+            {/* <QueryForm /> */}
+            <div className="book-now-container">
+              <button className="book-now-btn" onClick={handleBookNow}>
+                Customize Your Trip 
+              </button>
+            </div>
+      {batches && (
+        <>
+         <BatchesPage data={batches}  start={data.start} end ={data.End} />
+         <CostingPage data={costing} />
+         <div className="book-now-container">
+              <button className="book-now-btn" onClick={handleBookNow}>
+                Book Now
+              </button>
+            </div>
+        </>
+      )}
+            </div>
+          
           </>
         )}
       </div>

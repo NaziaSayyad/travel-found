@@ -1,79 +1,76 @@
 .subnavbar {
-    display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
-    gap : 120px;
-    padding: 10px 20px;
-    background-color: white;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Ensure it's on top */
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #003366;
+
+  .logo-video-container {
+    height: 40px; /* Try 30px or 50px as needed */
+    width: auto;
+    overflow: hidden;
   }
   
-  .logo img {
-    height: 40px;
-    margin-right: 8px;
+  .logo-video {
+    height: 60px;
+    width: 90px;
+    margin-left: 15px;
+    object-fit: contain;
+    display: block;
   }
   
-  .search-bar {
-    display: flex;
-    align-items: center;
-    border: 2px solid #00aaff;
-    border-radius: 20px;
-    padding: 5px;
-  }
-  
-  .search-bar input {
-    border: none;
-    outline: none;
-    padding: 5px;
-    width: 200px;
-  }
-  
-  .search-icon {
-    color: #00aaff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .menu-links {
-    display: flex;
-    gap: 25px;
-  }
-  
-  .menu-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  .menu-links a:hover {
-    color: #21759b;
-  }
-  .menu-links::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 3px;  /* Thickness of the underline */
-    background-color: #00aaff; /* Color of the underline */
-    /* transition: width 0.3s ease-in-out; */
-  }
-  /* Dropdown Styles */
+
+
+/*  */
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 2px solid #00aaff;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+
+.search-icon {
+  color: #00aaff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Menu links */
+.menu-links {
+  display: flex;
+  gap: 25px;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.menu-links a:hover {
+  color: #21759b;
+}
+
+/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -86,77 +83,48 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   top: 100%;
-  /* left: 50; */
-  right: 50;
-  text-align: center; 
-  transform: translateX(30%); 
-  /* Centering the dropdown */
+  transform: translateX(30%);
   z-index: 10;
 }
-/* Dropdown Items with Hover Effect */
+
 .dropdown-item {
   display: block;
   padding: 10px;
-  color:#21759b; /* Text color */
+  color: #21759b;
   text-decoration: none;
   font-weight: bold;
-  /* border: 2px solid #00a3c8; Border color */
-  /* background-color: #f8fdff; Light background */
-  border-radius: 8px; /* Rounded corners */
-  /* text-align: center; */
-  /* transition: all 0.3s ease; */
+  border-radius: 8px;
   margin: 5px;
-  width: 80%; 
+  width: 80%;
   font-size: 15px;
 }
 
 .dropdown-item:hover {
-  /* background-color: #00a3c8; Background color on hover */
-  color: white; /* Text color on hover */
-  border: 2px solid #21759b; /* Border color */
- 
+  color: white;
+  background-color: #21759b;
 }
-/* Show dropdown on hover */
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-} */
-
+/* Contact */
 .contact-btn {
-    display: flex;
-    align-items: center;
-    border: 2px solid #00aaff;
-    border-radius: 20px;
-    padding: 5px 12px;
-    color: #00aaff;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .contact-btn {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 8px 15px;
-    /* border: 5px solid brown; */
-    border-radius: 5px solid brown;
-    /* border-radius: 5px solid blue; */
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .phone-icon {
-    color: white;
-  }
-  .phone-icon {
-    margin-right: 5px;
-    color:#21759b;
-  }
-  .number{
-    font-weight: bold;
-  }
-  
+  display: flex;
+  align-items: center;
+  border: 2px solid #00aaff;
+  border-radius: 20px;
+  padding: 8px 15px;
+  color: #00aaff;
+  font-weight: bold;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.phone-icon {
+  color: #21759b;
+}
+
+.number {
+  font-weight: bold;
+}
