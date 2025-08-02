@@ -4,7 +4,7 @@ import { FaSearch, FaBars, FaHome, FaCompass, FaPhone, FaStar } from "react-icon
 import { FcGoogle } from 'react-icons/fc'; // colorful Google icon
 import { SiTripadvisor } from 'react-icons/si';
 import { FaFacebook } from 'react-icons/fa';
-import { DestinationSlideshow } from "../SlideShow/DestinationSlideshow";
+import { DestinationSlideShow } from "../SlideShow/DestinationSlideshow";
 
 const destinations = [
   {name : "Ladakh",  img : "https://i.ibb.co/FLVKvs0B/1-15.jpg"},
@@ -88,7 +88,7 @@ const MobileLandingPage = () => {
              <h2> Sliders </h2>
               <h2> Sliders </h2>
                <h2> Sliders </h2>
-               <DestinationSlideshow />
+               <DestinationSlideShow />
 
           </div>
       {/* Bottom Nav */}
