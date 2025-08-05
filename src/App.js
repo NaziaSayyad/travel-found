@@ -22,6 +22,7 @@ import { InternationalTrips } from './Pages/InternationalTrips/InternationalTrip
 import { useIsMobile } from './Responsive-component/UseMobile';
 import MobileLandingPage from './MobileVersion/Components/Dashboard/MobileDashboard';
 import { MobileNavbar } from './MobileVersion/Components/Navbar/MobileNavbar';
+import { MobileFooter } from './MobileVersion/Components/Footer/MobileFooter';
 
 function App() {
   const isMobile = useIsMobile();
@@ -56,7 +57,8 @@ function App() {
         <Route path='/domestic/:id' element={<DomesticTrips />}  />
         <Route path='/international/:id' element={<InternationalTrips />}/>
       </Routes>
-   <Footer />
+       {isMobile ? <MobileFooter /> :  <Footer />}
+    
   </div>
   );
 }

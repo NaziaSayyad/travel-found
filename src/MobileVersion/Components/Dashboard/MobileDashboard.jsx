@@ -1,10 +1,12 @@
 import React from "react";
 import "./MobileDashboard.css";
-import { FaSearch, FaBars, FaHome, FaCompass, FaPhone, FaStar } from "react-icons/fa";
+import {FaStar } from "react-icons/fa";
 import { FcGoogle } from 'react-icons/fc'; // colorful Google icon
 import { SiTripadvisor } from 'react-icons/si';
 import { FaFacebook } from 'react-icons/fa';
-import { DestinationSlideShow } from "../SlideShow/DestinationSlideshow";
+import { MobileFooter } from "../Footer/MobileFooter";
+import { DestinationSlideShow } from "../SlideShow/Destination-SlideShow/DestinationSlideshow";
+import { HorizontalSlider } from "../SlideShow/Horizontal-SlideShow/HorizontalSlider";
 
 const destinations = [
   {name : "Ladakh",  img : "https://i.ibb.co/FLVKvs0B/1-15.jpg"},
@@ -16,23 +18,7 @@ const destinations = [
 const MobileLandingPage = () => {
   return (
     <div className="mobile-container">
-      {/* Top Header */}
-      {/* <div className="top-header">
-        <img src="/logo.png" alt="logo" className="logo" />
-        <span className="phone-number">+91-9090403075</span>
-        <FaSearch className="icon" />
-        <FaBars className="icon" />
-      </div> */}
-
-      {/* Hero Banner */}
-      {/* <div className="hero-section">
-        <img src="/banner.jpg" alt="travel banner" className="hero-image" />
-        <div className="hero-overlay">
-          <h2>Global Community of Travelers</h2>
-          <h1> Background Vedio </h1>
-          <p className="highlight">Sprl</p>
-        </div>
-      </div> */}
+     
       <div className="banner">
             <h1> Vedio In Background </h1>
       </div>
@@ -83,34 +69,29 @@ const MobileLandingPage = () => {
         </div>
       </div>
           <div>
+            <HorizontalSlider />
             <h2> Sliders </h2>
              <h2> Sliders </h2> 
              <h2> Sliders </h2>
               <h2> Sliders </h2>
                <h2> Sliders </h2>
                <DestinationSlideShow />
-
+        <h4> Slider</h4>
+        <h4> Slider </h4>
+        <h4> Slider </h4>
+        <h4> Slider </h4>
+        <h4> Slider </h4>
+        <h4> Slider </h4>
+        <h4> Slider </h4>
+        <h4> Slider </h4>
+        <h4> Slider </h4>
+        <h4> Slider </h4>
+        <h4> Slider </h4>
+        
           </div>
-      {/* Bottom Nav */}
-      <div className="bottom-nav">
-        <div className="nav-item">
-          <FaHome />
-          <span>Home</span>
-        </div>
-        <div className="nav-item">
-          <FaCompass />
-          <span>Explore</span>
-        </div>
-        <div className="nav-item">
-          <FaSearch />
-          <span>Search</span>
-        </div>
-        <div className="nav-item">
-          <FaPhone />
-          <span>Contact</span>
-        </div>
-      </div>
+      
     </div>
+
   );
 };
 

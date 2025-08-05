@@ -19,8 +19,16 @@ const Navbar = () => {
    <>
    <SubNavbar /> 
     <nav className="navbar">
+      <div>
+         <Link to='/'>
+      <img 
+          className="logo-img"
+          src="/travelfond-logo-image.png"
+          />
+      </Link>
+      </div>
       <div className="nav-container">
-
+          
         {/* Navigation Links
         <div className="nav-links">
         Domestic DropDown  */}

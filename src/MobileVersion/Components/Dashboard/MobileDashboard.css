@@ -124,28 +124,3 @@
   object-fit: cover;
   margin-bottom: 4px;
 }
-
-/* Bottom Navigation */
-.bottom-nav {
-  position: sticky;
-  bottom: 0;
-  background: #fff;
-  display: flex;
-  justify-content: space-around;
-  border-top: 1px solid #ddd;
-  padding: 10px 0;
-  z-index: 99;
-}
-
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 11px;
-  color: #444;
-}
-
-.nav-item svg {
-  font-size: 18px;
-  margin-bottom: 3px;
-}

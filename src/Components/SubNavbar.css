@@ -10,17 +10,18 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  justify-content: space-around;
 }
 
   .logo-video-container {
-    height: 40px; /* Try 30px or 50px as needed */
+    height: 60px; /* Try 30px or 50px as needed */
     width: auto;
     overflow: hidden;
   }
   
   .logo-video {
-    height: 60px;
-    width: 90px;
+    height: 100px;
+    width: 150px;
     margin-left: 15px;
     object-fit: contain;
     display: block;

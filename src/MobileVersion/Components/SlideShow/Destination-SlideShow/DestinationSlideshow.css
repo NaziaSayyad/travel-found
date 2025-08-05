@@ -1,4 +1,4 @@
-.wanderon-swiper-container {
+.swiper-container {
   max-width: 260px;
   margin: 0 auto;
   padding-top: 40px;
@@ -14,19 +14,19 @@
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
-  overflow: hidden;
+  border-radius: 10px !important; /* Remove curve */
+  /* overflow: hidden; */
   position: relative;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   color: inherit;
-  background: #000;
+
 }
 
 .card-slide img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .card-content {

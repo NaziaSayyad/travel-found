@@ -8,18 +8,18 @@ export const SubNavbar = () => {
     <div className="subnavbar">
       {/* Left: Logo */}
       {/* Logo */}
-           <Link to='/'> 
+           {/* <Link to='/'> 
            <div className="logo-video-container">
            <video
              className="logo-video"
-             src="/logo.mp4"
+             src="/travel-fond-logo.mp4"
              autoPlay
              loop
              muted
              playsInline
            />
          </div>
-           </Link>
+           </Link> */}
 
       {/* Center: Search Bar */}
       <div className="search-bar">
