@@ -1,0 +1,42 @@
+
+/* Mobile styles */
+@media (max-width: 500px) {
+  .trip-image-wrapper {
+    /* height: 180px; */
+position: relative;
+  width: 100%;
+  height: 60%; /* Adjusted to fit taller card */
+  overflow: hidden;
+  }
+
+  .trip-details h3 {
+    font-size: 16px;
+  }
+  .trip-card{
+    /* max-width: 400px; */
+  }
+  .trip-item {
+    font-size: 12px;
+  }
+
+  .old-price,
+  .new-price {
+    font-size: 12px;
+  }
+
+  .nav-button {
+    font-size: 18px;
+    padding: 6px;
+  }
+  .vignette-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(to top, black, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+}

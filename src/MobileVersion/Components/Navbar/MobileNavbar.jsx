@@ -1,6 +1,7 @@
 import { FaBars, FaSearch } from "react-icons/fa"
 import "./MobileNavbar.css";
 import { Link } from "react-router-dom";
+import { SideDrawer } from "../../Sub-Components/SideDrawer/SideDrawer";
 
 export const MobileNavbar = () => {
 
@@ -27,7 +28,8 @@ export const MobileNavbar = () => {
            </Link>
            <span className="phone-number"> +91-9899275976</span>
                 <FaSearch className="nav-icon" />
-                <FaBars className="nav-icon" />
+                {/* <FaBars className="nav-icon" /> */}
+                <SideDrawer />
             </div> 
             </div>
         </>

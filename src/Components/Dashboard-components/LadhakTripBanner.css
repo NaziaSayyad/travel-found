@@ -1,64 +1,119 @@
 .international-trips {
-    width: 1200px;
-    text-align: center;
-    background-color: #f9f9f9;
-    padding: 20px 10px;
-    margin-left: 10%;
+  max-width: 1200px;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px 10px;
+  margin: 0 auto;
+}
 
-  }
+.trip-banner {
+  background: url("https://i.postimg.cc/j5s0Gvmq/sand-6740499.jpg") no-repeat center center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+.trip-content {
+  max-width: 600px;
+  margin-left: 5%;
+}
+
+.trip-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.trip-content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.explore-btn {
+  background-color: #ffd700;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.trip-swiper {
+  margin-top: -30px; 
+  /* Pull it up into the banner area */
+  /* padding: 0 30px; */
+  /* position: relative; */
+  /* z-index: 10; */
+}
+
+
+.ladakh-trip-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.ladakh-trip-card {
+  position: relative;
+  display: block;
+  width: 250px;
+  height: 200px; /* fixed height */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.trip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.trip-card:hover .trip-img {
+  transform: scale(1.05);
+}
+
+.trip-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+.trip-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.trip-info p {
+  font-size: 14px;
+  margin: 2px 0 0;
   
-  .trip-banner {
-    background: url("https://i.postimg.cc/j5s0Gvmq/sand-6740499.jpg") no-repeat center center/cover;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-  }
-  
-  .trip-content {
-    /* text-align: center; */
-    max-width: 600px;
-    margin-left: 5%;
-  }
-  
-  .trip-content h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .trip-content p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-  }
-  
-  .explore-btn {
-    background-color: #ffd700;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-  }
-  
-  .trip-images {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: -50px;
-    padding: 20px;
-  }
-  
-  .trip-img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #00aaff;
+  top: 35%;
+  border: 2px solid;
+  border-radius: 50%;
+  size :15px
+}
+.swiper-button-next{
+  margin-left: 5%;
+}
+
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}

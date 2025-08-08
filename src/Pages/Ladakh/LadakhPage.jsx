@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import FilterComponent from "./Itenaries/components/FilterComponent";
 import CurvedSlideshow from "../UI/Curveslideshow";
+import { useIsMobile } from "../../Responsive-component/UseMobile";
+import { Mobile_TravelCarousel } from "../../MobileVersion/Pages/Mobile_TravelCarousel";
 
 const API = 'http://localhost:8080/ladakh';
 
@@ -31,6 +33,8 @@ const images = [
 
 export const Ladakh = () => {
   const location = useLocation();
+  const isMobile = useIsMobile();
+  
   const [data, setData] = useState([]);
   const [cityList, setCityList] = useState([]);
 
@@ -133,56 +137,82 @@ export const Ladakh = () => {
       {(!isFiltered || DMLS.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Delhi to Srinagar</h2>
-          <TravelCarousel data={DMLS} link = {'/ladakh'} />
+          {
+            isMobile ? <Mobile_TravelCarousel data={DMLS} link = {'/ladakh'} /> :
+            <TravelCarousel data={DMLS} link = {'/ladakh'} />
+          }
         </>
       )}
 
       {(!isFiltered || MLS.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Manali to Srinagar</h2>
-          <TravelCarousel data={MLS}  link = {'/ladakh'} />
+          {
+            isMobile ? <Mobile_TravelCarousel data={MLS} link = {'/ladakh'} /> :
+            <TravelCarousel data={MLS} link = {'/ladakh'} />
+          }
         </>
       )}
 
       {(!isFiltered || SLMD.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Srinagar to Delhi</h2>
-          <TravelCarousel data={SLMD} link = {'/ladakh'} />
+          
+         {
+            isMobile ? <Mobile_TravelCarousel data={SLMD} link = {'/ladakh'} /> :
+            <TravelCarousel data={SLMD} link = {'/ladakh'} />
+          }
         </>
       )}
 
       {(!isFiltered || SLM.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Srinagar to Manali</h2>
-          <TravelCarousel data={SLM}  link = {'/ladakh'} />
+          {
+            isMobile ? <Mobile_TravelCarousel data={SLM} link = {'/ladakh'} /> :
+            <TravelCarousel data={SLM} link = {'/ladakh'} />
+          }
+         
         </>
       )}
 
       {(!isFiltered || SL.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Srinagar to Leh</h2>
-          <TravelCarousel data={SL}  link = {'/ladakh'} />
+         {
+            isMobile ? <Mobile_TravelCarousel data={SL} link = {'/ladakh'} /> :
+            <TravelCarousel data={SL} link = {'/ladakh'} />
+          }
         </>
       )}
 
       {(!isFiltered || LS.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Leh to Srinagar</h2>
-          <TravelCarousel data={LS} link = {'/ladakh'} />
+          {
+            isMobile ? <Mobile_TravelCarousel data={LS} link = {'/ladakh'} /> :
+            <TravelCarousel data={LS} link = {'/ladakh'} />
+          }
         </>
       )}
 
       {(!isFiltered || LL.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Leh to Leh</h2>
-          <TravelCarousel data={LL} link = {'/ladakh'}  />
+          {
+            isMobile ? <Mobile_TravelCarousel data={LL} link = {'/ladakh'} /> :
+            <TravelCarousel data={LL} link = {'/ladakh'} />
+          }
         </>
       )}
 
       {(!isFiltered || DMLMD.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Delhi to Delhi</h2>
-          <TravelCarousel data={DMLMD}  link = {'/ladakh'} />
+         {
+            isMobile ? <Mobile_TravelCarousel data={DMLMD} link = {'/ladakh'} /> :
+            <TravelCarousel data={DMLMD} link = {'/ladakh'} />
+          }
         </>
       )}
 
