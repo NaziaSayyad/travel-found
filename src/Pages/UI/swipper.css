@@ -27,6 +27,7 @@
   height: 60%; /* Adjusted to fit taller card */
   overflow: hidden;
 }
+
 .trip-image {
   width: 100%;
   height: 500px;
@@ -171,7 +172,7 @@
   cursor: not-allowed;
 }
 
-/* Mobile Styles */
+/* Mobile Styles
 @media (max-width: 768px) {
   .trip-image-wrapper {
     height: 250px;
@@ -192,4 +193,7 @@
     flex-direction: column;
     gap: 4px;
   }
-}
+} */
+/* ✅ Keep desktop styles as they are */
+
+/* 📱 Mobile Styles */

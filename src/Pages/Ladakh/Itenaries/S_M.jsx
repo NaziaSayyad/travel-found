@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { MantineProvider } from "@mantine/core";
 import CurvedSlideshow from "../../UI/Curveslideshow";
 
+const Heading_Name_Curved_Slider = "Ladakh moments";
 
 
 export const Shrinagar_Manali = () => {
@@ -109,7 +110,7 @@ export const Shrinagar_Manali = () => {
         <h1> Reviews </h1>
       </div>
         <div>
-            <CurvedSlideshow />
+            <CurvedSlideshow Heading_Name_Curved_Slider={Heading_Name_Curved_Slider} />
         </div>
     </>
   )

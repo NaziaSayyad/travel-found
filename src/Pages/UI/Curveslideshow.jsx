@@ -82,7 +82,8 @@ const slides = [
     className: "card last",
   },
 ];
-const CurvedSlideshow = () => {
+
+const CurvedSlideshow = ({Heading_Name_Curved_Slider}) => {
   const carouselRef = useRef(null);
   const [visibleIndex, setVisibleIndex] = useState(0);
   const slidesPerView = 5;
@@ -103,11 +104,10 @@ const CurvedSlideshow = () => {
     setVisibleIndex(newIndex);
   };
 
-
   return (
     <>
       <div className="curved-slideshow">
-        <h2 className="title">Ladakh Moments</h2>
+        <h2 className="curvedslideshow-title">Heading_Name_Curved_Slider</h2>
         <div className="carousel-wrapper">
           <button
             className="arrow left"
@@ -120,7 +120,7 @@ const CurvedSlideshow = () => {
 
           <div className="carousel" ref={carouselRef}>
             {slides.map((slide, index) => {
-              let cardClass = "card";
+              let cardClass = "crousel-card-3D";
 
               if (index === visibleIndex) cardClass += " first";
               else if (index === visibleIndex + 1) cardClass += " first2";
