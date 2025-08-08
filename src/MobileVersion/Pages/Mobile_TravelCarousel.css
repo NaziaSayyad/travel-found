@@ -1,13 +1,12 @@
-
 /* Mobile styles */
 @media (max-width: 500px) {
-  .trip-image-wrapper {
+.trip-image-wrapper {
     /* height: 180px; */
-position: relative;
+  position: relative;
   width: 100%;
   height: 60%; /* Adjusted to fit taller card */
   overflow: hidden;
-  }
+}
 
   .trip-details h3 {
     font-size: 16px;

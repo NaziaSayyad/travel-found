@@ -27,6 +27,7 @@
   height: 60%; /* Adjusted to fit taller card */
   overflow: hidden;
 }
+
 .trip-image {
   width: 100%;
   height: 500px;
