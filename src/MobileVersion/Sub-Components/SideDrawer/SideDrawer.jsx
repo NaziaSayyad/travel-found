@@ -28,10 +28,10 @@ export const SideDrawer = () =>{
                     <div className="menu-list">
                         <Link> Upcoming Trips </Link>
                         <Link> International Trips </Link>
-                        <Link> Upcoming Trips </Link>
-                        <Link> Upcoming Trips </Link>
-                        <Link> Upcoming Trips </Link>
-                        <Link> Upcoming Trips </Link>
+                        <Link to='/ladakh'> Ladakh  </Link>
+                        <Link to='/spiti'> Spiti </Link>
+                        <Link to='/himachal'> Himachal </Link>
+                        <Link to='/'> Upcoming Trips </Link>
                         <Link> Upcoming Trips </Link>
                         <Link> Upcoming Trips </Link>
                         <Link> Upcoming Trips </Link>

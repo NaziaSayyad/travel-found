@@ -41,7 +41,9 @@ function App() {
 }
 
   return (
-    <div className="App">
+    <div style={{
+      margin : 0
+    }}>
 
     {isMobile ? <MobileNavbar /> :  <Navbar />}
       <Routes>

@@ -1,36 +1,36 @@
-/* Bottom Navigation */
+/* Bottom Navigation for Mobile */
 .bottom-nav {
-    /* position: sticky; */
-    bottom: 0;
-    border-top: 1px solid #ddd;
-    padding: 10px 0;
-    z-index: 99;
-    color: white;
-    background-color: black;
-    width: 80%;
     position: fixed;
-    bottom: 0px;
-    background-color: rgb(30, 30, 30);
+    bottom: 0;
+    left: 50%;                 /* Start from middle */
+    transform: translateX(-50%); /* Center horizontally */
+    width: calc(100% - 40px);  /* Give space on left & right (20px each) */
+    max-width: 500px;          /* Prevents it from becoming too wide on tablets */
+     background-color: rgb(30, 30, 30);
+     color: white;
+    border-top: 1px solid #ddd;
+    z-index: 99;
     display: flex;
-    margin-top: 10px;
-    -webkit-box-pack: justify;
     justify-content: space-between;
-    padding: 10px 40px;
+    padding: 10px 20px;
     border-radius: 12px 12px 0px 0px;
+    box-sizing: border-box;
 }
 
-.nav-item {
+/* Items inside nav */
+.mobile-nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 11px;
     cursor: pointer;
-   /* color: white; */
 }
-.nav-item :hover{
+
+.mobile-nav-item:hover {
     color: rgb(80, 67, 0);
 }
-.nav-item svg {
+
+.mobile-nav-item svg {
     font-size: 18px;
     margin-bottom: 3px;
 }
