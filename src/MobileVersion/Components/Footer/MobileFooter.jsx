@@ -5,19 +5,19 @@ export const MobileFooter = () =>{
     return(
         <>
          <div className="bottom-nav">
-        <div className="nav-item">
+        <div className="mobile-nav-item">
           <FaInstagram />
           <span>Instagram</span>
         </div>
-        <div className="nav-item">
+        <div className="mobile-nav-item">
           <FaCompass />
           <span>Explore</span>
         </div>
-        <div className="nav-item">
+        <div className="mobile-nav-item">
           <FaSearch />
           <span>Search</span>
         </div>
-        <div className="nav-item">
+        <div className="mobile-nav-item">
           <FaPhone />
           <span>Contact</span>
         </div>

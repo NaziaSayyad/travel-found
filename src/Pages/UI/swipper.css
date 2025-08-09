@@ -171,29 +171,3 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-/* Mobile Styles
-@media (max-width: 768px) {
-  .trip-image-wrapper {
-    height: 250px;
-  }
-  .trip-details h3 {
-    font-size: 16px;
-  }
-  .trip-item,
-  .custom,
-  .price {
-    font-size: 12px;
-  }
-  .custom-div {
-    flex-direction: column;
-    gap: 5px;
-  }
-  .trip-def {
-    flex-direction: column;
-    gap: 4px;
-  }
-} */
-/* ✅ Keep desktop styles as they are */
-
-/* 📱 Mobile Styles */

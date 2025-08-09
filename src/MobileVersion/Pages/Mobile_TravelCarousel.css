@@ -1,41 +1,96 @@
 /* Mobile styles */
-@media (max-width: 500px) {
+
+/* @media (max-width: 500px) { */
+/* Horizontal scroll container */
+.travel-carousel-scroll {
+
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  margin-left: 5%;
+  scroll-snap-type: x mandatory;
+  padding: 10px;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+}
+
+.travel-carousel-scroll::-webkit-scrollbar {
+  display: none; /* hide scrollbar on mobile */
+}
+
+/* Each card */
+.trip-card {
+  
+  flex: 0 0 80%; 
+  margin-left: 5px;
+  /* Show most of one card on mobile */
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Image section */
 .trip-image-wrapper {
-    /* height: 180px; */
   position: relative;
   width: 100%;
-  height: 60%; /* Adjusted to fit taller card */
+  height: 100%; /* Adjusted to fit taller card */
   overflow: hidden;
 }
 
-  .trip-details h3 {
-    font-size: 16px;
-  }
-  .trip-card{
-    /* max-width: 400px; */
-  }
-  .trip-item {
-    font-size: 12px;
-  }
+.trip-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .old-price,
-  .new-price {
-    font-size: 12px;
-  }
-
-  .nav-button {
-    font-size: 18px;
-    padding: 6px;
-  }
-  .vignette-overlay {
+.vignette-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 35%;
-  background: linear-gradient(to top, black, transparent);
-  z-index: 1;
-  pointer-events: none;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
 }
 
+/* Text details */
+.trip-details {
+  padding: 10px;
 }
+
+.trip-details h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.trip-def {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+.new-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: red;
+}
+
+.custom-div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+/* } */

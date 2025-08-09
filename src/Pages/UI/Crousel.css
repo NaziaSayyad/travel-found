@@ -5,9 +5,10 @@ body {
 }
 
 .carousel-container {
-  width: 100%;
-  max-width: 100vw; /* prevent overflow */
- position: relative;
+  /* width: 100%; */
+  max-width: 1500px;
+  /* prevent overflow */
+  position: relative;
   margin: 0 auto;
 }
 
@@ -66,4 +67,14 @@ body {
   font-weight: bold;
   margin-top: 10px;
   border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+  .carousel-container {
+    width: 100%;
+    /* max-width: 500px; */
+    /* prevent overflow */
+    position: relative;
+    margin: 0 auto;
+  }
 }
