@@ -11,34 +11,34 @@ export const Mobile_TravelCarousel = ({ data, link }) => {
   return (
     <div className="travel-carousel-scroll">
       {data?.map((trip, index) => (
-        <div className="trip-card" key={index}>
+        <div className="mobile-trip-card" key={index}>
           <Link to={`${link}/${trip.id}`}>
-            <div className="trip-image-wrapper">
+            <div className="mobile-trip-image-wrapper">
               <img
                 src={trip.img}
                 alt={trip.Name}
-                className="trip-image"
+                className="mobile-trip-image"
               />
-              <div className="vignette-overlay" />
+              <div className="mobile-vignette-overlay" />
             </div>
 
-            <div className="trip-details">
+            <div className="mobile-trip-details">
               <h3>{trip.Name}</h3>
               <TripRoute locations={trip.Route} destination={trip.id} />
 
-              <div className="trip-def">
-                <div className="trip-item">
+              <div className="mobile-trip-def">
+                <div className="mobile-trip-item">
                   <BiTimeFive size={20} color="skyblue" />
                   <span>{trip.nights}</span>
                 </div>
-                <div className="trip-item">
+                <div className="mobile-trip-item">
                   <GoLocation size={20} color="skyblue" />
-                  <span className="trip-item-location">{trip.location}</span>
+                  <span className="mobile-trip-item-location">{trip.location}</span>
                 </div>
               </div>
 
               <div className="custom-div">
-                <div className="price">
+                <div className="mobile-price">
                   <FaRupeeSign className="price-icon" />
                   <span className="old-price">{trip.oldprice}</span>
                   <span className="new-price">{trip.newprice}</span>
