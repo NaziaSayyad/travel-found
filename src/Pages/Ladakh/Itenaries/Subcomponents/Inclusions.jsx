@@ -24,7 +24,7 @@ export const Inclusions = ({ data }) => {
                  {detail}
                </li>
               ))}
-              <p>
+              <p className='para-incl'>
                {/* style={{ letterSpacing: '1px' }}> */}
                  {el.meals?.join("    ")} 
               </p>

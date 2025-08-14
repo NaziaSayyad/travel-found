@@ -31,7 +31,6 @@
     font-size: 16px;
     margin: 8px 0;
     color: #333;
-    
   }
   .inclusion-category {
     margin-bottom: 16px;
@@ -61,14 +60,14 @@
     font-weight: normal;
   }
   
-  /* .inclusion-category span{
-    margin-left: 10px;
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: bold;
-    margin-bottom: 500px;
+  @media screen and (max-width : 600px) {
+    .inclusions-item{
+      text-align: left;
+      padding: 0;
+      /* border: 5px solid; */
+      width: 500px;
+    }
+    .inclusion-heading{
+      width: 350px;
+    }
   }
-  .inclusions-item {
-    margin: 4px 0;
-    font-weight: normal;
-  } */

@@ -12,7 +12,7 @@ const images = [
   'https://i.postimg.cc/sfkwnmLt/leh-4152872.jpg',
 ];
 
-export default function ItenarySlideshow({data}) {
+export default function ItenarySlideshow({data, downloadItenary}) {
   console.log(data,"itneary-slideshow");
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,7 +54,8 @@ export default function ItenarySlideshow({data}) {
         alt="slideshow"
         className={`slideshow-image ${fade ? 'fade-in' : 'fade-out'}`}
       />
-      <button className="download-btn" onClick={handleDownloadClick}>
+     <div className='button-slide'>
+       <button className="download-btn" onClick={handleDownloadClick}>
         <FaDownload className="icon" /> Download Itinerary
       </button>
       <Modal
@@ -64,6 +65,7 @@ export default function ItenarySlideshow({data}) {
         email={email}
         setEmail={setEmail}
         phone={phone}
+        downloadItenary={downloadItenary}
         setPhone={setPhone}
       />
       <button className='whatsapp-btn'>
@@ -73,6 +75,7 @@ export default function ItenarySlideshow({data}) {
            <RequestCallback /> 
           <span>  Request A call back  </span>
       </button>
+     </div>
       
     </div>
   );

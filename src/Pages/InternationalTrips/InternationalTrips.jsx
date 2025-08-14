@@ -6,7 +6,7 @@ export const InternationalTrips = () =>{
      const [data,setdata] = useState();
         const [loading,setLoading] = useState(true);
         const {id} = useParams();
-    const API = `http://localhost:8080/international/${id}`;
+    const API = `https://travelfond-backend.onrender.com/international/${id}`;
     
      const location = useLocation(); // Add this hook
        useEffect(() => {

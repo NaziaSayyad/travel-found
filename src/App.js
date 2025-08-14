@@ -47,12 +47,12 @@ function App() {
 
     {isMobile ? <MobileNavbar /> :  <Navbar />}
       <Routes>
-          <Route path="/" element={isMobile ? <MobileLandingPage /> : <Dashboard />} />
-          <Route path="/ladakh" element ={<Ladakh />} />
-         <Route path="/about" element ={<About />} />
-          <Route path="/contact" element ={<Contact />}  />
-          <Route  path="/spiti" element ={<Spiti />} />
-          <Route path="/test" element={<Test />}/>
+        <Route path="/" element={isMobile ? <MobileLandingPage /> : <Dashboard />} />
+        <Route path="/ladakh" element ={<Ladakh />} />
+        <Route path="/about" element ={<About />} />
+        <Route path="/contact" element ={<Contact />}  />
+        <Route path="/spiti" element ={<Spiti />} />
+        <Route path="/test" element={<Test />} />
         <Route path='/ladakh/:id' element={<Shrinagar_Manali />} />
         <Route path='/spiti/:id' element={<SpitiItenary />} />
         <Route path='/book-now' element = {<RegistrationForm />}/>

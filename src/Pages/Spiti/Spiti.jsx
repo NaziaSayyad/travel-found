@@ -29,7 +29,7 @@ const images = [
     price: "Rs. 34,999/- Per Person",
   },
 ];
-const API = 'http://localhost:8080/spiti';
+const API = 'https://travelfond-backend.onrender.com/spiti';
 
 export const Spiti = () => {
   const isMobile = useIsMobile();

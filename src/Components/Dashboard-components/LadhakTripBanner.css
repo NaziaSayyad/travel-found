@@ -45,28 +45,28 @@
 }
 
 .trip-swiper {
-  margin-top: -30px; 
-  /* Pull it up into the banner area */
-  /* padding: 0 30px; */
-  /* position: relative; */
-  /* z-index: 10; */
+  margin-top: -40px; 
+  
+  
 }
 
 
 .ladakh-trip-slide {
   display: flex;
   justify-content: center;
+  overflow: hidden
 }
 
 .ladakh-trip-card {
   position: relative;
   display: block;
-  width: 250px;
+  width: 350px;
   height: 200px; /* fixed height */
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-decoration: none;
+  /* overflow: scroll; */
 }
 
 .trip-img {
@@ -101,19 +101,31 @@
   margin: 2px 0 0;
   
 }
-.swiper-button-next,
-.swiper-button-prev {
-  color: #00aaff;
-  top: 35%;
-  border: 2px solid;
+/* .banner-nav-button-left */
+button.banner-nav-button-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #21759b;
+  border: 5px solid brown;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  /* font-size: 20px; */
+  cursor: pointer;
+  z-index: 10;
   border-radius: 50%;
-  size :15px
 }
-.swiper-button-next{
-  margin-left: 5%;
+.banner-nav-button-left {
+  left: -10px;
 }
-
-.swiper-button-disabled {
-  opacity: 0.3;
-  pointer-events: none;
+.banner-nav-button-right {
+  right: -10px;
+}
+.banner-nav-button:hover {
+  background-color: #145a86;
+}
+.banner-nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

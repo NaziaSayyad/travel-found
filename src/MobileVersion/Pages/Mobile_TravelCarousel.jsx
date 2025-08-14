@@ -8,6 +8,8 @@ import { FaRupeeSign } from "react-icons/fa";
 import { TripRoute } from "../../Pages/UI/Route";
 
 export const Mobile_TravelCarousel = ({ data, link }) => {
+  console.log(data,"Travvel-crausel");
+  
   return (
     <div className="travel-carousel-scroll">
       {data?.map((trip, index) => (
@@ -20,7 +22,7 @@ export const Mobile_TravelCarousel = ({ data, link }) => {
                 className="mobile-trip-image"
               />
               <div className="mobile-vignette-overlay" />
-            </div>
+            
 
             <div className="mobile-trip-details">
               <h3>{trip.Name}</h3>
@@ -33,12 +35,12 @@ export const Mobile_TravelCarousel = ({ data, link }) => {
                 </div>
                 <div className="mobile-trip-item">
                   <GoLocation size={20} color="skyblue" />
-                  <span className="mobile-trip-item-location">{trip.location}</span>
+                  <span className="trip-item-location">{trip.location}</span>
                 </div>
               </div>
 
               <div className="custom-div">
-                <div className="mobile-price">
+                <div className="price">
                   <FaRupeeSign className="price-icon" />
                   <span className="old-price">{trip.oldprice}</span>
                   <span className="new-price">{trip.newprice}</span>
@@ -48,6 +50,7 @@ export const Mobile_TravelCarousel = ({ data, link }) => {
                   <span className="custom">Custom / Group</span>
                 </div>
               </div>
+            </div>
             </div>
           </Link>
         </div>

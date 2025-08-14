@@ -92,11 +92,14 @@ export const TabNavigation = ({
           <Overview data={Overviews} />
         </div>
 
-        <div id="itinerary" ref={tabs[1].ref} className="section">
+        <div id="itinerary" 
+        ref={tabs[1].ref} 
+        className="section">
           <Itenaries data={Itenary} />
         </div>
 
-        <div id="inclusions" ref={tabs[2].ref} className="section">
+        <div id="inclusions" ref={tabs[2].ref} 
+        className="section">
           <Inclusions data={Inclustion} />
         </div>
 

@@ -4,19 +4,18 @@ import LadhakTripBanner from '../Components/Dashboard-components/LadhakTripBanne
 import { useLocation } from 'react-router-dom';
 import CurvedSlideshow from './UI/Curveslideshow';
 
-const Banner = "Discover the world, one destination at a time";
-
+const  Ladakh_Banner = "https://i.ibb.co/JwDTcTb7/lake-2594425-1920.jpg"
 const ladakh = "Ladakh Trips";
-const ladakh_link = "/ldakh";
+const ladakh_link = "/ladakh";
 const ladakh_images = [
   {
-    place: "Manali",
+    place: "Nubra",
     price: "45,000",
     img: "https://i.postimg.cc/htNmg4Fv/lake-6529960.jpg",
 
   },
   {
-    place: "Leh",
+    place: "Tso Moriri",
     price: "40,000",
     img: "https://i.postimg.cc/sfkwnmLt/leh-4152872.jpg"
   },
@@ -31,42 +30,67 @@ const ladakh_images = [
     img: "https://i.postimg.cc/j5s0Gvmq/sand-6740499.jpg"
   },
   {
-    place: "Nubra",
+    place: "Zanskar",
     price: "45000",
-    img: "https://i.postimg.cc/gcZhYGv2/lake-489289.jpg"
-  },
+    img: "https://i.ibb.co/h18VstcR/divyanshi-verma-w-Lq-V0-R6-LYNI-unsplash.jpg"
+    },
   
 ];
 
+const Spiti_Banner = "https://i.ibb.co/0pGcZKrN/ladakh-7127801.jpg";
 const Spiti = "Spiti Trips";
 const Spiti_link = "/spiti";
 const Spiti_images = [
   {
-    place: "Manali",
+    place: "Shimla",
     price: "45,000",
-    img: "https://i.postimg.cc/htNmg4Fv/lake-6529960.jpg",
-
+    img: "https://i.ibb.co/vCYZd9QM/bharath-raj-n-Jn5-B80xu-NUs-unsplash.jpg"
   },
   {
-    place: "Leh",
+    place: "Kalpa",
     price: "40,000",
-    img: "https://i.postimg.cc/sfkwnmLt/leh-4152872.jpg"
-  },
+    img: "https://i.ibb.co/JjpfJ4fs/vinay-manda-Ivr-T-0k-Nxqo-unsplash.jpg" 
+    },
   {
-    place: "Pangong",
+    place: "Kaza",
     price: "7000",
-    img: "https://i.postimg.cc/yNGFDY4w/118.jpg"
-  },
+    img: "https://i.ibb.co/8VrkyZY/pexels-yogendras31-14672478.jpg" 
+    },
   {
-    place: "Turtuk",
+    place: "Tirthan",
     price: "40,000",
-    img: "https://i.postimg.cc/j5s0Gvmq/sand-6740499.jpg"
+    img: "https://i.ibb.co/4ZzkyDr6/pexels-harsh-kukadiya-244412142-31756527.jpg"
+     },
+  {
+    place: "Chandratal",
+    price: "45000",
+    img: "https://i.ibb.co/zVVy2X9q/pexels-eberhardgross-1624255.jpg"
+  },
+   {
+    place: "Shimla",
+    price: "45,000",
+    img: "https://i.ibb.co/vCYZd9QM/bharath-raj-n-Jn5-B80xu-NUs-unsplash.jpg"
   },
   {
-    place: "Nubra",
+    place: "Kalpa",
+    price: "40,000",
+    img: "https://i.ibb.co/JjpfJ4fs/vinay-manda-Ivr-T-0k-Nxqo-unsplash.jpg" 
+    },
+  {
+    place: "Kaza",
+    price: "7000",
+    img: "https://i.ibb.co/8VrkyZY/pexels-yogendras31-14672478.jpg" 
+    },
+  {
+    place: "Tirthan",
+    price: "40,000",
+    img: "https://i.ibb.co/4ZzkyDr6/pexels-harsh-kukadiya-244412142-31756527.jpg"
+     },
+  {
+    place: "Chandratal",
     price: "45000",
-    img: "https://i.postimg.cc/gcZhYGv2/lake-489289.jpg"
-  },
+    img: "https://i.ibb.co/zVVy2X9q/pexels-eberhardgross-1624255.jpg"
+  }
  
 ];
 
@@ -128,7 +152,7 @@ export const  Dashboard = () => {
      
           {/* Ladakh  */}
           <LadhakTripBanner
-          Banner ={Banner}
+          Banner ={Ladakh_Banner}
           images = {ladakh_images} 
           heading={ladakh}
           link = {ladakh_link}
@@ -136,26 +160,28 @@ export const  Dashboard = () => {
 
         {/* Spiti */}
         <LadhakTripBanner 
-         Banner ={Banner}
+         Banner ={Spiti_Banner}
           images = {Spiti_images} 
            heading={Spiti}
           link = {Spiti_link}
         />
 
         {/* Himachal Pradesh */}
-        <LadhakTripBanner 
+        {/* <LadhakTripBanner 
         Banner ={Banner}
         images = {Himachal_images} 
          heading={Himachal}
         link = {Himachal_link}
-        />
+        /> */}
 
         {/* Internationa */} 
         {/* <LadhakTripBanner /> */}
 {/* Journey Frames */}
 
 <CurvedSlideshow
-      Heading_Name_Curved_Slider = {Journey} /> 
+      Heading_Name_Curved_Slider = {Journey} 
+      destination={'ladakh'}
+      /> 
         <h1> Dashboard </h1>
         <h1> Dashboard </h1>
         <h1> Dashboard </h1>

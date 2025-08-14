@@ -5,89 +5,89 @@ import "./Curveslideshow.css";
 
 
 
-const slides = [
-  {
-    img: "https://i.ibb.co/xSdjvFhP/ladakh-7215612.jpg",
-    label: "Ladakh",
-    className: "card first",
-  },
-  {
-    img: "https://i.ibb.co/Ld27sZCX/1-37.jpg",
-    label: "Ladakh",
-    className: "card",
-  },
-  {
-    img: "https://i.ibb.co/7dJgXrCQ/1-44.jpg",
-    label: "Ladakh",
-    className: "card",
-  },
-  {
-    img: "https://i.ibb.co/23kwkGSs/1-3.jpg",
-    label: "Ladakh",
-    className: "card last",
-  },
-  {
-    img: "https://i.ibb.co/3y6Dzx6M/divyanshi-verma-w-Lq-V0-R6-LYNI-unsplash.jpg",
-    label: "Ladakh",
-    className: "card",
-  },
-  {
-    img: "https://i.ibb.co/7dJgXrCQ/1-44.jpg",
-    label: "Ladakh",
-    className: "card",
-  },
-  {
-    img: "https://i.ibb.co/zHbVCHNZ/1-17.jpg",
-    label: "Ladakh",
-    className: "card last",
-  },
-  {
-    img: "https://i.ibb.co/XrMWrY1y/pexels-arthousestudio-5014919.jpg", 
-    label: "Ladakh",
-    className: "card first",
-  },
-  {
-    img: "https://i.ibb.co/gZNV119d/pexels-abhilash-mishra-190481-1539700.jpg",
-    label: "Ladakh",
-    className: "card",
-  },
-  {
-    img: "https://i.ibb.co/tT6YB2kb/mountain-7565282.jpg",
-    label: "Ladakh",
-    className: "card",
-  },
-  {
-    img:"https://i.ibb.co/3y6Dzx6M/divyanshi-verma-w-Lq-V0-R6-LYNI-unsplash.jpg",
-    label: "Ladakh",
-    className: "card last",
-  },
-  {
-    img: "https://i.ibb.co/Fqqq7vN3/manas-aggarwal-Pf-ZQ-Gfmqe-I-unsplash.jpg",
-    label: "Ladakh",
-    className: "card",
-  },
-  {
-    img: "https://i.ibb.co/FLVKvs0B/1-15.jpg",
-    label: "Ladakh",
-    className: "card",
-  },
-  {
-    img: "https://i.ibb.co/Gfq6dGhT/1-26.jpg",
-    label: "Ladakh",
-    className: "card last",
-  },
-  {
-    img: "https://i.ibb.co/MkjvrGYs/1-20.jpg",
-    label: "Ladakh",
-    className: "card last",
-  },
-];
 
-const CurvedSlideshow = ({Heading_Name_Curved_Slider}) => {
+const CurvedSlideshow = ({Heading_Name_Curved_Slider, destination}) => {
   const carouselRef = useRef(null);
   const [visibleIndex, setVisibleIndex] = useState(0);
   const slidesPerView = 5;
   const cardWidth = 270;
+const slides = [
+  {
+    img: "https://i.ibb.co/xSdjvFhP/ladakh-7215612.jpg",
+    label: destination,
+    className: "card first",
+  },
+  {
+    img: "https://i.ibb.co/Ld27sZCX/1-37.jpg",
+    label: destination,
+    className: "card",
+  },
+  {
+    img: "https://i.ibb.co/7dJgXrCQ/1-44.jpg",
+    label: destination,
+    className: "card",
+  },
+  {
+    img: "https://i.ibb.co/23kwkGSs/1-3.jpg",
+    label: destination,
+    className: "card last",
+  },
+  {
+    img: "https://i.ibb.co/3y6Dzx6M/divyanshi-verma-w-Lq-V0-R6-LYNI-unsplash.jpg",
+    label: destination,
+    className: "card",
+  },
+  {
+    img: "https://i.ibb.co/7dJgXrCQ/1-44.jpg",
+    label: destination,
+    className: "card",
+  },
+  {
+    img: "https://i.ibb.co/zHbVCHNZ/1-17.jpg",
+    label: destination,
+    className: "card last",
+  },
+  {
+    img: "https://i.ibb.co/XrMWrY1y/pexels-arthousestudio-5014919.jpg", 
+    label: destination,
+    className: "card first",
+  },
+  {
+    img: "https://i.ibb.co/gZNV119d/pexels-abhilash-mishra-190481-1539700.jpg",
+    label: destination,
+    className: "card",
+  },
+  {
+    img: "https://i.ibb.co/tT6YB2kb/mountain-7565282.jpg",
+    label: destination,
+    className: "card",
+  },
+  {
+    img:"https://i.ibb.co/3y6Dzx6M/divyanshi-verma-w-Lq-V0-R6-LYNI-unsplash.jpg",
+    label: destination,
+    className: "card last",
+  },
+  {
+    img: "https://i.ibb.co/Fqqq7vN3/manas-aggarwal-Pf-ZQ-Gfmqe-I-unsplash.jpg",
+    label: destination,
+    className: "card",
+  },
+  {
+    img: "https://i.ibb.co/FLVKvs0B/1-15.jpg",
+    label: destination,
+    className: "card",
+  },
+  {
+    img: "https://i.ibb.co/Gfq6dGhT/1-26.jpg",
+    label: destination,
+    className: "card last",
+  },
+  {
+    img: "https://i.ibb.co/MkjvrGYs/1-20.jpg",
+    label: destination,
+    className: "card last",
+  },
+];
 
 
   const scrollSlider = (direction) => {
@@ -107,7 +107,7 @@ const CurvedSlideshow = ({Heading_Name_Curved_Slider}) => {
   return (
     <>
       <div className="curved-slideshow">
-        <h2 className="curvedslideshow-title">Heading_Name_Curved_Slider</h2>
+        <h4 className="curvedslideshow-title">{Heading_Name_Curved_Slider}</h4>
         <div className="carousel-wrapper">
           <button
             className="arrow left"

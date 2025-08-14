@@ -5,11 +5,13 @@ body {
 }
 
 .carousel-container {
-  /* width: 100%; */
-  max-width: 1500px;
+  width: 100%;
+  max-width: 1520px;
   /* prevent overflow */
   position: relative;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-top: 8%;
+  /* border: 5px solid brown; */
 }
 
 .carousel-slide {
@@ -69,12 +71,22 @@ body {
   border-radius: 5px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
+  body{
+    border: 2px solid;
+  }
   .carousel-container {
     width: 100%;
     /* max-width: 500px; */
     /* prevent overflow */
     position: relative;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-left: 2%;
+    /* margin-top: 15%; */
+
   }
+  .carousel-slide{
+    /* margin-left: 5%; */
+  }
+
 }

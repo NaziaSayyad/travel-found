@@ -4,11 +4,15 @@ import { useLocation, useParams } from "react-router-dom";
 import ItenarySlideshow from "../UI/Itenaries_slideshow";
 import { TabNavigation } from "../Ladakh/Itenaries/components/TabNavigation";
 import SidebarForm from "../Ladakh/Itenaries/components/SidebarForm";
+import "./SpitiItenaries.css";
+import CurvedSlideshow from "../UI/Curveslideshow";
 
+const Heading_Name_Curved_Slider = "SPITI MOMENTS"
+const Label = "Spiti"
 export const SpitiItenary = () =>{
     const { id } = useParams();
 
-  const API = `http://localhost:8080/spiti/${id}`;
+  const API = `https://travelfond-backend.onrender.com/spiti/${id}`;
   const [tripDetails, setTripDetails] = useState("");
   const [loading, setLoading] = useState(true);
   const location = useLocation(); // Add this hook
@@ -55,14 +59,10 @@ export const SpitiItenary = () =>{
     return(
         <>
     
- <ItenarySlideshow  data = {tripDetails}/>
+ <ItenarySlideshow  data = {tripDetails} downloadItenary={'Spiti Itinerary'}/>
       <div>
         {/* <h1> Two different Components </h1> */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          marginTop : '40px'
-        }}>
+        <div className="tab-side-container">
 
           <div>
             {/* <InfoCard pick = {tripDetails?.start} Drop={tripDetails?.End} Nights={tripDetails?.nights} /> */}
@@ -83,12 +83,7 @@ export const SpitiItenary = () =>{
             />
 
           </div>
-          <div style={{
-            position: 'sticky',
-            top: '100px', // adjust according to your header height
-            height: 'fit-content',
-            alignSelf: 'flex-start' // ensures it sticks at the top of the container
-          }}>
+          <div className="SidebarForm-container">
            
             <SidebarForm 
              costing = {tripDetails?.Costing} 
@@ -107,6 +102,11 @@ export const SpitiItenary = () =>{
         <h1> Reviews </h1>
         <h1> Reviews </h1>
         <h1> Reviews </h1>
+      </div>
+      <div>
+         <CurvedSlideshow 
+         destination ={Label}
+         Heading_Name_Curved_Slider={Heading_Name_Curved_Slider} />
       </div>
       </>
     )

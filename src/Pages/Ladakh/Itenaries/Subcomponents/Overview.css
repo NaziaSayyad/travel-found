@@ -1,0 +1,14 @@
+.overview-data{
+    width: 800px;
+    margin-top: 3%;
+    text-align: left;
+    margin-left: 2%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+@media screen and (max-width : 600px) {
+    
+    .overview-data{
+        width: 200px;
+    }
+}

@@ -129,3 +129,12 @@
 .number {
   font-weight: bold;
 }
+@media screen and (max-width :768px) {
+ .subnavbar{
+  width: 100%;
+  overflow: scroll;
+  display: flex;
+  gap: 8px;
+ 
+ }  
+}

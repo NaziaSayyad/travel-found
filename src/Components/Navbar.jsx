@@ -8,8 +8,8 @@ import InternationalDropdown from "./International";
 import { SubNavbar } from "./SubNavbar";
 // import logo from "./logo.png"; // Add your logo
 
-const DomesticAPI = 'http://localhost:8080/domestic';
-const InternationalAPI = 'http://localhost:8080/international'
+const DomesticAPI = 'https://travelfond-backend.onrender.com/domestic';
+const InternationalAPI = 'https://travelfond-backend.onrender.com/international'
 const Navbar = () => {
   const [DomesticDropdown, setDomesticDropdown] = useState(false);
   const [LadakhDropdown, setLadakhDropdown] = useState(false);

@@ -4,26 +4,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// const images = [
-//   {
-//     url: "https://i.postimg.cc/j5s0Gvmq/sand-6740499.jpg",
-//     title: "Ladakh Tour Packages",
-//     description: "Feel the thrill of the mountains and monasteries",
-//     price: "Rs. 34,999/- Per Person",
-//   },
-//   {
-//     url: "https://i.ibb.co/cXDPsY8j/1-4.jpg",
-//     title: "Ladakh Tour Packages",
-//     description: "Feel the thrill of the mountains and monasteries",
-//     price: "Rs. 34,999/- Per Person",
-//   },
-//   {
-//     url: "https://i.ibb.co/FLVKvs0B/1-15.jpg",
-//     title: "Ladakh Tour Packages",
-//     description: "Feel the thrill of the mountains and monasteries",
-//     price: "Rs. 34,999/- Per Person",
-//   },
-// ];
 
 
 export default function Carousel({images}) {
@@ -51,7 +31,7 @@ export default function Carousel({images}) {
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
                 <span className="Price">{item.price}</span>
-                {/* <button className="callback-btn">Request a Callback</button> */}
+            {/* <button className="callback-btn">Request a Callback</button> */}
               </div>
             </div>
           </div>

@@ -22,12 +22,14 @@
 .fade-out {
     opacity: 0;
 }
-
+.button-slide{
+    display: flex;
+    justify-content: space-between;
+}
 /* Download Button Styling */
 .download-btn {
     position: absolute;
     bottom: 30px; /* Adjust as needed */
-    /* left: 30%; */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -48,7 +50,6 @@
 .whatsapp-btn{
     position: absolute;
     bottom: 30px; /* Adjust as needed */
-    /* left: 30%; */
      left: 70%;
    transform: translateX(-50%);
     display: flex;
@@ -95,4 +96,78 @@
 
 .icon {
     font-size: 20px;
+}
+/* Mobile & Tablet Responsiveness */
+/* @media (max-width: 1024px) {
+    .slideshow-container {
+        height: 400pxx
+    }
+
+    .download-btn,
+    .whatsapp-btn,
+    .requestcallback-btn {
+        font-size: 14px;
+        padding: 8px 14px;
+        gap: 6px;
+    }
+} */
+
+@media (max-width: 768px) {
+    
+    .slideshow-container {
+        height: 500px;
+        width: 100%;
+        border: 2px solid;
+        margin-left: 3%;
+        /* margin-top: 5%; */
+    }
+
+    /* Stack buttons vertically for small screens */
+    
+    .download-btn {
+        /* position: static;
+        transform: none;
+        margin: 4px auto;
+        width: auto;     
+        min-width: 140px;
+        padding: 6px 12px;
+        font-size: 13px;
+        gap: 5px; */
+        left: 30%;
+        width: auto;
+    }
+    .whatsapp-btn{
+        left: 75%;
+        width: auto;
+       /* display: none; */
+    }
+    .requestcallback-btn{
+        display: none;
+    }
+    /* Container for buttons */
+    .button-slide {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .slideshow-container {
+        height: 600px;
+        
+    }
+
+    .download-btn,
+    .whatsapp-btn,
+    .requestcallback-btn {
+        /* position: absolute;  working not good */
+       font-size: 12px;
+        padding: 5px 10px;
+        min-width: 120px;
+    }
 }

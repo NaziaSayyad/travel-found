@@ -8,6 +8,11 @@
   margin: 50px auto;
   perspective: 1000px;
 }
+.curvedslideshow-title{
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 .carousel {
   display: flex;

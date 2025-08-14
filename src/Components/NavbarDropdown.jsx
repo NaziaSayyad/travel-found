@@ -4,7 +4,7 @@ import './NavbarDropdown.css';
 import { IoIosArrowDown } from 'react-icons/io';
 import { Link, useLocation, useParams } from 'react-router-dom';
 
-const API = `http://localhost:8080/domestic`;
+const API = `https://travelfond-backend.onrender.com/domestic`;
 
 const NavbarDropdown = ({ NAME }) => {
     const [statesData, setStatesData] = useState([]);
@@ -65,6 +65,8 @@ const NavbarDropdown = ({ NAME }) => {
 
         setFilteredStates(filtered);
     }, [searchTerm, statesData]);
+    console.log(statesData,"ss");
+    
 
     return (
         <div className="domestic-dropdown-wrapper"
@@ -73,9 +75,10 @@ const NavbarDropdown = ({ NAME }) => {
         >
             <div className="dropdown-link">
                 <span className="domestic-dropdown-trigger"> {NAME}</span>
-                <span className="domestic-dropdown-arrow"><IoIosArrowDown size={20} /></span>
+                <span className="domestic-dropdown-arrow">
+            <IoIosArrowDown size={20} /></span>
             </div>
-
+ 
             <div className="dropdown-menu">
                 <input
                     type="text"

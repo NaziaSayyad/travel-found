@@ -1,7 +1,7 @@
 import React from 'react';
 import './Modal.css';
 
-const Modal = ({ isOpen, onClose, onSubmit, email, setEmail, phone, setPhone }) => {
+const Modal = ({ isOpen, onClose, onSubmit, email, setEmail, phone, setPhone , downloadItenary}) => {
   if (!isOpen) return null;
 
   const handleOverlayClick = (e) => {
@@ -15,7 +15,7 @@ const Modal = ({ isOpen, onClose, onSubmit, email, setEmail, phone, setPhone }) 
       <div className="modal-content">
         <div className='img-heading-breakpoints'>
         <img src="https://i.postimg.cc/s29nSzXK/mountain-5769089.jpg" alt="" />
-        <h2>Ladakh Itenary</h2>
+        <h2>{downloadItenary}</h2>
         </div>
         <form onSubmit={onSubmit}>
           <div className="form-group">

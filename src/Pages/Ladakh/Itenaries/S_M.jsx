@@ -5,17 +5,16 @@ import SidebarForm from "./components/SidebarForm"
 import { TabNavigation } from "./components/TabNavigation"
 import { useLocation, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-
+import "./S_M.css";
 import { MantineProvider } from "@mantine/core";
 import CurvedSlideshow from "../../UI/Curveslideshow";
 
-const Heading_Name_Curved_Slider = "Ladakh moments";
-
-
+const Label = 'Ladakh';
+const Heading_Name_Curved_Slider = "LADAKH MOMENTS"
 export const Shrinagar_Manali = () => {
   const { id } = useParams();
 
-  const API = `http://localhost:8080/ladakh/${id}`;
+  const API = `https://travelfond-backend.onrender.com/ladakh/${id}`;
   const [tripDetails, setTripDetails] = useState("");
   const [loading, setLoading] = useState(true);
   const location = useLocation(); // Add this hook
@@ -57,15 +56,12 @@ export const Shrinagar_Manali = () => {
       {/* <h1> Srinagar  to Manali Itineraries </h1>
       <h4> {tripDetails?.newprice}</h4> */}
 
-      <ItenarySlideshow  data = {tripDetails}/>
+      <ItenarySlideshow  data = {tripDetails} 
+      downloadItenary= {'Ladakh Itinerary'} />
 
       <div>
         {/* <h1> Two different Components </h1> */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          marginTop : '40px'
-        }}>
+        <div className="tab-side-container">
 
           <div>
             {/* <InfoCard pick = {tripDetails?.start} Drop={tripDetails?.End} Nights={tripDetails?.nights} /> */}
@@ -85,12 +81,7 @@ export const Shrinagar_Manali = () => {
             
 
           </div>
-          <div style={{
-            position: 'sticky',
-            top: '100px', // adjust according to your header height
-            height: 'fit-content',
-            alignSelf: 'flex-start' // ensures it sticks at the top of the container
-          }}>
+          <div className="SidebarForm-container">
             <SidebarForm 
               costing = {tripDetails?.Costing} 
               batches = {tripDetails?.Batches}
@@ -110,7 +101,9 @@ export const Shrinagar_Manali = () => {
         <h1> Reviews </h1>
       </div>
         <div>
-            <CurvedSlideshow Heading_Name_Curved_Slider={Heading_Name_Curved_Slider} />
+            <CurvedSlideshow 
+            destination = {Label}
+            Heading_Name_Curved_Slider={Heading_Name_Curved_Slider} />
         </div>
     </>
   )

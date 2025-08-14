@@ -7,8 +7,8 @@ import FilterComponent from "./Itenaries/components/FilterComponent";
 import CurvedSlideshow from "../UI/Curveslideshow";
 import { useIsMobile } from "../../Responsive-component/UseMobile";
 import { Mobile_TravelCarousel } from "../../MobileVersion/Pages/Mobile_TravelCarousel";
-
-const API = 'http://localhost:8080/ladakh';
+// https://travelfond-backend.onrender.com
+const API = 'https://travelfond-backend.onrender.com/ladakh';
 
 const images = [
   {
