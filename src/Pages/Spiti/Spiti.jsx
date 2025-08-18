@@ -5,7 +5,7 @@ import axios from "axios";
 import { TravelCarousel } from "../UI/Swiper";
 import FilterComponent from "../Ladakh/Itenaries/components/FilterComponent";
 import { SpitiFilterComponent } from "./SpitiFilterComponent";
-import { useIsMobile } from "../../Responsive-component/UseMobile";
+import { useBreakpoint } from "../../Responsive-component/UseMobile";
 import { Mobile_TravelCarousel } from "../../MobileVersion/Pages/Mobile_TravelCarousel";
 
 
@@ -32,7 +32,10 @@ const images = [
 const API = 'https://travelfond-backend.onrender.com/spiti';
 
 export const Spiti = () => {
-  const isMobile = useIsMobile();
+  // const isMobile = useIsMobile();
+  // You want mobile <= 768, tablet <= 1200
+const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
+
 
   useEffect(() => {
     window.scrollTo({
@@ -146,29 +149,28 @@ export const Spiti = () => {
         {(!isFiltered || TSM.length > 0) && (
           <>
             <h2 className="trips-define">Trip From Tirthan Spiti Manali </h2>
-            {
-              isMobile ? <Mobile_TravelCarousel data={TSM} link={'/spiti'} /> :
-                <TravelCarousel data={TSM} link={'/spiti'} />
-            }
+            {isMobile && <Mobile_TravelCarousel data={TSM} link={'/spiti'} />}
+               { isDesktop &&  <TravelCarousel data={TSM} link={'/spiti'} />}
+            
           </>
         )}
 
         {(!isFiltered || SSM.length > 0) && (
           <>
             <h2 className="trips-define">Trip From Shimla Spiti Manali </h2>
-            {
+            {/* {
               isMobile ? <Mobile_TravelCarousel data={SSM} link={'/spiti'} /> :
                 <TravelCarousel data={SSM} link={'/spiti'} />
-            }
+            } */}
           </>
         )}
         {(!isFiltered || SSS.length > 0) && (
           <>
             <h2 className="trips-define">Trip From Shimla Spiti Shimla </h2>
-            {
+            {/* {
               isMobile ? <Mobile_TravelCarousel data={SSS} link={'/spiti'} /> :
                 <TravelCarousel data={SSS} link={'/spiti'} />
-            }
+            } */}
           </>
         )}
 

@@ -19,13 +19,16 @@ import { useLocation, BrowserRouter as Router } from 'react-router-dom';
 import { SpitiItenary } from './Pages/Spiti/SpitiItenaries';
 import DomesticTrips from './Pages/DomesticTrips/DomesticTrips';
 import { InternationalTrips } from './Pages/InternationalTrips/InternationalTrips';
-import { useIsMobile } from './Responsive-component/UseMobile';
+
 import MobileLandingPage from './MobileVersion/Components/Dashboard/MobileDashboard';
 import { MobileNavbar } from './MobileVersion/Components/Navbar/MobileNavbar';
 import { MobileFooter } from './MobileVersion/Components/Footer/MobileFooter';
+import { useBreakpoint } from './Responsive-component/UseMobile';
 
-function App() {
-  const isMobile = useIsMobile();
+function App() {// You want mobile <= 768, tablet <= 1200
+const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
+
+
   function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -44,10 +47,21 @@ function App() {
     <div style={{
       margin : 0
     }}>
+      {isMobile &&  <MobileNavbar />}
+      {/* {isTablet && } */}
+      {isDesktop && <Navbar />}
+    {/* {isMobile ? <MobileNavbar /> :  <Navbar />} */}
 
-    {isMobile ? <MobileNavbar /> :  <Navbar />}
       <Routes>
-        <Route path="/" element={isMobile ? <MobileLandingPage /> : <Dashboard />} />
+        {/* <Route path="/" element={isMobile && <MobileLandingPage /> } />
+       {isDesktop && <Dashboard />} />
+        <Route path='/' element = {isDesktop && <Dashboard />} /> */}
+
+         <Route
+        path="/"
+        element={isMobile ? <MobileLandingPage /> : <Dashboard />}
+      />
+
         <Route path="/ladakh" element ={<Ladakh />} />
         <Route path="/about" element ={<About />} />
         <Route path="/contact" element ={<Contact />}  />
@@ -59,7 +73,8 @@ function App() {
         <Route path='/domestic/:id' element={<DomesticTrips />}  />
         <Route path='/international/:id' element={<InternationalTrips />}/>
       </Routes>
-       {isMobile ? <MobileFooter /> :  <Footer />}
+       {isMobile && <MobileFooter /> }
+       {isDesktop &&  <Footer />}
     
   </div>
   );

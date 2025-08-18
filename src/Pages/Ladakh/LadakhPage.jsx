@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import FilterComponent from "./Itenaries/components/FilterComponent";
 import CurvedSlideshow from "../UI/Curveslideshow";
-import { useIsMobile } from "../../Responsive-component/UseMobile";
+import { useBreakpoint, useIsMobile } from "../../Responsive-component/UseMobile";
 import { Mobile_TravelCarousel } from "../../MobileVersion/Pages/Mobile_TravelCarousel";
 // https://travelfond-backend.onrender.com
 const API = 'https://travelfond-backend.onrender.com/ladakh';
@@ -33,8 +33,9 @@ const images = [
 
 export const Ladakh = () => {
   const location = useLocation();
-  const isMobile = useIsMobile();
-  
+  // You want mobile <= 768, tablet <= 1200
+  const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
+
   const [data, setData] = useState([]);
   const [cityList, setCityList] = useState([]);
 
@@ -138,8 +139,8 @@ export const Ladakh = () => {
         <>
           <h2 className="trips-define">Trip From Delhi to Srinagar</h2>
           {
-            isMobile ? <Mobile_TravelCarousel data={DMLS} link = {'/ladakh'} /> :
-            <TravelCarousel data={DMLS} link = {'/ladakh'} />
+            isMobile && <Mobile_TravelCarousel data={DMLS} link = {'/ladakh'} /> }
+           { isDesktop && <TravelCarousel data={DMLS} link = {'/ladakh'} />
           }
         </>
       )}
@@ -148,8 +149,8 @@ export const Ladakh = () => {
         <>
           <h2 className="trips-define">Trip From Manali to Srinagar</h2>
           {
-            isMobile ? <Mobile_TravelCarousel data={MLS} link = {'/ladakh'} /> :
-            <TravelCarousel data={MLS} link = {'/ladakh'} />
+            isMobile && <Mobile_TravelCarousel data={MLS} link = {'/ladakh'} /> }
+          { isDesktop &&  <TravelCarousel data={MLS} link = {'/ladakh'} />
           }
         </>
       )}
@@ -158,20 +159,20 @@ export const Ladakh = () => {
         <>
           <h2 className="trips-define">Trip From Srinagar to Delhi</h2>
           
-         {
+         {/* {
             isMobile ? <Mobile_TravelCarousel data={SLMD} link = {'/ladakh'} /> :
             <TravelCarousel data={SLMD} link = {'/ladakh'} />
-          }
+          } */}
         </>
       )}
 
       {(!isFiltered || SLM.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Srinagar to Manali</h2>
-          {
+          {/* {
             isMobile ? <Mobile_TravelCarousel data={SLM} link = {'/ladakh'} /> :
             <TravelCarousel data={SLM} link = {'/ladakh'} />
-          }
+          } */}
          
         </>
       )}
@@ -179,40 +180,40 @@ export const Ladakh = () => {
       {(!isFiltered || SL.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Srinagar to Leh</h2>
-         {
+         {/* {
             isMobile ? <Mobile_TravelCarousel data={SL} link = {'/ladakh'} /> :
             <TravelCarousel data={SL} link = {'/ladakh'} />
-          }
+          } */}
         </>
       )}
 
       {(!isFiltered || LS.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Leh to Srinagar</h2>
-          {
+          {/* {
             isMobile ? <Mobile_TravelCarousel data={LS} link = {'/ladakh'} /> :
             <TravelCarousel data={LS} link = {'/ladakh'} />
-          }
+          } */}
         </>
       )}
 
       {(!isFiltered || LL.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Leh to Leh</h2>
-          {
+          {/* {
             isMobile ? <Mobile_TravelCarousel data={LL} link = {'/ladakh'} /> :
             <TravelCarousel data={LL} link = {'/ladakh'} />
-          }
+          } */}
         </>
       )}
 
       {(!isFiltered || DMLMD.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Delhi to Delhi</h2>
-         {
+         {/* {
             isMobile ? <Mobile_TravelCarousel data={DMLMD} link = {'/ladakh'} /> :
             <TravelCarousel data={DMLMD} link = {'/ladakh'} />
-          }
+          } */}
         </>
       )}
 
