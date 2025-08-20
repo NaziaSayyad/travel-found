@@ -60,14 +60,4 @@
     font-weight: normal;
   }
   
-  @media screen and (max-width : 600px) {
-    .inclusions-item{
-      text-align: left;
-      padding: 0;
-      /* border: 5px solid; */
-      width: 500px;
-    }
-    .inclusion-heading{
-      width: 350px;
-    }
-  }
+ 

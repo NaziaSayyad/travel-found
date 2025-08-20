@@ -2,11 +2,16 @@
 
 /* @media (max-width: 500px) { */
 /* Horizontal scroll container */
+body{
+  padding: 0;
+  margin: 0;
+  /* border: 2px solid blue; */
+}
 .travel-carousel-scroll {
   display: flex;
   gap: 12px;
   overflow-x: auto;
-  margin-left: 5%;
+  margin-left: 3%;
   scroll-snap-type: x mandatory;
   padding: 10px;
   -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
@@ -22,6 +27,7 @@
   flex: 0 0 80%; 
   margin-left: 5px;
   height: 500px;
+  /* margin-right: 2px; */
   /* Show most of one card on mobile */
   background: white;
   border-radius: 10px;

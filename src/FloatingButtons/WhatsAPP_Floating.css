@@ -1,0 +1,44 @@
+.floating-buttons {
+  position: sticky;
+  width: 50px;
+  left: 550px;
+  /* right: 10px;   distance from right side */
+  bottom: 70px;  /* distance from bottom */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;     /* space between buttons */
+  z-index: 9999; /* stay above everything */
+}
+
+.float-btn {
+  width: 10px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease-in-out;
+  color: white;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Scroll to Top Button */
+.scroll-btn {
+  background-color: #00bcd4; /* blue */
+}
+.whatsapp-float{
+     border-radius: 25px;
+    cursor: pointer;
+    height: 45px;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgb(78, 240, 78); /* Yellow button */
+    border: transparent;
+}
+

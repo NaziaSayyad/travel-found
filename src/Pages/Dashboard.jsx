@@ -182,18 +182,7 @@ export const  Dashboard = () => {
       Heading_Name_Curved_Slider = {Journey} 
       destination={'ladakh'}
       /> 
-        <h1> Dashboard </h1>
-        <h1> Dashboard </h1>
-        <h1> Dashboard </h1>
-        <h1> Dashboard </h1>
-        <h1> Dashboard </h1>
-        <h1> Dashboard </h1>
-        <h1> Dashboard </h1>
-        <h1> Dashboard </h1>
-        <h1> Dashboard </h1>
-        <h1> Dashboard </h1>
-        <h1> Dashboard </h1>
-        <h1> Dashboard </h1>
+       
       </div>
     )
   }

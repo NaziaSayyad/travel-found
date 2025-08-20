@@ -3,8 +3,7 @@ import { FaMapMarkerAlt, FaClock } from "react-icons/fa"; // Import icons
 import "./InfoCard.css"; // Import CSS
 
 const InfoCard = ({pick,Drop,Nights}) => {
-  console.log('pick-drop',Nights);
-  
+ 
   return (
     <div className="info-container">
       <div className="info-card">

@@ -7,6 +7,9 @@ import FilterComponent from "./Itenaries/components/FilterComponent";
 import CurvedSlideshow from "../UI/Curveslideshow";
 import { useBreakpoint, useIsMobile } from "../../Responsive-component/UseMobile";
 import { Mobile_TravelCarousel } from "../../MobileVersion/Pages/Mobile_TravelCarousel";
+import ItenarySlideshow from "../UI/Itenaries_slideshow";
+import { LadakhCrausel, LadakhPage } from "../../MobileVersion/Pages/Ladakh_Mobile";
+
 // https://travelfond-backend.onrender.com
 const API = 'https://travelfond-backend.onrender.com/ladakh';
 
@@ -129,9 +132,14 @@ export const Ladakh = () => {
 
   return (
     <div>
+      {
+        isMobile && <LadakhPage />      }
+      {
+        isDesktop && 
       <Carousel images={images} />
+      }
       {/* <h1>Ladakh</h1> */}
-      <h1>About Ladakh packages</h1>
+      <h1 style={{textAlign:"center"}}>About Ladakh packages</h1>
 
       <FilterComponent onFilterChange={applyFilters} cityList={cityList} />
 
@@ -159,20 +167,20 @@ export const Ladakh = () => {
         <>
           <h2 className="trips-define">Trip From Srinagar to Delhi</h2>
           
-         {/* {
-            isMobile ? <Mobile_TravelCarousel data={SLMD} link = {'/ladakh'} /> :
-            <TravelCarousel data={SLMD} link = {'/ladakh'} />
-          } */}
+          {
+            isMobile && <Mobile_TravelCarousel data={SLMD} link = {'/ladakh'} /> }
+          { isDesktop &&  <TravelCarousel data={SLMD} link = {'/ladakh'} />
+          }
         </>
       )}
 
       {(!isFiltered || SLM.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Srinagar to Manali</h2>
-          {/* {
-            isMobile ? <Mobile_TravelCarousel data={SLM} link = {'/ladakh'} /> :
-            <TravelCarousel data={SLM} link = {'/ladakh'} />
-          } */}
+          {
+            isMobile && <Mobile_TravelCarousel data={SLM} link = {'/ladakh'} /> }
+          { isDesktop &&  <TravelCarousel data={SLM} link = {'/ladakh'} />
+          }
          
         </>
       )}
@@ -180,40 +188,40 @@ export const Ladakh = () => {
       {(!isFiltered || SL.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Srinagar to Leh</h2>
-         {/* {
-            isMobile ? <Mobile_TravelCarousel data={SL} link = {'/ladakh'} /> :
-            <TravelCarousel data={SL} link = {'/ladakh'} />
-          } */}
+         {
+            isMobile && <Mobile_TravelCarousel data={SL} link = {'/ladakh'} /> }
+          { isDesktop &&  <TravelCarousel data={SL} link = {'/ladakh'} />
+          }
         </>
       )}
 
       {(!isFiltered || LS.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Leh to Srinagar</h2>
-          {/* {
-            isMobile ? <Mobile_TravelCarousel data={LS} link = {'/ladakh'} /> :
-            <TravelCarousel data={LS} link = {'/ladakh'} />
-          } */}
+           {
+            isMobile && <Mobile_TravelCarousel data={LS} link = {'/ladakh'} /> }
+          { isDesktop &&  <TravelCarousel data={LS} link = {'/ladakh'} />
+          }
         </>
       )}
 
       {(!isFiltered || LL.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Leh to Leh</h2>
-          {/* {
-            isMobile ? <Mobile_TravelCarousel data={LL} link = {'/ladakh'} /> :
-            <TravelCarousel data={LL} link = {'/ladakh'} />
-          } */}
+          {
+            isMobile && <Mobile_TravelCarousel data={LL} link = {'/ladakh'} /> }
+          { isDesktop &&  <TravelCarousel data={LL} link = {'/ladakh'} />
+          }
         </>
       )}
 
       {(!isFiltered || DMLMD.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Delhi to Delhi</h2>
-         {/* {
-            isMobile ? <Mobile_TravelCarousel data={DMLMD} link = {'/ladakh'} /> :
-            <TravelCarousel data={DMLMD} link = {'/ladakh'} />
-          } */}
+          {
+            isMobile && <Mobile_TravelCarousel data={DMLMD} link = {'/ladakh'} /> }
+          { isDesktop &&  <TravelCarousel data={DMLMD} link = {'/ladakh'} />
+          }
         </>
       )}
 

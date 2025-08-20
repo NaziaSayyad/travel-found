@@ -1,5 +1,5 @@
-import { MdArrowRight } from 'react-icons/md';
 import './Inclusions.css'
+import { MdArrowRight } from 'react-icons/md';
 import { FaCheckCircle } from "react-icons/fa"; // Importing the checkmark icon
 
 export const Inclusions = ({ data }) => {
@@ -14,7 +14,8 @@ export const Inclusions = ({ data }) => {
           <li key={el.id} className="inclusion-category">
             <div className="inclusion-heading">
               {/* <MdArrowRight size={20} color="teal" /> */}
-              <span> <img src={el.img} alt="logo" className='logo-category' /></span>
+              <span> <img src={el.img} alt="logo" 
+              className='logo-category' /></span>
               <span>{el.Name}</span>
             </div>
 

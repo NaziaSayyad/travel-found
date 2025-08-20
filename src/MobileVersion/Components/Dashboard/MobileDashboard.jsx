@@ -89,24 +89,10 @@ const MobileLandingPage = () => {
       </div>
       <div>
         <HorizontalSlider />
-        <h2> Sliders </h2>
-        <h2> Sliders </h2>
-        <h2> Sliders </h2>
-        <h2> Sliders </h2>
-        <h2> Sliders </h2>
+        
         <DestinationSlideShow />
-        <h4> Slider</h4>
-        <h4> Slider </h4>
-        <h4> Slider </h4>
-        <h4> Slider </h4>
-        <h4> Slider </h4>
-        <h4> Slider </h4>
-        <h4> Slider </h4>
-        <h4> Slider </h4>
-        <h4> Slider </h4>
-        <h4> Slider </h4>
-        <h4> Slider </h4>
-
+        
+        
       </div>
 
     </div>

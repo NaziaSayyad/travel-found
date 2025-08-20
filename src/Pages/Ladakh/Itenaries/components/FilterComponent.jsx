@@ -59,7 +59,8 @@ const FilterComponent = ({ onFilterChange, cityList = [] }) => {
   return (
     <>
       <div className="filter-main-container">
-        <h4> Create Your Own Itenary </h4>
+        <h4 style={{textAlign : 'center'}}>
+           Create Your Own Itenary </h4>
         {/* Multi-select Cities */}
         <div className="city-multiselect">
           <div className="city-checkbox-list">

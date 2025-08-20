@@ -13,8 +13,7 @@ const images = [
 ];
 
 export default function ItenarySlideshow({data, downloadItenary}) {
-  console.log(data,"itneary-slideshow");
-
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -54,6 +53,7 @@ export default function ItenarySlideshow({data, downloadItenary}) {
         alt="slideshow"
         className={`slideshow-image ${fade ? 'fade-in' : 'fade-out'}`}
       />
+      
      <div className='button-slide'>
        <button className="download-btn" onClick={handleDownloadClick}>
         <FaDownload className="icon" /> Download Itinerary

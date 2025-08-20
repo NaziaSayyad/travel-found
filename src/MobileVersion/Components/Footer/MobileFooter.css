@@ -1,36 +1,39 @@
-/* Bottom Navigation for Mobile */
 .bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 50%;                 /* Start from middle */
-    transform: translateX(-50%); /* Center horizontally */
-    width: calc(100% - 40px);  /* Give space on left & right (20px each) */
-    max-width: 500px;          /* Prevents it from becoming too wide on tablets */
-     background-color: rgb(30, 30, 30);
-     color: white;
-    border-top: 1px solid #ddd;
-    z-index: 99;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-radius: 12px 12px 0px 0px;
-    box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;             /* stick to the left edge */
+  width: 100%;         /* cover full width */
+  background-color: rgb(30, 30, 30);
+  color: white;
+  border-top: 1px solid #ddd;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;  /* space inside */
+  border-radius: 12px 12px 0 0; /* rounded top only */
+  box-sizing: border-box;
 }
 
-/* Items inside nav */
 .mobile-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 11px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  cursor: pointer;
+  flex: 1; /* evenly distribute */
 }
 
 .mobile-nav-item:hover {
-    color: rgb(80, 67, 0);
+  color: gold; /* highlight color */
 }
 
 .mobile-nav-item svg {
-    font-size: 18px;
-    margin-bottom: 3px;
+  font-size: 18px;
+  margin-bottom: 3px;
 }
+
+/* Push content above footer (global rule) */
+body {
+  padding-bottom: 70px; /* must be >= footer height */
+}
+

@@ -93,12 +93,7 @@ export const Shrinagar_Manali = () => {
 
         
       <div>
-        <h1> Reviews </h1>
-        <h1> Reviews </h1>
-        <h1> Reviews </h1>
-        <h1> Reviews </h1>
-        <h1> Reviews </h1>
-        <h1> Reviews </h1>
+        
       </div>
         <div>
             <CurvedSlideshow 

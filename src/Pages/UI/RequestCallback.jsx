@@ -15,7 +15,7 @@ const RequestCallback = () => {
   return (
     <>
       <button className="callback-btn" onClick={() => setShowModal(true)}>
-        <FaPhoneAlt style={{marginBottom : '12px'}} />
+        <FaPhoneAlt style={{marginBottom : '12px', size : '20px'}} />
       </button>
 
       {showModal && (

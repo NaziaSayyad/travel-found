@@ -10,37 +10,39 @@ const packages = [
   {
     name: "Ladakh",
     img: "https://i.ibb.co/MxxyH6Rn/vivek-kumar-7k1-IKQZik-Sc-unsplash.jpg",
-    link : "/ladakh",
+    link: "/ladakh",
     price: "₹21,999"
   },
 
   {
     name: "Spiti",
     img: "https://i.ibb.co/MxxyH6Rn/vivek-kumar-7k1-IKQZik-Sc-unsplash.jpg",
-    link : "/spiit",
+    link: "/spiit",
     price: "₹39,999"
   },
   {
     name: "Kashmir",
     img: "https://i.ibb.co/Hfmsv9nG/pexels-arjun-godara-277047411-27818167.jpg",
-   link : "/kashmir",
+    link: "/kashmir",
     price: "₹39,999"
   },
   {
     name: "Himachal",
     img: "https://i.ibb.co/wZN0Fyd0/pexels-karan-hansraj-2147704894-29774206.jpg",
-   link : "/himachal",
+    link: "/himachal",
     price: "₹42,999"
   }
 ];
 export const DestinationSlideShow = () => {
   return (
     <>
+      <h1 style={{ textAlign: 'center ' }}> Explore India </h1>
       <div className="swiper-container">
         <Swiper
           effect={"cards"}
           grabCursor={true}
           modules={[EffectCards]}
+          cardsEffect={{ slideShadows: false }}   // 👈 disables those ugly shadows
           className="mySwiper"
         >
           {packages.map((el, index) => (
@@ -52,9 +54,10 @@ export const DestinationSlideShow = () => {
                   <p>Starting Price {el.price}</p>
                 </div>
               </a>
-            </SwiperSlide> 
+            </SwiperSlide>
           ))}
         </Swiper>
+
       </div>
     </>
   );

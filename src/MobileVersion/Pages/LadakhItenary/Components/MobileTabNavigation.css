@@ -1,0 +1,62 @@
+.mobile-tab-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    overflow: scroll;
+    margin-left: 2%;
+    margin-right: 2%;
+    position: sticky;
+    top: 65px;
+    /* top: 185px; */
+    z-index: 1000;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+
+}
+.section {
+  scroll-margin-top: 160px;
+  /* navHeight + tabHeight */
+  padding: 20px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px 0;
+}
+.tab.active {
+  color: #00a9ce;
+  position: relative;
+}
+.mobile-underline {
+  /* position: absolute;
+  bottom: 0;
+  height: 3px;
+  background-color: #00a9ce;
+  width: 80px;
+  margin-left: 0;
+  transition: left 0.3s ease-in-out; */
+}
+.mobile-info-card-container{
+  position: relative;
+  z-index: 98;
+  background: white;
+  /* transition: all 0.3s ease; */
+}
+.mobile-info-card-container.fixed {
+  position: sticky;
+  top: 148px;
+  /* Adjust based on your navbar + tab heights */
+}
+/* 
+tab-container
+tab 
+active
+underline
+ */

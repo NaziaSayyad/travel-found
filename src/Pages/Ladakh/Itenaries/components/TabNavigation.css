@@ -6,7 +6,6 @@
   background-color: white;
   padding: 10px 0;
   width: 100%;
-  /* width: 180px; */
   display: flex;
   justify-content: space-around;
   border-bottom: 1px solid #e0e0e0;
@@ -57,33 +56,3 @@
   /* Adjust based on your navbar + tab heights */
 }
 
-@media screen and (max-width : 768px) {
-  .tab-container {
-   position: sticky;
-    top: 140px;
-    z-index: 1000;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* padding: 0px 12px; */
-   gap: 24px;
-   width: 100%;
-    /* -webkit-box-pack: justify; */
-    justify-content: space-between;
-    overflow: scroll;
-    margin-right: 5%;
-  }
-
-  .info-card-container.fixed {
-    position: sticky;
-    top: 192px;
-    /* Adjust based on your navbar + tab heights */
-  }
-
-}
-@media screen and (max-width :500px) {
-  .tab-container{
-    /* width: 250px; */
-    top: 0;
-    overflow: scroll;
-  }
-}

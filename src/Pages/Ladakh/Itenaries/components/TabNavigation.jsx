@@ -83,8 +83,9 @@ export const TabNavigation = ({
         <InfoCard pick={start} Drop={end} Nights={nights} />
       </div>
      
-      <div>
-        <div id="overview" ref={tabs[0].ref} className="section">
+      <div> 
+
+        <div id="overview" ref={tabs[0].ref}  className="section">
           <h2 style={{ marginLeft: "5%" }}>Overview</h2>
           <div style={{ textAlign: "left", marginLeft: "2%" }}>
             <Route data={route} />
@@ -92,14 +93,11 @@ export const TabNavigation = ({
           <Overview data={Overviews} />
         </div>
 
-        <div id="itinerary" 
-        ref={tabs[1].ref} 
-        className="section">
+        <div id="itinerary" ref={tabs[1].ref} className="section">
           <Itenaries data={Itenary} />
         </div>
 
-        <div id="inclusions" ref={tabs[2].ref} 
-        className="section">
+        <div id="inclusions" ref={tabs[2].ref} className="section">
           <Inclusions data={Inclustion} />
         </div>
 

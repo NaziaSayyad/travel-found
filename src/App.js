@@ -24,6 +24,9 @@ import MobileLandingPage from './MobileVersion/Components/Dashboard/MobileDashbo
 import { MobileNavbar } from './MobileVersion/Components/Navbar/MobileNavbar';
 import { MobileFooter } from './MobileVersion/Components/Footer/MobileFooter';
 import { useBreakpoint } from './Responsive-component/UseMobile';
+import { Mobile_Ladakh_ITenary } from './MobileVersion/Pages/LadakhItenary/Ladakh_Itenary';
+import { LadakhPage } from './MobileVersion/Pages/Ladakh_Mobile';
+import { WhatsAppButton } from './Pages/UI/WhatsappButton';
 
 function App() {// You want mobile <= 768, tablet <= 1200
 const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
@@ -47,6 +50,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
     <div style={{
       margin : 0
     }}>
+
       {isMobile &&  <MobileNavbar />}
       {/* {isTablet && } */}
       {isDesktop && <Navbar />}
@@ -62,17 +66,35 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
         element={isMobile ? <MobileLandingPage /> : <Dashboard />}
       />
 
-        <Route path="/ladakh" element ={<Ladakh />} />
+        <Route path="/ladakh" element ={<Ladakh /> } />
         <Route path="/about" element ={<About />} />
         <Route path="/contact" element ={<Contact />}  />
         <Route path="/spiti" element ={<Spiti />} />
         <Route path="/test" element={<Test />} />
-        <Route path='/ladakh/:id' element={<Shrinagar_Manali />} />
+
+        <Route path='/ladakh/:id' 
+        element={isMobile ? <Mobile_Ladakh_ITenary /> : 
+        <Shrinagar_Manali />} 
+        />
+
         <Route path='/spiti/:id' element={<SpitiItenary />} />
         <Route path='/book-now' element = {<RegistrationForm />}/>
         <Route path='/domestic/:id' element={<DomesticTrips />}  />
         <Route path='/international/:id' element={<InternationalTrips />}/>
       </Routes>
+      {/* <button style={{
+        position: 'fixed',
+        bottom : '10px',
+        right : '20px',
+        border: 'none',
+        backgroundColor : ' rgb(78, 240, 78)',
+        borderRadius : '25px',
+        cursor : 'pointer',
+        height : '45px',
+        boxShadow : '2px 4px 10px rgba(0, 0, 0, 0.2)'
+      }}>
+        <WhatsAppButton />
+      </button> */}
        {isMobile && <MobileFooter /> }
        {isDesktop &&  <Footer />}
     
