@@ -82,7 +82,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
         <Route path='/domestic/:id' element={<DomesticTrips />}  />
         <Route path='/international/:id' element={<InternationalTrips />}/>
       </Routes>
-      {/* <button style={{
+      <button style={{
         position: 'fixed',
         bottom : '10px',
         right : '20px',
@@ -94,7 +94,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
         boxShadow : '2px 4px 10px rgba(0, 0, 0, 0.2)'
       }}>
         <WhatsAppButton />
-      </button> */}
+      </button>
        {isMobile && <MobileFooter /> }
        {isDesktop &&  <Footer />}
     
