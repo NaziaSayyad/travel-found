@@ -5,6 +5,7 @@ import ItenarySlideshow from "../../../Pages/UI/Itenaries_slideshow";
 import { TabNavigation } from "../../../Pages/Ladakh/Itenaries/components/TabNavigation";
 import { MobileTabNavigation } from "./Components/MobileTabNavigation";
 import { FloatingButtons } from "../../../FloatingButtons/WhatsAPP_Floating";
+import Loading from "../../../Loading/Loading";
 
 export const Mobile_Ladakh_ITenary = () =>{
    const { id } = useParams();
@@ -29,12 +30,15 @@ export const Mobile_Ladakh_ITenary = () =>{
      useEffect(() => {
     const fetchdata = async () => {
       try {
+        setLoading(true)
         const res = await axios.get(API);
         console.log(res.data,"fe");
         setTripDetails(res.data);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
+        
+      }finally{
         setLoading(false);
       }
     };
@@ -45,7 +49,9 @@ export const Mobile_Ladakh_ITenary = () =>{
   console.log("Trip Details State:", tripDetails); // Debugging step 2 ✅
   console.log(tripDetails.Inclusions, "incl");
 
-
+if(loading){
+  return <Loading /> 
+}
     return(
         <>
         <ItenarySlideshow />

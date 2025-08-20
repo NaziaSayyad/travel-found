@@ -8,12 +8,13 @@ import { useEffect, useState } from "react";
 import "./S_M.css";
 import { MantineProvider } from "@mantine/core";
 import CurvedSlideshow from "../../UI/Curveslideshow";
+import Loading from "../../../Loading/Loading";
 
 const Label = 'Ladakh';
 const Heading_Name_Curved_Slider = "LADAKH MOMENTS"
 export const Shrinagar_Manali = () => {
   const { id } = useParams();
-
+  
   const API = `https://travelfond-backend.onrender.com/ladakh/${id}`;
   const [tripDetails, setTripDetails] = useState("");
   const [loading, setLoading] = useState(true);
@@ -37,9 +38,11 @@ export const Shrinagar_Manali = () => {
         const res = await axios.get(API);
         console.log(res.data,"fe");
         setTripDetails(res.data);
-        setLoading(false);
+        setLoading(true);
       } catch (error) {
         console.error("Error fetching data:", error);
+        
+      }finally{
         setLoading(false);
       }
     };
@@ -51,6 +54,9 @@ export const Shrinagar_Manali = () => {
   console.log(tripDetails.Inclusions, "incl");
 
 
+  if(loading){
+  return <Loading /> 
+}
   return (
     <>
       {/* <h1> Srinagar  to Manali Itineraries </h1>

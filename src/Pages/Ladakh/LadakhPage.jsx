@@ -9,6 +9,7 @@ import { useBreakpoint, useIsMobile } from "../../Responsive-component/UseMobile
 import { Mobile_TravelCarousel } from "../../MobileVersion/Pages/Mobile_TravelCarousel";
 import ItenarySlideshow from "../UI/Itenaries_slideshow";
 import { LadakhCrausel, LadakhPage } from "../../MobileVersion/Pages/Ladakh_Mobile";
+import Loading from "../../Loading/Loading";
 
 // https://travelfond-backend.onrender.com
 const API = 'https://travelfond-backend.onrender.com/ladakh';
@@ -35,6 +36,8 @@ const images = [
 ];
 
 export const Ladakh = () => {
+  const [loading, setLoading] = useState(true);
+
   const location = useLocation();
   // You want mobile <= 768, tablet <= 1200
   const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
@@ -47,9 +50,9 @@ export const Ladakh = () => {
     route: "",
     budget: "",
     customize: "",
-    turtuk : "",
+    turtuk: "",
     leh: "",
-    hanleUmlingla : "",
+    hanleUmlingla: "",
     cities: []
   });
 
@@ -69,6 +72,7 @@ export const Ladakh = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);   // start loader
         const res = await axios.get(API);
         setData(res.data);
 
@@ -88,6 +92,8 @@ export const Ladakh = () => {
         setDMLMD(res.data.filter(trip => trip.code === "DMLMD"));
       } catch (err) {
         console.error("Error fetching data", err);
+      } finally {
+        setLoading(false);  // stop loader
       }
     };
     fetchData();
@@ -108,14 +114,14 @@ export const Ladakh = () => {
             : nightsNumber === parseInt(newFilters.nights))) &&
         (!newFilters.route || trip.route === newFilters.route) &&
         (!newFilters.customize || trip.customize === newFilters.customize) &&
-        (!newFilters.leh  || trip.leh  === newFilters.leh ) &&
-        (!newFilters.turtuk  || trip.turtuk  === newFilters.turtuk ) &&
-        (!newFilters.hanleUmlingla  || trip.leh  === newFilters.leh ) &&
-        
+        (!newFilters.leh || trip.leh === newFilters.leh) &&
+        (!newFilters.turtuk || trip.turtuk === newFilters.turtuk) &&
+        (!newFilters.hanleUmlingla || trip.leh === newFilters.leh) &&
+
         (!newFilters.cities.length ||
           newFilters.cities.some(city => trip.Route?.includes(city)))
-      
-        );
+
+      );
     });
 
     setMLS(filtered.filter(trip => trip.code === "MLS"));
@@ -130,26 +136,33 @@ export const Ladakh = () => {
 
   const isFiltered = filters.nights || filters.route || filters.budget || filters.cities.length;
 
+  if (loading) {
+    return <Loading />
+  }
   return (
     <div>
-      {
-        isMobile && <LadakhPage />      }
-      {
-        isDesktop && 
-      <Carousel images={images} />
-      }
+      {isMobile && <LadakhPage />}
+      {isDesktop && <Carousel images={images} />}
+
       {/* <h1>Ladakh</h1> */}
-      <h1 style={{textAlign:"center"}}>About Ladakh packages</h1>
+      <h1 style={{ textAlign: "center" }}>About Ladakh packages</h1>
 
       <FilterComponent onFilterChange={applyFilters} cityList={cityList} />
 
       {(!isFiltered || DMLS.length > 0) && (
         <>
-          <h2 className="trips-define">Trip From Delhi to Srinagar</h2>
-          {
-            isMobile && <Mobile_TravelCarousel data={DMLS} link = {'/ladakh'} /> }
-           { isDesktop && <TravelCarousel data={DMLS} link = {'/ladakh'} />
+
+          {loading? (
+            <Loading />
+          ) : (
+            <>
+              <h2 className="trips-define">Trip From Delhi to Srinagar</h2>
+              {isMobile && <Mobile_TravelCarousel data={DMLS} link={'/ladakh'} />}
+              {isDesktop && <TravelCarousel data={DMLS} link={'/ladakh'} />}
+            </>
+          )
           }
+
         </>
       )}
 
@@ -157,8 +170,8 @@ export const Ladakh = () => {
         <>
           <h2 className="trips-define">Trip From Manali to Srinagar</h2>
           {
-            isMobile && <Mobile_TravelCarousel data={MLS} link = {'/ladakh'} /> }
-          { isDesktop &&  <TravelCarousel data={MLS} link = {'/ladakh'} />
+            isMobile && <Mobile_TravelCarousel data={MLS} link={'/ladakh'} />}
+          {isDesktop && <TravelCarousel data={MLS} link={'/ladakh'} />
           }
         </>
       )}
@@ -166,10 +179,10 @@ export const Ladakh = () => {
       {(!isFiltered || SLMD.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Srinagar to Delhi</h2>
-          
+
           {
-            isMobile && <Mobile_TravelCarousel data={SLMD} link = {'/ladakh'} /> }
-          { isDesktop &&  <TravelCarousel data={SLMD} link = {'/ladakh'} />
+            isMobile && <Mobile_TravelCarousel data={SLMD} link={'/ladakh'} />}
+          {isDesktop && <TravelCarousel data={SLMD} link={'/ladakh'} />
           }
         </>
       )}
@@ -178,19 +191,19 @@ export const Ladakh = () => {
         <>
           <h2 className="trips-define">Trip From Srinagar to Manali</h2>
           {
-            isMobile && <Mobile_TravelCarousel data={SLM} link = {'/ladakh'} /> }
-          { isDesktop &&  <TravelCarousel data={SLM} link = {'/ladakh'} />
+            isMobile && <Mobile_TravelCarousel data={SLM} link={'/ladakh'} />}
+          {isDesktop && <TravelCarousel data={SLM} link={'/ladakh'} />
           }
-         
+
         </>
       )}
 
       {(!isFiltered || SL.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Srinagar to Leh</h2>
-         {
-            isMobile && <Mobile_TravelCarousel data={SL} link = {'/ladakh'} /> }
-          { isDesktop &&  <TravelCarousel data={SL} link = {'/ladakh'} />
+          {
+            isMobile && <Mobile_TravelCarousel data={SL} link={'/ladakh'} />}
+          {isDesktop && <TravelCarousel data={SL} link={'/ladakh'} />
           }
         </>
       )}
@@ -198,9 +211,9 @@ export const Ladakh = () => {
       {(!isFiltered || LS.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Leh to Srinagar</h2>
-           {
-            isMobile && <Mobile_TravelCarousel data={LS} link = {'/ladakh'} /> }
-          { isDesktop &&  <TravelCarousel data={LS} link = {'/ladakh'} />
+          {
+            isMobile && <Mobile_TravelCarousel data={LS} link={'/ladakh'} />}
+          {isDesktop && <TravelCarousel data={LS} link={'/ladakh'} />
           }
         </>
       )}
@@ -209,8 +222,8 @@ export const Ladakh = () => {
         <>
           <h2 className="trips-define">Trip From Leh to Leh</h2>
           {
-            isMobile && <Mobile_TravelCarousel data={LL} link = {'/ladakh'} /> }
-          { isDesktop &&  <TravelCarousel data={LL} link = {'/ladakh'} />
+            isMobile && <Mobile_TravelCarousel data={LL} link={'/ladakh'} />}
+          {isDesktop && <TravelCarousel data={LL} link={'/ladakh'} />
           }
         </>
       )}
@@ -219,8 +232,8 @@ export const Ladakh = () => {
         <>
           <h2 className="trips-define">Trip From Delhi to Delhi</h2>
           {
-            isMobile && <Mobile_TravelCarousel data={DMLMD} link = {'/ladakh'} /> }
-          { isDesktop &&  <TravelCarousel data={DMLMD} link = {'/ladakh'} />
+            isMobile && <Mobile_TravelCarousel data={DMLMD} link={'/ladakh'} />}
+          {isDesktop && <TravelCarousel data={DMLMD} link={'/ladakh'} />
           }
         </>
       )}
