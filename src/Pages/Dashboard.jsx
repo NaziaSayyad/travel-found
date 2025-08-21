@@ -4,14 +4,21 @@ import LadhakTripBanner from '../Components/Dashboard-components/LadhakTripBanne
 import { useLocation } from 'react-router-dom';
 import CurvedSlideshow from './UI/Curveslideshow';
 
-const  Ladakh_Banner = "https://i.ibb.co/JwDTcTb7/lake-2594425-1920.jpg"
+const  Ladakh_Banner = "https://i.ibb.co/0jDgf79F/NUBRA-CARD-BANNER.png"
+// "https://i.ibb.co/Z1vMP76k/CARD-BANNER-1.png"
+// "https://i.ibb.co/JwDGcFfv/CARD-BANNER.png";
+// "https://i.ibb.co/93bnLMBT/500-150-PX.png";
+//  "https://i.ibb.co/JwDTcTb7/lake-2594425-1920.jpg"
 const ladakh = "Ladakh Trips";
 const ladakh_link = "/ladakh";
 const ladakh_images = [
   {
     place: "Nubra",
     price: "45,000",
-    img: "https://i.postimg.cc/htNmg4Fv/lake-6529960.jpg",
+    img: "https://i.ibb.co/PzJ8VmXz/CARD-3.png"
+    // 'https://i.ibb.co/v4pTLt9Z/CARD.png', 
+    // "https://i.ibb.co/v4pTLt9Z/CARD.png",
+    // "https://i.postimg.cc/htNmg4Fv/lake-6529960.jpg",
 
   },
   {

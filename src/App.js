@@ -27,6 +27,7 @@ import { useBreakpoint } from './Responsive-component/UseMobile';
 import { Mobile_Ladakh_ITenary } from './MobileVersion/Pages/LadakhItenary/Ladakh_Itenary';
 import { LadakhPage } from './MobileVersion/Pages/Ladakh_Mobile';
 import { WhatsAppButton } from './Pages/UI/WhatsappButton';
+import { Ladakh_New_Trips } from './Pages/LadakhTrips/LadakhTrips';
 
 function App() {// You want mobile <= 768, tablet <= 1200
 const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
@@ -76,7 +77,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
         element={isMobile ? <Mobile_Ladakh_ITenary /> : 
         <Shrinagar_Manali />} 
         />
-
+        <Route path='/ladakhTrip' element = {<Ladakh_New_Trips />}/>
         <Route path='/spiti/:id' element={<SpitiItenary />} />
         <Route path='/book-now' element = {<RegistrationForm />}/>
         <Route path='/domestic/:id' element={<DomesticTrips />}  />

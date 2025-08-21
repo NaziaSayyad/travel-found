@@ -1,0 +1,14 @@
+.trips-define{
+    margin-left: 5%;
+}
+
+/* set this once (adjust value to your header height) */
+:root { --header-h: 150px; }
+
+/* apply to your anchor sections */
+.anchor-section {
+  scroll-margin-top: var(--header-h);
+}
+
+/* optional: smooth behavior for hash links */
+html { scroll-behavior: smooth; }

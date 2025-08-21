@@ -19,6 +19,7 @@
   transition: transform 0.4s ease;
   cursor: pointer;
   position: relative;
+  border: 2px solid white;
 }
 
 .trip-image-wrapper {

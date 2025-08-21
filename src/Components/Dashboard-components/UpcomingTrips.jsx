@@ -5,7 +5,7 @@ const UpcomingTripsBanner = () => {
   return (
     <div className="upcoming-trips-banner">
       <img
-        src="https://i.postimg.cc/htNmg4Fv/lake-6529960.jpg" 
+        src="https://i.ibb.co/sptPp3wk/UPCOMING-TRIP-1250-400.png"
         alt="Upcoming  Trips"
         className="banner-image"
       />

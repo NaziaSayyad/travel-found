@@ -145,17 +145,17 @@ const Navbar = () => {
           onMouseEnter={() => setLadakhDropdown(true)}
           onMouseLeave={() => setLadakhDropdown(false)}
         >
-          <Link to="/ladakh" className="dropdown-link">
+          <Link to="/ladakhTrip" className="dropdown-link">
             <span className="dropdown-text">Ladakh</span>
             <span className="drop-arrow"><IoIosArrowDown size={20} /></span>
           </Link>
 
           <div className={`mega-dropdown-menu ${LadakhDropdown ? 'show' : ''}`}>
             <div className="dropdown-column">
-              <Link to="#"> Group Tours / Bag Packing </Link>
-              <Link to="#"> Customize Trips </Link>
-              <Link to="#"> Luxurious Ladakh </Link>
-              <Link to='/ladakh'> View all </Link>
+              <Link to="/ladakhTrip#group"> Group Tours / Bag Packing </Link>
+              <Link to="/ladakhTrip#customize"> Customize Trips </Link>
+              <Link to="/ladakhTrip#luxurious"> Luxurious Ladakh </Link>
+              <Link to='/ladakhTrip'> View all </Link>
             </div>
           </div>
         </div>

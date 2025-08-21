@@ -44,6 +44,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
       behavior: 'instant'
     });
   }, []);
+
   const location = useLocation(); // Add this hook
   const [data, setdata] = useState();
   const [SSM, setSSM] = useState();
@@ -67,6 +68,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
     // Scroll to top whenever the component mounts or location changes
     window.scrollTo(0, 0);
   }, [location]);
+
 
   useEffect(() => {
     const fetchdata = async () => {
@@ -92,6 +94,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
     }
     fetchdata();
   }, [])
+  
 
   const applyFilters = (newFilters) => {
     console.log(newFilters, "updates");

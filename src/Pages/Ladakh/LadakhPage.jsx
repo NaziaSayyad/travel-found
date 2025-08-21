@@ -208,6 +208,16 @@ export const Ladakh = () => {
         </>
       )}
 
+      {(!isFiltered || LL.length > 0) && (
+        <>
+          <h2 className="trips-define">Trip From Leh to Leh</h2>
+          {
+            isMobile && <Mobile_TravelCarousel data={LL} link={'/ladakh'} />}
+          {isDesktop && <TravelCarousel data={LL} link={'/ladakh'} />
+          }
+        </>
+      )}
+      
       {(!isFiltered || LS.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Leh to Srinagar</h2>
@@ -218,15 +228,7 @@ export const Ladakh = () => {
         </>
       )}
 
-      {(!isFiltered || LL.length > 0) && (
-        <>
-          <h2 className="trips-define">Trip From Leh to Leh</h2>
-          {
-            isMobile && <Mobile_TravelCarousel data={LL} link={'/ladakh'} />}
-          {isDesktop && <TravelCarousel data={LL} link={'/ladakh'} />
-          }
-        </>
-      )}
+     
 
       {(!isFiltered || DMLMD.length > 0) && (
         <>
