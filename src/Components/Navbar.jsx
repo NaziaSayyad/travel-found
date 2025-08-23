@@ -8,8 +8,9 @@ import InternationalDropdown from "./International";
 import { SubNavbar } from "./SubNavbar";
 // import logo from "./logo.png"; // Add your logo
 
-const DomesticAPI = 'https://travelfond-backend.onrender.com/domestic';
-const InternationalAPI = 'https://travelfond-backend.onrender.com/international'
+// const DomesticAPI = 'https://travelfond-backend.onrender.com/domestic';
+ const DomesticAPI = `https://travelfondbackend-production.up.railway.app/domestic`;
+const InternationalAPI = `https://travelfondbackend-production.up.railway.app/international`;
 const Navbar = () => {
   const [DomesticDropdown, setDomesticDropdown] = useState(false);
   const [LadakhDropdown, setLadakhDropdown] = useState(false);
@@ -28,7 +29,6 @@ const Navbar = () => {
       </Link>
       </div>
       <div className="nav-container">
-          
         {/* Navigation Links
         <div className="nav-links">
         Domestic DropDown  */}
@@ -181,7 +181,6 @@ const Navbar = () => {
         </div>
 
       </div>
-      {/* </div> */}
     </nav>
    </>
   );

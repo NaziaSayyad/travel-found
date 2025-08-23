@@ -30,14 +30,14 @@ const images = [
   },
 ];
 
-const API = 'https://travelfond-backend.onrender.com/ladakh';
+const API = 'https://travelfondbackend-production.up.railway.app/ladakh';
 
 export const Ladakh_New_Trips = () => {
 
     const [loading, setLoading] = useState(true);
     const location = useLocation();
     const [cityList, setCityList] = useState([]);
-    const [SLM, setSLM] = useState([]);
+    const [GL, setGL] = useState([]);
     const [SL, setSL] = useState([]);
     const [LL, setLL] = useState([]);
     const [data, setData] = useState([]);
@@ -78,7 +78,7 @@ useEffect(() => {
         const uniqueCities = [...new Set(allCities)];
         setCityList(uniqueCities);
 
-        setSLM(res.data.filter(trip => trip.code === "SLM"));
+        setGL(res.data.filter(trip => trip.code === "GL"));
         setSL(res.data.filter(trip => trip.code === "SL"));
         setLL(res.data.filter(trip => trip.code === "LL"));
        
@@ -125,7 +125,7 @@ useEffect(() => {
       );
     });
 
-    setSLM(filtered.filter(trip => trip.code === "SLM"));
+    setGL(filtered.filter(trip => trip.code === "GL"));
     setSL(filtered.filter(trip => trip.code === "SL"));
     setLL(filtered.filter(trip => trip.code === "LL"));
 };
@@ -159,39 +159,37 @@ useEffect(() => {
                 }}>
                  
                  <div  id="group" className="anchor-section">
-                    {(!isFiltered || SLM.length > 0) && (
+                    {(!isFiltered || GL.length > 0) && (
                    <>
                      <h2  className="trips-define">Group Trips </h2>
                      {
-                       isMobile && <Mobile_TravelCarousel data={SLM} link={'/ladakh'} />}
-                     {isDesktop && <TravelCarousel data={SLM} link={'/ladakh'} />
+                       isMobile && <Mobile_TravelCarousel data={GL} link={'/ladakh'} />}
+                     {isDesktop && <TravelCarousel data={GL} link={'/ladakh'} />
                      }
            
                    </>
                  )}
                  </div>
            
-                 <div id="customize" className="anchor-section">
+                 <div id="customize" className="anchor-section-customize">
                     {(!isFiltered || SL.length > 0) && (
                    <>
                      <h2  className="trips-define">Customize Trips </h2>
-                     {
-                       isMobile && <Mobile_TravelCarousel data={SL} link={'/ladakh'} />}
-                     {isDesktop && <TravelCarousel data={SL} link={'/ladakh'} />
-                     }
+                      {isMobile && <Mobile_TravelCarousel data={LL} link={'/ladakh'} />}
+                     {isDesktop && <TravelCarousel data={LL} link={'/ladakh'} />}
+                   
                    </>
                  )}
                  </div>
            
-                <div id="luxurious" className="anchor-section">
+                <div id="luxurious" className="anchor-section-luxurious">
                      {(!isFiltered || LL.length > 0) && (
                    <>
                      <h2   className="trips-define">Luxurious Ladakh  </h2>
-                     {
-                       isMobile && <Mobile_TravelCarousel data={LL} link={'/ladakh'} />}
-                     {isDesktop && <TravelCarousel data={LL} link={'/ladakh'} />
-                     }
-                   </>
+                    {isMobile && <Mobile_TravelCarousel data={SL} link={'/ladakh'} />}
+                     {isDesktop && <TravelCarousel data={SL} link={'/ladakh'} />}
+                   
+                    </>
                  )}
                 </div>
 

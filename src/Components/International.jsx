@@ -50,14 +50,16 @@ const InternationalDropdown = ({ API, NAME }) => {
           isDropdownOpen ? 'domestic-dropdown-show' : ''
         }`}
       >
-        <input
+        {/* <input
           type="text"
           className="domestic-dropdown-search"
           placeholder="Search countries..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-        />
-
+        /> */}
+          <h2 style={{textAlign :'center'}}> Coming Soon .... </h2>
+          <h3 style={{textAlign :'center'}}> Coming Soon .... </h3>
+                
         <div className="domestic-dropdown-grid">
           {/* Display filtered country list dynamically */}
           {filteredCountries.length > 0 ? (

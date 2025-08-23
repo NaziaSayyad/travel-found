@@ -34,6 +34,8 @@ const destinations = [
 
 const MobileLandingPage = () => {
   return (
+    <>
+    
     <div className="mobile-container">
 
       <div className="banner">
@@ -96,6 +98,8 @@ const MobileLandingPage = () => {
       </div>
 
     </div>
+    <MobileFooter />
+    </>
 
   );
 };

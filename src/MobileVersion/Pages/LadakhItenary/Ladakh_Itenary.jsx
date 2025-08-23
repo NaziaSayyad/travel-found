@@ -6,6 +6,8 @@ import { TabNavigation } from "../../../Pages/Ladakh/Itenaries/components/TabNav
 import { MobileTabNavigation } from "./Components/MobileTabNavigation";
 import { FloatingButtons } from "../../../FloatingButtons/WhatsAPP_Floating";
 import Loading from "../../../Loading/Loading";
+import { CostingPage } from "../../../Pages/Ladakh/Itenaries/Subcomponents/Costing";
+import { MobileCosting } from "../CostingComponent/Mobile_Costing";
 
 export const Mobile_Ladakh_ITenary = () =>{
    const { id } = useParams();
@@ -71,8 +73,10 @@ if(loading){
           />
             
          </div>
-        {/* <h1> Mobile Itenary Page </h1> */}
-        <FloatingButtons />
+         <div>
+          <MobileCosting />
+         </div>
+        {/* <FloatingButtons /> */}
         </>
     )
 }

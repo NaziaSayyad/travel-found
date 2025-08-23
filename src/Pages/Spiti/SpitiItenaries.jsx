@@ -12,8 +12,10 @@ const Label = "Spiti"
 export const SpitiItenary = () =>{
     const { id } = useParams();
 
-  const API = `https://travelfond-backend.onrender.com/spiti/${id}`;
-  const [tripDetails, setTripDetails] = useState("");
+  // const API = `https://travelfond-backend.onrender.com/spiti/${id}`;
+ 
+  const API = `https://travelfondbackend-production.up.railway.app/spiti/${id}`;
+ const [tripDetails, setTripDetails] = useState("");
   const [loading, setLoading] = useState(true);
   const location = useLocation(); // Add this hook
    useEffect(() => {

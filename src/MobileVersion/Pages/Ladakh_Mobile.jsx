@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Ladakh_Mobile.css";
 import ItenarySlideshow from "../../Pages/UI/Itenaries_slideshow";
 import { Mobile_TravelCarousel } from "./Mobile_TravelCarousel";
+import { MobileFooter } from "../Components/Footer/MobileFooter";
 const API = 'https://travelfond-backend.onrender.com/ladakh';
 
 const images = [

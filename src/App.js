@@ -28,9 +28,10 @@ import { Mobile_Ladakh_ITenary } from './MobileVersion/Pages/LadakhItenary/Ladak
 import { LadakhPage } from './MobileVersion/Pages/Ladakh_Mobile';
 import { WhatsAppButton } from './Pages/UI/WhatsappButton';
 import { Ladakh_New_Trips } from './Pages/LadakhTrips/LadakhTrips';
+import { PrivacyPolicy } from './PrivacyPolicy/PrivacyPolicy';
 
 function App() {// You want mobile <= 768, tablet <= 1200
-const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
+const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
 
 
   function ScrollToTop() {
@@ -54,6 +55,11 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
 
       {isMobile &&  <MobileNavbar />}
       {/* {isTablet && } */}
+      
+      {isTablet && <Navbar />}
+
+
+      {/* Desktop  */}
       {isDesktop && <Navbar />}
     {/* {isMobile ? <MobileNavbar /> :  <Navbar />} */}
 
@@ -65,10 +71,12 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
          <Route
         path="/"
         element={isMobile ? <MobileLandingPage /> : <Dashboard />}
+        // element = {isTablet ? <MobileLandingPage /> : <Dashboard />}
       />
 
         <Route path="/ladakh" element ={<Ladakh /> } />
         <Route path="/about" element ={<About />} />
+        <Route path='/privacypolicy' element={<PrivacyPolicy />} />
         <Route path="/contact" element ={<Contact />}  />
         <Route path="/spiti" element ={<Spiti />} />
         <Route path="/test" element={<Test />} />
@@ -96,9 +104,11 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
       }}>
         <WhatsAppButton />
       </button>
-       {isMobile && <MobileFooter /> }
-       {isDesktop &&  <Footer />}
-    
+       {/* {isMobile && <MobileFooter /> }
+       {isDesktop &&  <Footer />} */}
+    <Footer />
+    {/* <SubFooter /> */}
+    {/* {isMobile && <MobileFooter />} */}
   </div>
   );
 }

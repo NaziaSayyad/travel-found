@@ -4,7 +4,8 @@ import './NavbarDropdown.css';
 import { IoIosArrowDown } from 'react-icons/io';
 import { Link, useLocation, useParams } from 'react-router-dom';
 
-const API = `https://travelfond-backend.onrender.com/domestic`;
+// const API = `https://travelfond-backend.onrender.com/domestic`;
+  const API = `https://travelfondbackend-production.up.railway.app/domestic`;
 
 const NavbarDropdown = ({ NAME }) => {
     const [statesData, setStatesData] = useState([]);
@@ -80,14 +81,15 @@ const NavbarDropdown = ({ NAME }) => {
             </div>
  
             <div className="dropdown-menu">
-                <input
+                {/* <input
                     type="text"
                     placeholder="Search City..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="dropdown-search"
-                />
-
+                /> */}
+                <h2 style={{textAlign :'center'}}> Coming Soon .... </h2>
+                <h3 style={{textAlign :'center'}}> Coming Soon .... </h3>
                 <div className="dropdown-grid">
                     {filteredStates?.map((state, index) => (
                         <div className="domestic-dropdown-item" key={index}>

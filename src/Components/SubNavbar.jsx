@@ -30,7 +30,7 @@ export const SubNavbar = () => {
       {/* Right: Menu Links */}
       <div className="menu-links">
        {/* dropdown */}
-       <div className="dropdown">
+       {/* <div className="dropdown">
        <Link to="#" className="menu-item">
             <FaCalendarAlt className="icon" />
              Best Seller Packages
@@ -40,7 +40,7 @@ export const SubNavbar = () => {
             <Link to="/kashmir" className="dropdown-item">Himachal</Link>
             <Link to= '/spiti' className="dropdown-item">Spiti</Link>
           </div>
-        </div>
+        </div> */}
 
        {/* about  */}
         <Link to="/about">About Us</Link>

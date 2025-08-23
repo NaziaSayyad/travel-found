@@ -31,7 +31,7 @@ return (
  
  <div className="about-container">
       <div className="about-section">
-        <h1>About Us</h1>
+        <h1 style={{textAlign : 'center'}}>About Us</h1>
         <p>
           Welcome to our company! 
           At Travel Fond, our journey began with two passionate friends who shared a

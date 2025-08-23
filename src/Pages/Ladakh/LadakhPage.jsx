@@ -10,9 +10,11 @@ import { Mobile_TravelCarousel } from "../../MobileVersion/Pages/Mobile_TravelCa
 import ItenarySlideshow from "../UI/Itenaries_slideshow";
 import { LadakhCrausel, LadakhPage } from "../../MobileVersion/Pages/Ladakh_Mobile";
 import Loading from "../../Loading/Loading";
+import { MobileFooter } from "../../MobileVersion/Components/Footer/MobileFooter";
 
 // https://travelfond-backend.onrender.com
 const API = 'https://travelfond-backend.onrender.com/ladakh';
+// const API ='https://travelfondbackend-production.up.railway.app/ladakh';
 
 const images = [
   {
@@ -40,7 +42,7 @@ export const Ladakh = () => {
 
   const location = useLocation();
   // You want mobile <= 768, tablet <= 1200
-  const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
+  const { isMobile, isTablet, isDesktop } = useBreakpoint(820, 1024);
 
   const [data, setData] = useState([]);
   const [cityList, setCityList] = useState([]);
@@ -140,6 +142,7 @@ export const Ladakh = () => {
     return <Loading />
   }
   return (
+    <>
     <div>
       {isMobile && <LadakhPage />}
       {isDesktop && <Carousel images={images} />}
@@ -228,9 +231,7 @@ export const Ladakh = () => {
         </>
       )}
 
-     
-
-      {(!isFiltered || DMLMD.length > 0) && (
+     {(!isFiltered || DMLMD.length > 0) && (
         <>
           <h2 className="trips-define">Trip From Delhi to Delhi</h2>
           {
@@ -241,5 +242,8 @@ export const Ladakh = () => {
       )}
 
     </div>
+    {isMobile && <MobileFooter />}
+    </>
+    
   );
 };
