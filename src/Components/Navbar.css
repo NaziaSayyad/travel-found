@@ -337,8 +337,10 @@
 @media screen and (max-width :820px) {
 
   .navbar{
+  padding: 15px 10px;
   width: 100%;
   overflow: scroll;
+  scrollbar-width: none;
 } 
  .nav-links {
      display: flex;
@@ -351,6 +353,7 @@
     display: none;
   }
  .nav-container{
+  margin-top: 1%;
   max-width: 600px;
   margin-left: 5%;
   display: flex;
@@ -365,6 +368,6 @@
 }
 .logo-img{
   /* height: 54px; */
-  margin-top: 1%;
+  margin-top: 25%;
 }
 }

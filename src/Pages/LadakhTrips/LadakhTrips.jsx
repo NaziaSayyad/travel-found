@@ -8,22 +8,23 @@ import FilterComponent from "../Ladakh/Itenaries/components/FilterComponent";
 import { Mobile_TravelCarousel } from "../../MobileVersion/Pages/Mobile_TravelCarousel";
 import { TravelCarousel } from "../UI/Swiper";
 import { useBreakpoint } from "../../Responsive-component/UseMobile";
+import { LadakhCrausel, LadakhPage } from "../../MobileVersion/Pages/Ladakh_Mobile";
 
 const images = [
   {
-    url: "https://i.ibb.co/My73LbQH/pexels-akshay-salunke-1250693538-23522680.jpg",
+    url: "https://i.postimg.cc/j5s0Gvmq/sand-6740499.jpg",
     title: "Ladakh Tour Packages",
     description: "Feel the thrill of the mountains and monasteries",
     price: "Rs. 34,999/- Per Person",
   },
   {
-    url: "https://i.ibb.co/yDYdkf9/lake-489289.jpg",
+    url: "https://i.ibb.co/cXDPsY8j/1-4.jpg",
     title: "Ladakh Tour Packages",
     description: "Feel the thrill of the mountains and monasteries",
     price: "Rs. 34,999/- Per Person",
   },
   {
-    url: "https://i.ibb.co/gZ8YhxLc/pangong-tso-7228599.jpg",
+    url: "https://i.ibb.co/FLVKvs0B/1-15.jpg",
     title: "Ladakh Tour Packages",
     description: "Feel the thrill of the mountains and monasteries",
     price: "Rs. 34,999/- Per Person",
@@ -41,7 +42,7 @@ export const Ladakh_New_Trips = () => {
     const [SL, setSL] = useState([]);
     const [LL, setLL] = useState([]);
     const [data, setData] = useState([]);
-    const { isMobile, isTablet, isDesktop } = useBreakpoint(768, 1200);
+    const { isMobile, isTablet, isDesktop } = useBreakpoint(820, 1200,1024);
   
     const [filters, setFilters] = useState({
         route: "",
@@ -147,7 +148,9 @@ useEffect(() => {
     return (
         <>
         <div> 
-            <Carousel images={images}/>
+            {isMobile && <LadakhPage />}
+      {isDesktop && <Carousel images={images} />}
+
         </div>
             <h1 style={{textAlign : 'center'}}> Ladakh New Trips </h1>
 
@@ -164,8 +167,9 @@ useEffect(() => {
                      <h2  className="trips-define">Group Trips </h2>
                      {
                        isMobile && <Mobile_TravelCarousel data={GL} link={'/ladakh'} />}
-                     {isDesktop && <TravelCarousel data={GL} link={'/ladakh'} />
-                     }
+                     {isDesktop && <TravelCarousel data={GL} link={'/ladakh'} />}
+                     {isTablet && <TravelCarousel data={GL} link={'/ladakh'} />}
+          
            
                    </>
                  )}
@@ -177,7 +181,8 @@ useEffect(() => {
                      <h2  className="trips-define">Customize Trips </h2>
                       {isMobile && <Mobile_TravelCarousel data={LL} link={'/ladakh'} />}
                      {isDesktop && <TravelCarousel data={LL} link={'/ladakh'} />}
-                   
+                     {isTablet && <TravelCarousel data={LL} link={'/ladakh'} />}
+          
                    </>
                  )}
                  </div>
@@ -188,7 +193,8 @@ useEffect(() => {
                      <h2   className="trips-define">Luxurious Ladakh  </h2>
                     {isMobile && <Mobile_TravelCarousel data={SL} link={'/ladakh'} />}
                      {isDesktop && <TravelCarousel data={SL} link={'/ladakh'} />}
-                   
+                    {isTablet && <TravelCarousel data={SL} link={'/ladakh'} />}
+          
                     </>
                  )}
                 </div>

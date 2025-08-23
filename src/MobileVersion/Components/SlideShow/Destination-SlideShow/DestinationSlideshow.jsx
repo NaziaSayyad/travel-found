@@ -10,7 +10,7 @@ const packages = [
   {
     name: "Ladakh",
     img: "https://i.ibb.co/MxxyH6Rn/vivek-kumar-7k1-IKQZik-Sc-unsplash.jpg",
-    link: "/ladakh",
+    link: "/ladakhTrip",
     price: "₹21,999"
   },
 

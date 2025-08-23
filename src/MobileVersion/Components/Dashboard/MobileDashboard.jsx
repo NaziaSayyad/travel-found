@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const destinations = [
   {
-    link: "/ladakh",
+    link: "/ladakhTrip",
     name: "Ladakh",
     img: "https://i.ibb.co/FLVKvs0B/1-15.jpg"
   },

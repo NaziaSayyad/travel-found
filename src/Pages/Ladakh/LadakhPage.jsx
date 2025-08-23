@@ -42,7 +42,7 @@ export const Ladakh = () => {
 
   const location = useLocation();
   // You want mobile <= 768, tablet <= 1200
-  const { isMobile, isTablet, isDesktop } = useBreakpoint(820, 1024);
+  const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
 
   const [data, setData] = useState([]);
   const [cityList, setCityList] = useState([]);
@@ -162,6 +162,8 @@ export const Ladakh = () => {
               <h2 className="trips-define">Trip From Delhi to Srinagar</h2>
               {isMobile && <Mobile_TravelCarousel data={DMLS} link={'/ladakh'} />}
               {isDesktop && <TravelCarousel data={DMLS} link={'/ladakh'} />}
+             {isTablet && <TravelCarousel data={DMLS} link={'/ladakh'} />}
+          
             </>
           )
           }
@@ -174,8 +176,9 @@ export const Ladakh = () => {
           <h2 className="trips-define">Trip From Manali to Srinagar</h2>
           {
             isMobile && <Mobile_TravelCarousel data={MLS} link={'/ladakh'} />}
-          {isDesktop && <TravelCarousel data={MLS} link={'/ladakh'} />
-          }
+          {isDesktop && <TravelCarousel data={MLS} link={'/ladakh'} />}
+          {isTablet && <TravelCarousel data={MLS} link={'/ladakh'} />}
+          
         </>
       )}
 
@@ -187,6 +190,8 @@ export const Ladakh = () => {
             isMobile && <Mobile_TravelCarousel data={SLMD} link={'/ladakh'} />}
           {isDesktop && <TravelCarousel data={SLMD} link={'/ladakh'} />
           }
+          {isTablet && <TravelCarousel data={SLMD} link={'/ladakh'} />}
+          
         </>
       )}
 
@@ -197,6 +202,8 @@ export const Ladakh = () => {
             isMobile && <Mobile_TravelCarousel data={SLM} link={'/ladakh'} />}
           {isDesktop && <TravelCarousel data={SLM} link={'/ladakh'} />
           }
+          {isTablet && <TravelCarousel data={SLM} link={'/ladakh'} />}
+          
 
         </>
       )}
@@ -208,6 +215,8 @@ export const Ladakh = () => {
             isMobile && <Mobile_TravelCarousel data={SL} link={'/ladakh'} />}
           {isDesktop && <TravelCarousel data={SL} link={'/ladakh'} />
           }
+          {isTablet && <TravelCarousel data={SL} link={'/ladakh'} />}
+          
         </>
       )}
 
@@ -218,6 +227,8 @@ export const Ladakh = () => {
             isMobile && <Mobile_TravelCarousel data={LL} link={'/ladakh'} />}
           {isDesktop && <TravelCarousel data={LL} link={'/ladakh'} />
           }
+          {isTablet && <TravelCarousel data={LL} link={'/ladakh'} />}
+          
         </>
       )}
       
@@ -228,6 +239,8 @@ export const Ladakh = () => {
             isMobile && <Mobile_TravelCarousel data={LS} link={'/ladakh'} />}
           {isDesktop && <TravelCarousel data={LS} link={'/ladakh'} />
           }
+          {isTablet && <TravelCarousel data={LS} link={'/ladakh'} />}
+          
         </>
       )}
 
@@ -238,6 +251,8 @@ export const Ladakh = () => {
             isMobile && <Mobile_TravelCarousel data={DMLMD} link={'/ladakh'} />}
           {isDesktop && <TravelCarousel data={DMLMD} link={'/ladakh'} />
           }
+          {isTablet && <TravelCarousel data={MLS} link={'/ladakh'} />}
+          
         </>
       )}
 

@@ -28,14 +28,14 @@
 
 .mobile-carousel-content {
   position: absolute;
-  left: 10px;
+  left: 5px;
   bottom: 50px;
   color: white;
   /* max-width: 50px; */
 }
 
 .mobile-carousel-content h2 {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
 }
