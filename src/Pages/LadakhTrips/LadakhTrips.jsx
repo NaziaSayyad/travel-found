@@ -35,38 +35,38 @@ const API = 'https://travelfondbackend-production.up.railway.app/ladakh';
 
 export const Ladakh_New_Trips = () => {
 
-    const [loading, setLoading] = useState(true);
-    const location = useLocation();
-    const [cityList, setCityList] = useState([]);
-    const [GL, setGL] = useState([]);
-    const [SL, setSL] = useState([]);
-    const [LL, setLL] = useState([]);
-    const [data, setData] = useState([]);
-    const { isMobile, isTablet, isDesktop } = useBreakpoint(820, 1200,1024);
-  
-    const [filters, setFilters] = useState({
-        route: "",
-        budget: "",
-        customize: "",
-        cities: []
-    });
-useEffect(() => {
-  if (location.hash) {
-    const section = document.querySelector(location.hash);
-    if (section) {
-      const yOffset = -80; // adjust if you have a fixed navbar
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+  const [loading, setLoading] = useState(true);
+  const location = useLocation();
+  const [cityList, setCityList] = useState([]);
+  const [GL, setGL] = useState([]);
+  const [SL, setSL] = useState([]);
+  const [LL, setLL] = useState([]);
+  const [data, setData] = useState([]);
+  const { isMobile, isTablet, isDesktop } = useBreakpoint(820, 1200, 1024);
+
+  const [filters, setFilters] = useState({
+    route: "",
+    budget: "",
+    customize: "",
+    cities: []
+  });
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        const yOffset = -80; // adjust if you have a fixed navbar
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // aligns the top of the div with the top of the viewport
+      });
     }
-    section.scrollIntoView({
-  behavior: "smooth",
-  block: "start", // aligns the top of the div with the top of the viewport
-});
-  }
-}, [location]);
+  }, [location]);
 
 
-    useEffect(() => {
+  useEffect(() => {
     const fetchdata = async () => {
       try {
         const res = await axios.get(API);
@@ -82,7 +82,7 @@ useEffect(() => {
         setGL(res.data.filter(trip => trip.code === "GL"));
         setSL(res.data.filter(trip => trip.code === "SL"));
         setLL(res.data.filter(trip => trip.code === "LL"));
-       
+
       }
       catch (error) {
         console.error("Error fetching data:", error);
@@ -90,18 +90,18 @@ useEffect(() => {
     }
     fetchdata();
   }, [])
-  
-    useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }, [location]);
-    
-    useEffect(() => {
-        // Scroll to top whenever the component mounts or location changes
-        window.scrollTo(0, 0);
-    }, [location]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [location]);
+
+  useEffect(() => {
+    // Scroll to top whenever the component mounts or location changes
+    window.scrollTo(0, 0);
+  }, [location]);
 
 
-    const applyFilters = (newFilters) => {
+  const applyFilters = (newFilters) => {
     setFilters(newFilters);
 
     if (!data) return;
@@ -129,8 +129,8 @@ useEffect(() => {
     setGL(filtered.filter(trip => trip.code === "GL"));
     setSL(filtered.filter(trip => trip.code === "SL"));
     setLL(filtered.filter(trip => trip.code === "LL"));
-};
-useEffect(() => {
+  };
+  useEffect(() => {
     if (location.hash) {
       const section = document.querySelector(location.hash);
       if (section) {
@@ -140,66 +140,69 @@ useEffect(() => {
   }, [location]);
 
 
-    const isFiltered = filters.nights || filters.route.length || filters.budget || filters.cities.length;
-//     if (loading) {
-//     return <Loading />
-//   }
+  const isFiltered = filters.nights || filters.route.length || filters.budget || filters.cities.length;
+  //     if (loading) {
+  //     return <Loading />
+  //   }
 
-    return (
-        <>
-        <div> 
-            {isMobile && <LadakhPage />}
-      {isDesktop && <Carousel images={images} />}
+  return (
+    <>
+      <div>
+        {isMobile && <LadakhPage />}
+        {isDesktop && <Carousel images={images} />}
 
+      </div>
+      <h1 style={{ textAlign: 'center' }}> Ladakh New Trips </h1>
+      
+      <div>
+
+        <FilterComponent onFilterChange={applyFilters} cityList={cityList} />
+
+      </div>
+      <div style={{
+        marginBottom: '2%',
+        // border : '2px solid teal'
+      }}>
+
+        <div id="group" className="anchor-section">
+          {(!isFiltered || GL.length > 0) && (
+            <>
+              <h2 className="trips-define">Group Trips </h2>
+              {
+                isMobile && <Mobile_TravelCarousel data={GL} link={'/ladakh'} />}
+              {isDesktop && <TravelCarousel data={GL} link={'/ladakh'} />}
+              {isTablet && <TravelCarousel data={GL} link={'/ladakh'} />}
+
+
+            </>
+          )}
         </div>
-            <h1 style={{textAlign : 'center'}}> Ladakh New Trips </h1>
 
-      <FilterComponent onFilterChange={applyFilters} cityList={cityList} />
+        <div id="customize" className="anchor-section-customize">
+          {(!isFiltered || SL.length > 0) && (
+            <>
+              <h2 className="trips-define">Customize Trips </h2>
+              {isMobile && <Mobile_TravelCarousel data={LL} link={'/ladakh'} />}
+              {isDesktop && <TravelCarousel data={LL} link={'/ladakh'} />}
+              {isTablet && <TravelCarousel data={LL} link={'/ladakh'} />}
 
-                <div style={{
-                    marginBottom : '2%',
-                    // border : '2px solid teal'
-                }}>
-                 
-                 <div  id="group" className="anchor-section">
-                    {(!isFiltered || GL.length > 0) && (
-                   <>
-                     <h2  className="trips-define">Group Trips </h2>
-                     {
-                       isMobile && <Mobile_TravelCarousel data={GL} link={'/ladakh'} />}
-                     {isDesktop && <TravelCarousel data={GL} link={'/ladakh'} />}
-                     {isTablet && <TravelCarousel data={GL} link={'/ladakh'} />}
-          
-           
-                   </>
-                 )}
-                 </div>
-           
-                 <div id="customize" className="anchor-section-customize">
-                    {(!isFiltered || SL.length > 0) && (
-                   <>
-                     <h2  className="trips-define">Customize Trips </h2>
-                      {isMobile && <Mobile_TravelCarousel data={LL} link={'/ladakh'} />}
-                     {isDesktop && <TravelCarousel data={LL} link={'/ladakh'} />}
-                     {isTablet && <TravelCarousel data={LL} link={'/ladakh'} />}
-          
-                   </>
-                 )}
-                 </div>
-           
-                <div id="luxurious" className="anchor-section-luxurious">
-                     {(!isFiltered || LL.length > 0) && (
-                   <>
-                     <h2   className="trips-define">Luxurious Ladakh  </h2>
-                    {isMobile && <Mobile_TravelCarousel data={SL} link={'/ladakh'} />}
-                     {isDesktop && <TravelCarousel data={SL} link={'/ladakh'} />}
-                    {isTablet && <TravelCarousel data={SL} link={'/ladakh'} />}
-          
-                    </>
-                 )}
-                </div>
+            </>
+          )}
+        </div>
 
-                </div>
-        </>
-    )
+        <div id="luxurious" className="anchor-section-luxurious">
+          {(!isFiltered || LL.length > 0) && (
+            <>
+              <h2 className="trips-define">Luxurious Ladakh  </h2>
+              {isMobile && <Mobile_TravelCarousel data={SL} link={'/ladakh'} />}
+              {isDesktop && <TravelCarousel data={SL} link={'/ladakh'} />}
+              {isTablet && <TravelCarousel data={SL} link={'/ladakh'} />}
+
+            </>
+          )}
+        </div>
+
+      </div>
+    </>
+  )
 }

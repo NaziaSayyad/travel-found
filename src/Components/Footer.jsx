@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SubFooter.css";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import NewsletterForm from "./NewsLetter/NewsLetterForm";
 
 export const Footer = () => {
   return (
@@ -23,7 +24,7 @@ export const Footer = () => {
           <h3>Follow Us</h3>
           <div className="social-icons">
             <a href="#"><FaFacebook /></a>
-            <a href="#"><FaInstagram /></a>
+            <a href="https://www.instagram.com/travelfond_official" target=" "><FaInstagram /></a>
             <a href="#"><FaTwitter /></a>
             <a href="#"><FaYoutube /></a>
           </div>
@@ -31,20 +32,22 @@ export const Footer = () => {
 
         {/* Column 4: Newsletter */}
         <div className="footer-column">
-          <h3>Newsletter</h3>
+          {/* <h3>Newsletter</h3>
           <p>Subscribe to get the latest travel updates.</p>
-          <input type="email" placeholder="Enter your email" />
-          <button>Subscribe</button>
+          <input type="email" id="email" placeholder="Enter your email" required />
+          <button onclick="subscribe()">Subscribe</button> */}
+
+            <NewsletterForm />
         </div>
       </div>
 
-        {/* Column 1: Company Info */}
-        <div className="footer-column">
-          <h1>Travel Fond</h1>
-          <h4>Your perfect travel partner for unforgettable adventures.</h4>
-          <p> Address: 16 DSIDC Complex, Mata Sundari Road,
-             Beside Ranjit Singh Flyover, Barakhamba Road, Near Connaught Place, Delhi -110002</p>
-        </div>
+      {/* Column 1: Company Info */}
+      <div className="footer-column">
+        <h1>Travel Fond</h1>
+        <h4>Your perfect travel partner for unforgettable adventures.</h4>
+        <p> Address: 16 DSIDC Complex, Mata Sundari Road,
+          Beside Ranjit Singh Flyover, Barakhamba Road, Near Connaught Place, Delhi -110002</p>
+      </div>
 
 
       {/* Copyright Section */}

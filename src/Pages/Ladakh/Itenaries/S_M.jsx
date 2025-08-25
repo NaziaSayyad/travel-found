@@ -15,7 +15,8 @@ const Heading_Name_Curved_Slider = "LADAKH MOMENTS"
 export const Shrinagar_Manali = () => {
   const { id } = useParams();
 
-  const API = `https://travelfondbackend-production.up.railway.app/ladakh${id}`;
+  const API = `https://travelfond-backend.onrender.com/ladakh/${id}`;
+  // https://travelfondbackend-production.up.railway.app/ladakh${id}`
   // https://travelfond-backend.onrender.com/ladakh/
   
   const [tripDetails, setTripDetails] = useState("");
