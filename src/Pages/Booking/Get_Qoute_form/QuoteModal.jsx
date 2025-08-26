@@ -56,7 +56,7 @@ export default function QuoteModal({ onClose }) {
         setStatus("");
 
         try {
-            const response = await fetch("http://localhost:8080/enquiry", {
+            const response = await fetch("https://travelfond-backend.onrender.com/enquiry", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

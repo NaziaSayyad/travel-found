@@ -27,6 +27,7 @@ export const Form = () => {
     if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
       setFeedback("Please enter a valid email address");
       setStatus("error");
+      setLoading(false);
       return;
     }
 
@@ -38,6 +39,7 @@ export const Form = () => {
     if (!/^\d{10}$/.test(formData.phone)) {
       setFeedback("Please enter a valid 10-digit phone number");
       setStatus("error");
+      setLoading(false);
       return;
     }
 
@@ -46,7 +48,7 @@ export const Form = () => {
     setStatus("");
 
     try {
-      const response = await fetch("http://localhost:8080/enquiry", {
+      const response = await fetch("https://travelfond-backend.onrender.com/enquiry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
