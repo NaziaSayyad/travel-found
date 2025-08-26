@@ -6,12 +6,23 @@ import { useNavigate } from "react-router-dom";
 import { BatchesPage } from "../Subcomponents/Batches";
 import { CostingPage } from "../Subcomponents/Costing";
 import QueryForm from "./QueryForm";
+import QuoteModal from "../../../Booking/Get_Qoute_form/QuoteModal";
 
 const SidebarForm = ({ costing, batches, data}) => {
   const [showCosting, setShowCosting] = useState(false);
   const navigate = useNavigate();
+ const [isModalOpen, setIsModalOpen] = useState(false);
 
-  console.log("booking",data.Name);
+    const openQuoteModal = () => {
+  document.body.classList.add("quote-modal-open"); // add a class to body
+  setIsModalOpen(true); // open modal
+};
+
+const closeQuoteModal = () => {
+  document.body.classList.remove("quote-modal-open"); // remove the class
+  setIsModalOpen(false); // close modal
+};
+
   
   const toggleCosting = () => {
     setShowCosting((prev) => !prev);
@@ -58,13 +69,15 @@ console.log(data,"DATA");
             <QueryForm /> */}
             <div>
             {/* <QueryForm /> */}
-            <div className="book-now-container">
-              <button className="book-now-btn" onClick={handleBookNow}>
-                Customize Your Trip 
-              </button>
-            </div>
-      {batches && (
+            {/*  */}
+            
+      {batches ? (
         <>
+            <div className="book-now-container">
+         <button className="book-now-btn" onClick={openQuoteModal}>
+               Get Quotes
+          </button>
+            </div>
          <BatchesPage data={batches}  start={data.start} end ={data.End} />
          <CostingPage data={costing} />
          <div className="book-now-container">
@@ -73,11 +86,22 @@ console.log(data,"DATA");
               </button>
             </div>
         </>
+      ):(
+          <div className="book-now-container">
+              <button className="book-now-btn" onClick={() => navigate("/customize-trip")}>
+                Customize Your Trip 
+              </button>
+            </div>
       )}
+      <div className="book-now-container">
+  
+</div>
+
             </div>
           
           </>
         )}
+         {isModalOpen && <QuoteModal onClose={closeQuoteModal} />}
       </div>
 
       {/* Form Component */}

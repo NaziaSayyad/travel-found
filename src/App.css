@@ -7,6 +7,20 @@
   pointer-events: none;
 }
 
+/* body.quote-modal-open .tab-container,
+body.quote-modal-open .info-card-container.fixed,
+body.quote-modal-open .navbar,
+body.quote-modal-open .subnavbar {
+  position: static !important;
+  z-index: 0 !important;
+} */
+
+body.quote-modal-open {
+  overflow: hidden;
+  /* height: 100vh;  */
+  /* prevent scroll */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

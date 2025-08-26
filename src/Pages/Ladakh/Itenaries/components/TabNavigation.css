@@ -1,8 +1,18 @@
+ body.modal-open .tab-container {
+  position: relative; /* or relative */
+  z-index: 0;;
+}
+ body.modal-open .info-card-container.fixed {
+  position: relative; /* or relative */
+  z-index: 0;;
+}
+
+
 .tab-container {
   position: sticky;
   top: 135px;
   /* Adjust this value to match your main navigation height */
-  z-index: 1000;
+  z-index: 0;
   background-color: white;
   padding: 10px 0;
   width: 100%;
@@ -45,7 +55,7 @@
 
 .info-card-container {
   position: relative;
-  z-index: 98;
+  z-index: 0;
   background: white;
   transition: all 0.3s ease;
 }
@@ -53,6 +63,7 @@
 .info-card-container.fixed {
   position: sticky;
   top: 195px;
+  z-index: 0;
   /* Adjust based on your navbar + tab heights */
 }
 

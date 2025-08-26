@@ -49,9 +49,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
 }
 
   return (
-    <div style={{
-      margin : 0
-    }}>
+    <div className='App'>
 
       {isMobile &&  <MobileNavbar />}
       {/* {isTablet && } */}

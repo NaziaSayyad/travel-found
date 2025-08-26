@@ -87,8 +87,6 @@ export const Shrinagar_Manali = () => {
               end = {tripDetails?.End}
               nights = {tripDetails?.nights}
             />
-            
-
           </div>
           <div className="SidebarForm-container">
             <SidebarForm 

@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body.quote-modal-open {
+  overflow: hidden;
+  height: 100vh; /* prevent small scroll jump */
+}
+ body.modal-open .tab-container {
+  position: static; /* or static */
+  z-index: 0;;
+}
+ body.modal-open .info-card-container.fixed {
+  position: static; /* or static */
+  z-index: 0;;
+}
+ body.modal-open .navbar {
+  position: static; /* or static */
+  z-index: 0;;
+}
+ body.modal-open .subnavbar {
+  position: static; /* or static */
+  z-index: 0;;
+}

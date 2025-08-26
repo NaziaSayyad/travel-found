@@ -34,7 +34,7 @@ const NavbarDropdown = ({ NAME }) => {
             .then((res) => {
                 setStatesData(res.data);
                 setFilteredStates(res.data);
-                console.log(res.data, "filter")
+                // console.log(res.data, "filter")
             })
             .catch((err) => console.error('Failed to load data:', err));
     }, []);
@@ -66,7 +66,7 @@ const NavbarDropdown = ({ NAME }) => {
 
         setFilteredStates(filtered);
     }, [searchTerm, statesData]);
-    console.log(statesData,"ss");
+    // console.log(statesData,"ss");
     
 
     return (

@@ -1,0 +1,103 @@
+/* Overlay covers entire screen */
+
+.quote-modal-overlay {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);  /* dimmed background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  /* height: 350px; */
+}
+
+/* Popup box */
+.quote-modal-box {
+  background: #fff;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  animation: popupScale 0.3s ease; /* popup animation */
+}
+
+/* Close button */
+.quote-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  border: 2px solid rgb(1, 95, 116);
+  border-radius: 25%;
+  color: rgb(1, 95, 116);
+  font-weight: bold;
+  
+}
+
+/* Modal layout */
+.quote-modal-body {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Left side */
+.quote-modal-left {
+  flex: 1;
+}
+
+/* Right side (form section) */
+.quote-modal-right {
+  flex: 1;
+  background: #e9f8ff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.quote-modal-right h2 {
+  margin-bottom: 5px;
+}
+
+.quote-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.quote-modal-form input,
+.quote-modal-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.submit-btn {
+  background: #ffd500;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Popup animation */
+@keyframes popupScale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
