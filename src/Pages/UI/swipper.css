@@ -121,7 +121,8 @@
   text-decoration: line-through;
   margin-right: 5px;
   font-size: 15px;
-  color: #ddd;
+  /* color: #ddd; */
+  color: red;
  align-items: center;
 }
 .new-price {

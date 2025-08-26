@@ -32,13 +32,14 @@ const SidebarForm = ({ costing, batches, data}) => {
 
     navigate("/book-now", { state: bookingDetails });
   };
+console.log(data,"DATA");
 
   return (
     <div className="sidebar-container">
       {/* Pricing Box */}
       <div className="pricing-box">
         <p>Starting from</p>
-        <span className="price">₹22,999/-</span>
+        <span className="price">{`₹${data.newprice}/-`}</span>
         <span className="per-person"> per person</span>
         <button className="pricing-btn" onClick={toggleCosting}>
           Dates & Costing
