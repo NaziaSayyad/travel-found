@@ -5,12 +5,13 @@ import { Form } from "./Form";
 import { useNavigate } from "react-router-dom";
 import { BatchesPage } from "../Subcomponents/Batches";
 import { CostingPage } from "../Subcomponents/Costing";
-import QueryForm from "./QueryForm";
+import QueryForm from "../../../Booking/Customize_Form/QueryForm";
 import QuoteModal from "../../../Booking/Get_Qoute_form/QuoteModal";
 
 const SidebarForm = ({ costing, batches, data}) => {
   const [showCosting, setShowCosting] = useState(false);
   const navigate = useNavigate();
+  
  const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openQuoteModal = () => {
@@ -31,19 +32,11 @@ const closeQuoteModal = () => {
   const handleBookNow = () => {
     // You can customize this object to send specific data like batch name, cost etc.
     const bookingDetails = {
-      Name : data.Name,
-      days : data.days,
-      img: data.img,
-      batch : batches,
-      cost :costing,
-      start : data.start,
-      end : data.End
-
+       data:data
     };
-
+    
     navigate("/book-now", { state: bookingDetails });
   };
-console.log(data,"DATA");
 
   return (
     <div className="sidebar-container">
@@ -59,18 +52,8 @@ console.log(data,"DATA");
         {/* Batch Section */}
         {showCosting && (
           <>
-           {/* <BatchesPage data={batches}  start={data.start} end ={data.End}  />
-            <CostingPage data={costing} />
-           <div className="book-now-container">
-              <button className="book-now-btn" onClick={handleBookNow}>
-                Book Now
-              </button>
-            </div>
-            <QueryForm /> */}
             <div>
-            {/* <QueryForm /> */}
-            {/*  */}
-            
+           
       {batches ? (
         <>
             <div className="book-now-container">
@@ -88,7 +71,7 @@ console.log(data,"DATA");
         </>
       ):(
           <div className="book-now-container">
-              <button className="book-now-btn" onClick={() => navigate("/customize-trip")}>
+              <button className="book-now-btn" onClick={handleBookNow}>
                 Customize Your Trip 
               </button>
             </div>

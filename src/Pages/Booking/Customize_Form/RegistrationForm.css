@@ -1,7 +1,5 @@
 .costing-form-container {
-  /* max-width: 500px; */
   width: 450px;
-  margin-top: 25px;
   margin-left: 85px;
   padding: 30px;
   background-color: #ffffff;
@@ -9,6 +7,10 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', sans-serif;
 }
+ .parent-booking-div{
+  display: flex;
+  justify-content: space-around;
+ }
 
 .costing-form-container h2 {
   text-align: center;
@@ -57,13 +59,13 @@
 }
 
 .booking-container {
-  display: flex;
-  justify-content: space-around;
-  /* flex-wrap: wrap; */
+  margin-top: 8%;
   background-color: #f9f9f9;
   font-family: sans-serif;
   padding: 30px;
  }
+
+
 .summary-section {
   flex: 1;
   /* min-width: 300px; */

@@ -13,7 +13,6 @@ import { Ladakh } from './Pages/Ladakh/LadakhPage';
 import { Spiti } from './Pages/Spiti/Spiti';
 import { Test } from './Pages/Test';
 import { Shrinagar_Manali } from './Pages/Ladakh/Itenaries/S_M';
-import { RegistrationForm } from './Pages/Ladakh/Itenaries/Subcomponents/RegistrationForm';
 import { useEffect } from 'react';
 import { useLocation, BrowserRouter as Router } from 'react-router-dom';
 import { SpitiItenary } from './Pages/Spiti/SpitiItenaries';
@@ -29,6 +28,7 @@ import { LadakhPage } from './MobileVersion/Pages/Ladakh_Mobile';
 import { WhatsAppButton } from './Pages/UI/WhatsappButton';
 import { Ladakh_New_Trips } from './Pages/LadakhTrips/LadakhTrips';
 import { PrivacyPolicy } from './PrivacyPolicy/PrivacyPolicy';
+import { RegistrationForm } from './Pages/Booking/Customize_Form/RegistrationForm';
 
 function App() {// You want mobile <= 768, tablet <= 1200
 const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
