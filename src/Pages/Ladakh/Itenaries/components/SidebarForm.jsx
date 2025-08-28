@@ -11,6 +11,11 @@ import QuoteModal from "../../../Booking/Get_Qoute_form/QuoteModal";
 const SidebarForm = ({ costing, batches, data}) => {
   const [showCosting, setShowCosting] = useState(false);
   const navigate = useNavigate();
+  // console.log(data,"sidebar");
+  // console.log(batches,"batch");
+  // console.log(costing,"costing");
+  
+  
   
  const [isModalOpen, setIsModalOpen] = useState(false);
 

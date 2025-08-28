@@ -74,7 +74,7 @@ if(loading){
             
          </div>
          <div>
-          <MobileCosting />
+          <MobileCosting data={tripDetails}/>
          </div>
         {/* <FloatingButtons /> */}
         </>

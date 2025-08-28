@@ -86,9 +86,10 @@ const QueryForm = ({ data }) => {
           <h2>Customise Your Trip</h2>
 
           <form onSubmit={handleSubmit}>
-            <label>
+            <label className='query-form-label'>
               Full Name:
               <input
+              className='query-form-input'
                 type="text"
                 name="fullName"
                 value={formData.fullName}
@@ -98,9 +99,10 @@ const QueryForm = ({ data }) => {
               />
             </label>
 
-            <label>
+            <label className='query-form-label'>
               Phone Number:
               <input
+              className='query-form-input'
                 type="tel"
                 name="phone"
                 value={formData.phone}
@@ -110,9 +112,10 @@ const QueryForm = ({ data }) => {
               />
             </label>
 
-            <label>
+            <label className='query-form-label'>
               Email ID:
               <input
+              className='query-form-input'
                 type="email"
                 name="email"
                 value={formData.email}
@@ -120,9 +123,10 @@ const QueryForm = ({ data }) => {
                 placeholder="Email Id *"
                 required
               /> </label>
-            <label>
+            <label className='query-form-label'>
               Trip Date:
               <input
+              className='query-form-input'
                 type="date"
                 name="tripDate"
                 value={formData.tripDate}
@@ -140,7 +144,7 @@ const QueryForm = ({ data }) => {
               />
             </label>
 
-            <label>
+            <label className='query-form-label'>
               No. of Pax:
               <select
                 className="input-costing"
@@ -164,7 +168,7 @@ const QueryForm = ({ data }) => {
             </label>
 
             {/* COST SELECTOR */}
-            <label htmlFor="cost">Select Cost</label>
+            <label className='query-form-label' htmlFor="cost">Select Cost</label>
             <select
               className="input-costing"
               id="cost"

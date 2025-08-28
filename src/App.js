@@ -29,6 +29,8 @@ import { WhatsAppButton } from './Pages/UI/WhatsappButton';
 import { Ladakh_New_Trips } from './Pages/LadakhTrips/LadakhTrips';
 import { PrivacyPolicy } from './PrivacyPolicy/PrivacyPolicy';
 import { RegistrationForm } from './Pages/Booking/Customize_Form/RegistrationForm';
+import { BatchCosting } from './MobileVersion/Pages/Booking/BatchCosting';
+import { GroupForm } from './MobileVersion/Pages/BookingForm/GroupTripsForm';
 
 function App() {// You want mobile <= 768, tablet <= 1200
 const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
@@ -78,14 +80,15 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
         <Route path="/contact" element ={<Contact />}  />
         <Route path="/spiti" element ={<Spiti />} />
         <Route path="/test" element={<Test />} />
-
+        <Route path='/costing' element={<BatchCosting /> } />
         <Route path='/ladakh/:id' 
         element={isMobile ? <Mobile_Ladakh_ITenary /> : 
         <Shrinagar_Manali />} 
         />
         <Route path='/ladakhTrip' element = {<Ladakh_New_Trips />}/>
         <Route path='/spiti/:id' element={<SpitiItenary />} />
-        <Route path='/book-now' element = {<RegistrationForm />}/>
+        <Route path='/book-now' element = {isMobile ? 
+        <GroupForm /> : <RegistrationForm />} />
         <Route path='/domestic/:id' element={<DomesticTrips />}  />
         <Route path='/international/:id' element={<InternationalTrips />}/>
       </Routes>
