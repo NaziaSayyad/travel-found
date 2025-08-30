@@ -88,7 +88,9 @@ const NavbarDropdown = ({ NAME }) => {
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="dropdown-search"
                 /> */}
-                <h2 style={{textAlign :'center'}}> Coming Soon .... </h2>
+                <div>
+                    
+                </div>
                 <h3 style={{textAlign :'center'}}> Coming Soon .... </h3>
                 <div className="dropdown-grid">
                     {filteredStates?.map((state, index) => (

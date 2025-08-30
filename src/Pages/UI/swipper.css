@@ -126,7 +126,8 @@
  align-items: center;
 }
 .new-price {
-  color: white;
+  color: #21759b;
+  /* color: white; */
   font-size: 15px;
     
 }

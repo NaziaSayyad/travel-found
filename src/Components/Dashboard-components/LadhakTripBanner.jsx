@@ -7,7 +7,7 @@ const heading = "Ladakh Trips";
 const para = "Discover the world, one destination at a time";
 const link = "/ladakh";
 
-const LadhakTripBanner = ({ Banner, images, heading, link }) => {
+const LadhakTripBanner = ({ Banner, images,  link }) => {
     
       const swiperRef = useRef(null);
   return (
@@ -32,7 +32,7 @@ const LadhakTripBanner = ({ Banner, images, heading, link }) => {
       }}
       >
         <div className="trip-content">
-          <h1> {heading} </h1>
+          {/* <h1> {heading} </h1> */}
           <p> {para} </p>
           <Link to={link}
             className="explore-btn"> Explore </Link>

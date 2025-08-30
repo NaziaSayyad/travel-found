@@ -94,13 +94,21 @@ export default function QuoteModal({ onClose }) {
                 <div className="quote-modal-body">
                     {/* Left section */}
                     <div className="quote-modal-left">
-                        {/* <img src="/consult.png" alt="Consultation" className="quote-modal-img" /> */}
-                        <ul>
+                        <img
+                         src="/imp.jpg"
+                          alt="Consultation" 
+                          style={{
+                            width:'480px',
+                            height :'450px'
+                          }}
+                        //   className="quote-modal-img" 
+                          />
+                        {/* <ul>
                             <li>✅ Free Consultation by Experts</li>
                             <li>✅ No Annoying Spam Calls</li>
                             <li>✅ Authentic Destination Insights</li>
                             <li>✅ Your Data is Safe with Us</li>
-                        </ul>
+                        </ul> */}
                         {/* <img
                             src=""
                             alt="kl"

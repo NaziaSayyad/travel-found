@@ -57,7 +57,6 @@ const InternationalDropdown = ({ API, NAME }) => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         /> */}
-          <h2 style={{textAlign :'center'}}> Coming Soon .... </h2>
           <h3 style={{textAlign :'center'}}> Coming Soon .... </h3>
                 
         <div className="domestic-dropdown-grid">

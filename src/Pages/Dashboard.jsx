@@ -13,7 +13,7 @@ const ladakh = "Ladakh Trips";
 const ladakh_link = "/ladakh";
 const ladakh_images = [
   {
-    place: "Nubra",
+    // place: "Nubra",
     price: "45,000",
     img: "https://i.ibb.co/PzJ8VmXz/CARD-3.png"
     // 'https://i.ibb.co/v4pTLt9Z/CARD.png', 
@@ -22,22 +22,22 @@ const ladakh_images = [
 
   },
   {
-    place: "Tso Moriri",
+    // place: "Tso Moriri",
     price: "40,000",
     img: "https://i.postimg.cc/sfkwnmLt/leh-4152872.jpg"
   },
   {
-    place: "Pangong",
+    // place: "Pangong",
     price: "7000",
     img: "https://i.postimg.cc/yNGFDY4w/118.jpg"
   },
   {
-    place: "Turtuk",
+    // place: "Turtuk",
     price: "40,000",
     img: "https://i.postimg.cc/j5s0Gvmq/sand-6740499.jpg"
   },
   {
-    place: "Zanskar",
+    // place: "Zanskar",
     price: "45000",
     img: "https://i.ibb.co/h18VstcR/divyanshi-verma-w-Lq-V0-R6-LYNI-unsplash.jpg"
     },
@@ -100,38 +100,84 @@ const Spiti_images = [
   }
  
 ];
+const Rajasthan_Banner =  "https://i.ibb.co/SXWMJyGs/2.png";
+const Rajasthan = "Rajasthan Trips";
+const Rajasthan_link = "/Rajasthan";
+const Rajasthan_images = [
+  {
+    // place: "Jaipur",
+    price: "45,000",
+    img: "https://i.ibb.co/TMhXb0dv/36.jpg"
+    },
+  {
+    // place: "Jaisalmer",
+    price: "40,000",
+    img: "https://i.ibb.co/9HRSMqhG/40.jpg"
+    },
+  {
+    // place: "Udaipur",
+    price: "7000",
+    img: "https://i.ibb.co/rRvLPXGY/44.jpg"
+    },
+  {
+    // place: "Jodhpur",
+    price: "40,000",
+    img: "https://i.ibb.co/nsk2RD69/47.jpg"
+  },
+  {
+    // place: "Ranthambore",
+    price: "45000",
+    img: "https://i.ibb.co/S48R464F/52.jpg" 
+    },
+   {
+    // place: "Mount Abu",
+    price: "45,000",
+    img: "https://i.ibb.co/svFX0kTx/53.jpg"
+    },
+  {
+    // place: "Ajmer",
+    price: "40,000",
+    img: "https://i.ibb.co/tM07RHpP/57.jpg"
+    },
+  {
+    // place: "Bikaner",
+    price: "7000",
+    img: "https://i.ibb.co/PZ40tdTn/55.jpg"
+    },
+  
+ 
+];
 
+const Himachal_Banner = "https://i.ibb.co/6c6pjpMy/1.png"
 const Himachal = "Himachal Trips";
 const Himachal_link = "/himachal";
 const Himachal_images = [
  
   {
-    place: "Manali",
+    // place: "Manali",
     price: "45,000",
-    img: "https://i.postimg.cc/htNmg4Fv/lake-6529960.jpg",
-
+    img: "https://i.ibb.co/pptV7Mj/6.jpg"    
   },
   {
-    place: "Leh",
+    // place: "Shimla",
     price: "40,000",
-    img: "https://i.postimg.cc/sfkwnmLt/leh-4152872.jpg"
-  },
+    img: "https://i.ibb.co/1fZPWq06/4.jpg"
+    },
   {
-    place: "Pangong",
+    // place: "Dalhousie",
     price: "7000",
-    img: "https://i.postimg.cc/yNGFDY4w/118.jpg"
-  },
+    img: "https://i.ibb.co/39wf2w40/27.jpg"
+    },
   {
-    place: "Turtuk",
+    // place: "Dharmshala",
     price: "40,000",
-    img: "https://i.postimg.cc/j5s0Gvmq/sand-6740499.jpg"
-  },
-  {
-    place: "Nubra",
-    price: "45000",
-    img: "https://i.postimg.cc/gcZhYGv2/lake-489289.jpg"
-  }
+    img:"https://i.ibb.co/jCd8KXb/18.jpg"  
+    },
+  
 ];
+
+
+
 const Journey = "Journey In Frames";
 
 
@@ -161,25 +207,25 @@ export const  Dashboard = () => {
           <LadhakTripBanner
           Banner ={Ladakh_Banner}
           images = {ladakh_images} 
-          heading={ladakh}
+          // heading={ladakh}
           link = {ladakh_link}
           />
 
         {/* Spiti */}
         <LadhakTripBanner 
-         Banner ={Spiti_Banner}
-          images = {Spiti_images} 
-           heading={Spiti}
-          link = {Spiti_link}
-        />
+         Banner ={Rajasthan_Banner}
+          images = {Rajasthan_images} 
+          //  heading={Rajasthan}
+          link = {Rajasthan_link}
+        /> 
 
         {/* Himachal Pradesh */}
-        {/* <LadhakTripBanner 
-        Banner ={Banner}
+        { <LadhakTripBanner 
+        Banner ={Himachal_Banner}
         images = {Himachal_images} 
-         heading={Himachal}
+        //  heading={Himachal}
         link = {Himachal_link}
-        /> */}
+        /> }
 
         {/* Internationa */} 
         {/* <LadhakTripBanner /> */}
