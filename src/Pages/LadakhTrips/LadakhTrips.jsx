@@ -31,7 +31,7 @@ const images = [
   },
 ];
 
-const API = 'https://travelfondbackend-production.up.railway.app/ladakh';
+const API = 'ttps://travelfond-backend.onrender.com/ladakh';
 
 export const Ladakh_New_Trips = () => {
 

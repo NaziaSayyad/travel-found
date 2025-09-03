@@ -89,8 +89,9 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
         <Route path='/spiti/:id' element={<SpitiItenary />} />
         <Route path='/book-now' element = {isMobile ? 
         <GroupForm /> : <RegistrationForm />} />
-        <Route path='/domestic/:id' element={<DomesticTrips />}  />
-        <Route path='/international/:id' element={<InternationalTrips />}/>
+        <Route path='/weekend' element={<DomesticTrips />} />
+        {/* <Route path='/domestic/:id' element={<DomesticTrips />}  /> */}
+        {/* <Route path='/international/:id' element={<InternationalTrips />}/> */}
       </Routes>
       <button style={{
         position: 'fixed',

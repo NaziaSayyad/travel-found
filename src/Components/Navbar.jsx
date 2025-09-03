@@ -34,8 +34,7 @@ const Navbar = () => {
       <div className="nav-container">
         <NavbarDropdown API ={DomesticAPI} NAME= {'Domestic'} />
         <InternationalDropdown API = {InternationalAPI} NAME = {'International'} />
-         <NavbarDropdown API = {WeekendAPI} NAME = {'Weekend Trips'} />
-        <div
+         <div
           className="mega-dropdown"
           onMouseEnter={() => setLadakhDropdown(true)}
           onMouseLeave={() => setLadakhDropdown(false)}
@@ -55,6 +54,25 @@ const Navbar = () => {
           </div>
         </div>
 
+ <div
+          className="mega-dropdown"
+          onMouseEnter={() => SetWeekendDropdown(true)}
+          onMouseLeave={() => SetWeekendDropdown(false)}
+        >
+          <Link to="/weekend" className="dropdown-link">
+            <span className="dropdown-text">Weekend Trips</span>
+            <span className="drop-arrow"><IoIosArrowDown size={20} /></span>
+          </Link>
+
+          <div className={`mega-dropdown-menu ${WeekendDropdown ? 'show' : ''}`}>
+            <div className="dropdown-column">
+              <Link to="/weekend#himachal"> Himachal </Link>
+              <Link to="/weekend#rajasthan"> Rajasthan </Link>
+              <Link to="/weekend#uttrakhand"> Uttrakhand </Link>
+              <Link to='/weekend'> View all </Link>
+            </div>
+          </div>
+        </div>
         
           
         
