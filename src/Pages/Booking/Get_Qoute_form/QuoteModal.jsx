@@ -103,16 +103,7 @@ export default function QuoteModal({ onClose }) {
                           }}
                         //   className="quote-modal-img" 
                           />
-                        {/* <ul>
-                            <li>✅ Free Consultation by Experts</li>
-                            <li>✅ No Annoying Spam Calls</li>
-                            <li>✅ Authentic Destination Insights</li>
-                            <li>✅ Your Data is Safe with Us</li>
-                        </ul> */}
-                        {/* <img
-                            src=""
-                            alt="kl"
-                        /> */}
+                       
                     </div>
 
                     {/* Right section */}

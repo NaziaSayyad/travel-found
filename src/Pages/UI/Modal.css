@@ -9,7 +9,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 9999;;
+  }
+  .itenary-close-btn{
+  height: 25px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  border: 2px solid rgb(1, 95, 116);
+  border-radius: 25%;
+  color: rgb(1, 95, 116);
+  font-weight: bold;
   }
   .img-heading-breakpoints{
     display: flex;
@@ -77,3 +88,15 @@
     opacity: 0.9;
   }
   
+  @media screen and (max-width : 780px) {
+    .img-heading-breakpoints{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .itenary-close-btn{
+    display: none;
+  }
+  .down-itenary{
+    font-size: 20px;
+  }
+  }

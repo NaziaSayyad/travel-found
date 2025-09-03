@@ -14,8 +14,12 @@ const Modal = ({ isOpen, onClose, onSubmit, email, setEmail, phone, setPhone , d
     <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="modal-content">
         <div className='img-heading-breakpoints'>
-        <img src="https://i.postimg.cc/s29nSzXK/mountain-5769089.jpg" alt="" />
-        <h2>{downloadItenary}</h2>
+          
+        <img src="https://i.postimg.cc/s29nSzXK/mountain-5769089.jpg" 
+        alt="" />
+        <h2 className='down-itenary'>{downloadItenary}</h2>
+        <button type='button' className='itenary-close-btn' onClick={onClose} >
+           X </button>
         </div>
         <form onSubmit={onSubmit}>
           <div className="form-group">

@@ -5,9 +5,9 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { Link, useLocation, useParams } from 'react-router-dom';
 
 // const API = `https://travelfond-backend.onrender.com/domestic`;
-  const API = `https://travelfondbackend-production.up.railway.app/domestic`;
+//   const API = `https://travelfond-backend.onrender.com/domestic`;
 
-const NavbarDropdown = ({ NAME }) => {
+const NavbarDropdown = ({API, NAME }) => {
     const [statesData, setStatesData] = useState([]);
     const [filteredStates, setFilteredStates] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -15,19 +15,17 @@ const NavbarDropdown = ({ NAME }) => {
     const { id } = useParams();
 
  const location = useLocation(); // Add this hook
-   useEffect(() => {
+     useEffect(() => {
           window.scrollTo({
               top: 0,
               left: 0,
               behavior: 'instant'
           });
       }, []);   
-        useEffect(() => {
+    useEffect(() => {
               // Scroll to top whenever the component mounts or location changes
               window.scrollTo(0, 0);
           }, [location]); 
-
-
     // Fetch from API
     useEffect(() => {
         axios.get(API) // Change this to your real URL
@@ -81,13 +79,13 @@ const NavbarDropdown = ({ NAME }) => {
             </div>
  
             <div className="dropdown-menu">
-                {/* <input
+                <input
                     type="text"
                     placeholder="Search City..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="dropdown-search"
-                /> */}
+                />
                 <div>
                     
                 </div>

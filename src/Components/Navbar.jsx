@@ -9,11 +9,14 @@ import { SubNavbar } from "./SubNavbar";
 // import logo from "./logo.png"; // Add your logo
 
 // const DomesticAPI = 'https://travelfond-backend.onrender.com/domestic';
- const DomesticAPI = `https://travelfondbackend-production.up.railway.app/domestic`;
-const InternationalAPI = `https://travelfondbackend-production.up.railway.app/international`;
+ const DomesticAPI = `https://travelfond-backend.onrender.com/domestic`;
+const InternationalAPI = `https://travelfond-backend.onrender.com/international`;
+const WeekendAPI = `http://localhost:8080/weekend`;
+
 const Navbar = () => {
-  const [DomesticDropdown, setDomesticDropdown] = useState(false);
-  const [LadakhDropdown, setLadakhDropdown] = useState(false);
+   const [DomesticDropdown, setDomesticDropdown] = useState(false);
+   const [LadakhDropdown, setLadakhDropdown] = useState(false);
+   const[WeekendDropdown,SetWeekendDropdown] = useState(false);
 
   return (
     
@@ -29,8 +32,9 @@ const Navbar = () => {
       </Link>
       </div>
       <div className="nav-container">
-        <NavbarDropdown NAME = {'Domestic'} />
+        <NavbarDropdown API ={DomesticAPI} NAME= {'Domestic'} />
         <InternationalDropdown API = {InternationalAPI} NAME = {'International'} />
+         <NavbarDropdown API = {WeekendAPI} NAME = {'Weekend Trips'} />
         <div
           className="mega-dropdown"
           onMouseEnter={() => setLadakhDropdown(true)}
@@ -51,12 +55,13 @@ const Navbar = () => {
           </div>
         </div>
 
+        
+          
+        
         <div className="nav-links">
+        
 
-          <Link to="/ladakh" className="dropdown-link">
-            <span className="dropdown-text">Himachal</span>
-            <span className="drop-arrow"><IoIosArrowDown size={20} /></span>
-          </Link>
+         
           <Link to="/spiti" className="dropdown-link">
             <span className="dropdown-text"> Spiti </span>
             <span className="drop-arrow"><IoIosArrowDown size={20} /></span>
