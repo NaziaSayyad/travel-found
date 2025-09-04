@@ -7,3 +7,13 @@
 .weekend-container >h4{
     border: 2px solid teal;
 }
+.city-card{
+    display: flex;
+    justify-content: space-around;
+    overflow: scroll;
+    scrollbar-width: none;
+
+}
+.city-card >div {
+    margin-left: 5%;
+}
