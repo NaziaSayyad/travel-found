@@ -28,7 +28,7 @@ const images = [
   },
 ];
 
-const API = 'http://localhost:8080/weekend';
+const API = 'https://travelfond-backend.onrender.com/weekend';
 // https://travelfond-backend.onrender.com/weekend'
 
 // https://travelfond-backend.onrender.com/weekend
