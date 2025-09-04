@@ -31,6 +31,7 @@ import { PrivacyPolicy } from './PrivacyPolicy/PrivacyPolicy';
 import { RegistrationForm } from './Pages/Booking/Customize_Form/RegistrationForm';
 import { BatchCosting } from './MobileVersion/Pages/Booking/BatchCosting';
 import { GroupForm } from './MobileVersion/Pages/BookingForm/GroupTripsForm';
+import { City } from './Pages/DomesticTrips/City';
 
 function App() {// You want mobile <= 768, tablet <= 1200
 const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
@@ -90,6 +91,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
         <Route path='/book-now' element = {isMobile ? 
         <GroupForm /> : <RegistrationForm />} />
         <Route path='/weekend' element={<DomesticTrips />} />
+        <Route path ='/city' element = {<City />} />
         {/* <Route path='/domestic/:id' element={<DomesticTrips />}  /> */}
         {/* <Route path='/international/:id' element={<InternationalTrips />}/> */}
       </Routes>
