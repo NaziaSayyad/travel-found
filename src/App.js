@@ -91,7 +91,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
         <Route path='/book-now' element = {isMobile ? 
         <GroupForm /> : <RegistrationForm />} />
         <Route path='/weekend' element={<DomesticTrips />} />
-        <Route path ='/city' element = {<City />} />
+        <Route path ='weekend/:id/city/:city_id' element = {<City />} />
         {/* <Route path='/domestic/:id' element={<DomesticTrips />}  /> */}
         {/* <Route path='/international/:id' element={<InternationalTrips />}/> */}
       </Routes>

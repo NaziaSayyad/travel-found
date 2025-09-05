@@ -71,7 +71,7 @@ const  DomesticTrips = () =>{
                       el.city?.map((i) =>(
                         <>
                           <div >
-                            <Link to={`/city`}>
+                            <Link to={`/weekend/${el.id}/city/${i.city_id}`}>
                               <img src= {i.image} style={{ 
                               borderRadius : '25%',
                               cursor : 'pointer',
