@@ -31,7 +31,7 @@ const images = [
   },
 ];
 
-const API = 'ttps://travelfond-backend.onrender.com/ladakh';
+const API = 'https://travelfond-backend.onrender.com/ladakh';
 
 export const Ladakh_New_Trips = () => {
 
