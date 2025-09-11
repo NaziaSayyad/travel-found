@@ -32,6 +32,7 @@ import { RegistrationForm } from './Pages/Booking/Customize_Form/RegistrationFor
 import { BatchCosting } from './MobileVersion/Pages/Booking/BatchCosting';
 import { GroupForm } from './MobileVersion/Pages/BookingForm/GroupTripsForm';
 import { City } from './Pages/DomesticTrips/City';
+import { Kashmir_Page } from './Pages/Kashmir/Kashmir';
 
 function App() {// You want mobile <= 768, tablet <= 1200
 const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
@@ -94,6 +95,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
         <Route path ='weekend/:id/city/:city_id' element = {<City />} />
         {/* <Route path='/domestic/:id' element={<DomesticTrips />}  /> */}
         {/* <Route path='/international/:id' element={<InternationalTrips />}/> */}
+     <Route path='/kashmir' element = {<Kashmir_Page />}/>
       </Routes>
       <button style={{
         position: 'fixed',

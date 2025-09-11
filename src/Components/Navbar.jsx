@@ -80,8 +80,8 @@ const Navbar = () => {
         
 
          
-          <Link to="/spiti" className="dropdown-link">
-            <span className="dropdown-text"> Spiti </span>
+          <Link to="/kashmir" className="dropdown-link">
+            <span className="dropdown-text"> Kashmir </span>
             <span className="drop-arrow"><IoIosArrowDown size={20} /></span>
           </Link>
           <Link to="/ladakh" className="dropdown-link">
