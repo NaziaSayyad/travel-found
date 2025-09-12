@@ -103,17 +103,30 @@ position: absolute;
 
 .kashmir-custom-div {
     display: flex;
-  justify-content: space-between;
   align-items: center;
-  /* padding: 2px 10px; */
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 12px;
-  padding-right: 6px;
-  margin-top: 8px;
+  gap: 6px;
+  /* border: 1px solid whitesmoke; */
+  border-radius: 30px;
+  padding: 4px 12px;
+  /* color: skyblue; */
+  color: white;
+  font-size: 14px;
+  /* margin-left: 5; */
 }
-
+.kashmir-custom-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  /* border: 1px solid whitesmoke; */
+  border-radius: 30px;
+  padding: 4px 12px;
+  /* color: skyblue; */
+  color: white;
+  font-size: 14px;
+}
 .kashmir-custom {
   font-size: 14px;
   color: #ddd;
+  font-weight: 500;
+  margin-bottom: 0;
 }

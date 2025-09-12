@@ -16,6 +16,7 @@ const API = "https://travelfond-backend.onrender.com/spiti";
     "Sonmarg",
     "Pahalgam",
     "Yusmarg",
+    "Dhudhpathri"
 
   ];
 export const Kashmir_Page = () => {
@@ -108,7 +109,7 @@ export const Kashmir_Page = () => {
         <span className="kashmir-old-price">{trip.oldprice}</span>
         <span className="kashmir-new-price">{trip.newprice}</span>
       </div>
-      <div className="kashmir-custom-head">
+      <div className= "kashmir-custom-head">
         <MdGroups size={22} color="skyblue" />
         <span className="kashmir-custom">Custom / Group</span>
       </div>
