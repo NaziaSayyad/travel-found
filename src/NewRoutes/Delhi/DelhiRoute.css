@@ -1,0 +1,47 @@
+.itinerary-box {
+  max-width: 520px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+}
+
+.day-box {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #0bbcd6;
+  color: white;
+  cursor: pointer;
+}
+
+.output-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.duration {
+  margin-top: 10px;
+  font-size: 16px;
+}

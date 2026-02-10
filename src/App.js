@@ -33,6 +33,7 @@ import { BatchCosting } from './MobileVersion/Pages/Booking/BatchCosting';
 import { GroupForm } from './MobileVersion/Pages/BookingForm/GroupTripsForm';
 import { City } from './Pages/DomesticTrips/City';
 import { Kashmir_Page } from './Pages/Kashmir/Kashmir';
+import DelhiRoute from './NewRoutes/Delhi/DelhiRoute';
 
 function App() {// You want mobile <= 768, tablet <= 1200
 const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
@@ -72,10 +73,12 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
 
          <Route
         path="/"
-        element={isMobile ? <MobileLandingPage /> : <Dashboard />}
+        // element={isMobile ? <MobileLandingPage /> : <Dashboard />}
+        // For tabelet 
         // element = {isTablet ? <MobileLandingPage /> : <Dashboard />}
+        element={<DelhiRoute />}
       />
-
+   
         <Route path="/ladakh" element ={<Ladakh /> } />
         <Route path="/about" element ={<About />} />
         <Route path='/privacypolicy' element={<PrivacyPolicy />} />
