@@ -1,7 +1,29 @@
 .itinerary-box {
+  margin-top: 15%;
+  margin-left: 35%;
+  border: 5px solid;
   max-width: 520px;
-  margin: 30px auto;
+  /* margin: 30px auto; */
   font-family: Arial, sans-serif;
+}
+.selctorspoint{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  /* width: 300px; */
+  gap: 20px;
+}
+.day-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .day-box {

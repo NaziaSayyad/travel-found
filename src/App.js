@@ -34,6 +34,7 @@ import { GroupForm } from './MobileVersion/Pages/BookingForm/GroupTripsForm';
 import { City } from './Pages/DomesticTrips/City';
 import { Kashmir_Page } from './Pages/Kashmir/Kashmir';
 import DelhiRoute from './NewRoutes/Delhi/DelhiRoute';
+import ItineraryBuilder from './NewRoutes/Manali/ManaliRoute';
 
 function App() {// You want mobile <= 768, tablet <= 1200
 const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
@@ -77,6 +78,7 @@ const { isMobile, isTablet, isDesktop } = useBreakpoint(768,1200, 1024);
         // For tabelet 
         // element = {isTablet ? <MobileLandingPage /> : <Dashboard />}
         element={<DelhiRoute />}
+        // element={<ItineraryBuilder />}
       />
    
         <Route path="/ladakh" element ={<Ladakh /> } />
