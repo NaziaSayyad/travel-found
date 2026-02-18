@@ -267,3 +267,48 @@ export default function ManaliRoute() {
     </div>
   );
 }
+
+// ================= Download Itinerary Modal Code =================
+// const downloadPDF = async () => {
+//   try {
+//     const response = await fetch(
+//       "http://localhost:8080/api/download-itinerary",
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({
+//           title: "Custom Travel Itinerary",
+//           customerName: "Client Name",
+//           days: output,
+//           duration: duration,
+//         }),
+//       }
+//     );
+
+//     if (!response.ok) {
+//       throw new Error("Failed to generate PDF");
+//     }
+
+//     const blob = await response.blob();
+
+//     // 🔥 IMPORTANT: explicitly set type
+//     const pdfBlob = new Blob([blob], { type: "application/pdf" });
+
+//     const fileURL = URL.createObjectURL(pdfBlob);
+
+//     // 🔥 Force download properly
+//     const link = document.createElement("a");
+//     link.href = fileURL;
+//     link.download = "Itinerary.pdf";
+//     document.body.appendChild(link);
+//     link.click();
+
+//     document.body.removeChild(link);
+//     URL.revokeObjectURL(fileURL);
+
+//   } catch (error) {
+//     console.error("Download error:", error);
+//   }
+// };
